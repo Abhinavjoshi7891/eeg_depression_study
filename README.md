@@ -96,9 +96,12 @@ The results from the Spatial RGB approach were transformative:
 ## 📊 Results & Visualizations
 High-definition visualizations and logs backing these metrics reside in:
 1. `results/exp_final/figures/`
-   - `subject_accuracy.png`: Bar plots showing granular tracking per subject.
-   - `majority_vote_pie.png`: Clinical outcome pie chart.
-   - `comparison_metrics.png`: Specificity / Sensitivity growth vs Experiment 1.
+   - **`subject_accuracy.png`**: Bar plots showing granular tracking per subject.
+     ![Per-Subject Accuracy](results/exp_final/figures/subject_accuracy.png)
+   - **`majority_vote_pie.png`**: Clinical outcome pie chart.
+     ![Majority Vote](results/exp_final/figures/majority_vote_pie.png)
+   - **`comparison_metrics.png`**: Specificity / Sensitivity growth vs Experiment 1.
+     ![Comparison Metrics](results/exp_final/figures/comparison_metrics.png)
 2. `results/exp_final/training_log.txt`: Complete tracking logs of the 40 LOSO loops.
 3. `results/exp_final/fold_results.csv`: Raw precision, F1, accuracy, and thresholds for all subjects.
 4. `results/approach2/`: Contains Exp 2's specific feature pipeline analysis.
