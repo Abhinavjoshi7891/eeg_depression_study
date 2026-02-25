@@ -29,6 +29,14 @@ The final curated dataset was heavily imbalanced: **65% MDD (26/40) vs. 35% Heal
   - Raw EDFs parsed using `mne`. Epoch division.
   - Spectrogram generation utilizing Discrete/Continuous Wavelet Transforms (DWT/CWT).
   - Initial datasets averaged all 19 channels into a single grayscale spectrogram.
+  
+  **Data Investigation Profiling** (Averaged Grayscale):
+  Before model building, we evaluated the generic pixel intensity distribution between cohorts. The visualizations below highlight the lack of strong global separability when brain regions are averaged, motivating our eventual move to Spatial RGB mapping.
+  
+  ![Class Averaged Spectrograms](results/data_investigation/1_class_averaged_spectrograms.png)
+  ![Intensity Histograms](results/data_investigation/3_intensity_histograms.png)
+  ![Per-Subject Variance](results/data_investigation/6_per_subject_variance.png)
+
   - **Final dataset (`preprocess_spatial.py`) mapping:**
     - **Frontal Channels** ➔ Red Channel
     - **Central Channels** ➔ Green Channel
