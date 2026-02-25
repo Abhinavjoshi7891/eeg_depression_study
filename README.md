@@ -105,6 +105,18 @@ High-definition visualizations and logs backing these metrics reside in:
 2. `results/exp_final/training_log.txt`: Complete tracking logs of the 40 LOSO loops.
 3. `results/exp_final/fold_results.csv`: Raw precision, F1, accuracy, and thresholds for all subjects.
 4. `results/approach2/`: Contains Exp 2's specific feature pipeline analysis.
+   - **`training_curves.png`**: Convergence tracking (loss/accuracy) over epochs.
+     ![Training Curves](results/approach2/training_curves.png)
+   - **`roc_curves.png`**: Threshold integrity across all subjects.
+     ![ROC Curves](results/approach2/roc_curves.png)
+   - **`confusion_matrix.png`**: Raw sequence-level predictions.
+     ![Confusion Matrix](results/approach2/confusion_matrix.png)
+   - **`metric_distributions.png`**: Spread of metrics highlighting model variance.
+     ![Metric Distributions](results/approach2/metric_distributions.png)
+   - **`per_fold_accuracy.png`**: LOSO progress sequence.
+     ![Per-Fold Accuracy](results/approach2/per_fold_accuracy.png)
+   - **`h_vs_mdd_comparison.png`**: Side-by-side performance of Healthy vs. MDD.
+     ![Cohort Comparison](results/approach2/h_vs_mdd_comparison.png)
 
 ---
 
