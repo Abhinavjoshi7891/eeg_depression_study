@@ -93,8 +93,9 @@ The results from the Spatial RGB approach were transformative:
 
 - **Global Evaluation**: Outperformed Experiment 1 across the board.
   - Accuracy: **80.5% ➔ 84.8%**
-  - MDD Sensitivity: **90.1% ➔ 93.8%**
-  - Healthy Specificity: **63.6% ➔ 68.0%**
+  - MDD Sensitivity (Recall): **90.1% ➔ 93.8%**
+  - Healthy Specificity (with outliers): **63.6% ➔ 68.0%**
+  - **Healthy Specificity (without outliers)**: **81.4% ➔ 89.8%** 🚀
 - **The "Median" Victory**: The Specificity "Mean" of 68% was still dragged down by the impossible outliers (H_16, H_24, H_27). But looking at the **Median Specificity** across subjects, we saw a massive leap from **78.4% ➔ 93.8%**.
 - **Clinical Success Rate**: Using a Subject-Level Majority Vote logic, the model accurately diagnosed **36 out of 40 patients (90.0%)**.
 - **Outlier Fix**: Successfully diagnosed extreme outlier **MDD_19**, which earlier algorithms had rated at <10% accuracy.
