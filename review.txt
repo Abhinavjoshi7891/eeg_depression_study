@@ -1,0 +1,39 @@
+Ref: Submission ID b8d4bf5e-8bd4-496a-8e37-7503621fb5de
+
+Dear Dr Pandey,
+
+Your manuscript "Hybrid Deep Learning Framework for EEG-Based Detection of Major Depressive Disorder" has now been assessed. If there are any reviewer comments on your manuscript, you can find them at the end of this email.
+
+Regrettably, your manuscript has been rejected for publication in Scientific Reports.
+
+Editor Comments
+
+"Thank you for submitting your manuscript. After careful consideration of the reviewer’s comments and an editorial evaluation, we regret to inform you that we are unable to proceed with publication of the manuscript in its current form.
+
+The reviewer identified a fundamental issue in the study design and validation strategy. In particular, the absence of leave-one-subject-out (LOSO) cross-validation means that the reported results cannot be considered valid. As noted by the reviewer, both eyes-open and eyes-closed data from the same subject should be included exclusively in the test set, with all remaining subjects used for training. Without this validation framework, the conclusions are not adequately supported by the evidence presented.
+Addressing this concern would require substantial reanalysis and may significantly alter the results, going beyond the scope of revision. For this reason, the manuscript cannot be accepted.
+
+We appreciate your interest in the journal and encourage you to consider resubmitting a thoroughly revised version once these methodological issues have been fully addressed."
+-Hsin-Yi Lai
+
+Thank you for the opportunity to review your work. I'm sorry that we cannot be more positive on this occasion and hope you will not be deterred from submitting future work to Scientific Reports.
+
+Kind regards,
+
+Purva Dhamankar
+Assistant Editor
+Scientific Reports
+
+While I'm sorry we cannot publish your work in Scientific Reports, your manuscript may be a good fit for one of our other journals. At Springer Nature we provide a free service to give authors a range of personalised journal recommendations. The corresponding author will receive an email with more information in the next 2 days. 
+
+Reviewer Comments:
+
+Reviewer 2
+Without leave one subject out cross validation, the results of the paper is not valid; add leave one subject out (Loso) cross validation for Mumtaz dataset.
+Please add LOSO results.
+It should be noted that, both eyes close and open for one subject, should be in test, rest in training.
+
+
+
+
+cp -r /Users/abhinavjoshi/Downloads/eeg_data/* data/raw/

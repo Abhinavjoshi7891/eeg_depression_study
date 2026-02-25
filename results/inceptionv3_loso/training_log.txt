@@ -1,0 +1,1668 @@
+[2026-02-05 09:42:49] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:49]   CONFIGURATION
+[2026-02-05 09:42:49] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:49] Device: mps
+[2026-02-05 09:42:49] Results directory: /Users/abhinavjoshi/Downloads/eeg_depression/results/inceptionv3_loso
+[2026-02-05 09:42:49] Hyperparameters:
+[2026-02-05 09:42:49]   Learning rate: 0.0001
+[2026-02-05 09:42:49]   Batch size: 32
+[2026-02-05 09:42:49]   Max epochs: 30
+[2026-02-05 09:42:49]   Patience: 7
+[2026-02-05 09:42:49]   LSTM hidden: 256
+[2026-02-05 09:42:49]   Max samples/subject: 500
+[2026-02-05 09:42:49] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:49]   LOADING DATA
+[2026-02-05 09:42:49] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:54] Spectrograms shape: (59900, 224, 224, 3)
+[2026-02-05 09:42:54] Labels shape: (59900,)
+[2026-02-05 09:42:54] Unique subjects: 40
+[2026-02-05 09:42:54] Class distribution: H=21,688, MDD=38,212
+[2026-02-05 09:42:54] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:54]   LOSO CROSS-VALIDATION
+[2026-02-05 09:42:54] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 09:42:54] Running 40 folds (one per subject)
+[2026-02-05 09:42:54] All paradigms (EC, EO, TASK) for test subject are in test set
+[2026-02-05 09:42:54] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 09:42:54] FOLD 1/40 — Test Subject: H_14
+[2026-02-05 09:42:54] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 09:42:58] Data preparation completed in 3.2s
+[2026-02-05 09:42:58]   Train: 17,550 samples | Val: 1,950 | Test: 1,422
+[2026-02-05 09:42:58]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 09:42:58] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 09:42:58] Starting training loop...
+[2026-02-05 09:43:37]   Epoch  1/30 | train_loss: 0.4524 | val_loss: 0.4402 | 38.9s
+[2026-02-05 09:44:11]   Epoch  2/30 | train_loss: 0.4397 | val_loss: 0.4274 | 34.7s
+[2026-02-05 09:44:46]   Epoch  3/30 | train_loss: 0.4343 | val_loss: 0.4285 | 34.6s
+[2026-02-05 09:45:21]   Epoch  4/30 | train_loss: 0.4334 | val_loss: 0.4259 | 34.8s
+[2026-02-05 09:45:56]   Epoch  5/30 | train_loss: 0.4306 | val_loss: 0.4227 | 34.9s
+[2026-02-05 09:46:31]   Epoch  6/30 | train_loss: 0.4299 | val_loss: 0.4231 | 35.2s
+[2026-02-05 09:47:06]   Epoch  7/30 | train_loss: 0.4285 | val_loss: 0.4210 | 35.1s
+[2026-02-05 09:47:42]   Epoch  8/30 | train_loss: 0.4295 | val_loss: 0.4203 | 35.2s
+[2026-02-05 09:48:17]   Epoch  9/30 | train_loss: 0.4276 | val_loss: 0.4208 | 35.4s
+[2026-02-05 09:48:53]   Epoch 10/30 | train_loss: 0.4269 | val_loss: 0.4208 | 35.7s
+[2026-02-05 09:49:29]   Epoch 11/30 | train_loss: 0.4251 | val_loss: 0.4219 | 36.4s
+[2026-02-05 09:50:07]   Epoch 12/30 | train_loss: 0.4268 | val_loss: 0.4225 | 37.4s
+[2026-02-05 09:50:44]   Epoch 13/30 | train_loss: 0.4244 | val_loss: 0.4175 | 37.2s
+[2026-02-05 09:51:21]   Epoch 14/30 | train_loss: 0.4258 | val_loss: 0.4201 | 37.2s
+[2026-02-05 09:51:59]   Epoch 15/30 | train_loss: 0.4243 | val_loss: 0.4199 | 37.4s
+[2026-02-05 09:52:36]   Epoch 16/30 | train_loss: 0.4233 | val_loss: 0.4173 | 37.4s
+[2026-02-05 09:53:13]   Epoch 17/30 | train_loss: 0.4243 | val_loss: 0.4191 | 37.4s
+[2026-02-05 09:53:51]   Epoch 18/30 | train_loss: 0.4243 | val_loss: 0.4172 | 37.6s
+[2026-02-05 09:54:29]   Epoch 19/30 | train_loss: 0.4218 | val_loss: 0.4167 | 37.6s
+[2026-02-05 09:55:07]   Epoch 20/30 | train_loss: 0.4238 | val_loss: 0.4155 | 37.8s
+[2026-02-05 09:55:45]   Epoch 21/30 | train_loss: 0.4231 | val_loss: 0.4165 | 38.9s
+[2026-02-05 09:56:33]   Epoch 22/30 | train_loss: 0.4214 | val_loss: 0.4164 | 47.7s
+[2026-02-05 09:57:19]   Epoch 23/30 | train_loss: 0.4212 | val_loss: 0.4149 | 46.3s
+[2026-02-05 09:58:06]   Epoch 24/30 | train_loss: 0.4229 | val_loss: 0.4145 | 46.4s
+[2026-02-05 09:58:55]   Epoch 25/30 | train_loss: 0.4209 | val_loss: 0.4153 | 48.6s
+[2026-02-05 09:59:39]   Epoch 26/30 | train_loss: 0.4220 | val_loss: 0.4141 | 44.1s
+[2026-02-05 10:00:17]   Epoch 27/30 | train_loss: 0.4209 | val_loss: 0.4164 | 38.4s
+[2026-02-05 10:00:56]   Epoch 28/30 | train_loss: 0.4202 | val_loss: 0.4134 | 38.4s
+[2026-02-05 10:01:34]   Epoch 29/30 | train_loss: 0.4198 | val_loss: 0.4139 | 38.2s
+[2026-02-05 10:02:12]   Epoch 30/30 | train_loss: 0.4188 | val_loss: 0.4136 | 38.1s
+[2026-02-05 10:02:15]   RESULTS: acc=0.567 | f1=0.000 | auc=nan
+[2026-02-05 10:02:15]            H_recall=0.567 | MDD_recall=0.000
+[2026-02-05 10:02:15]   Fold completed in 19.3 min
+[2026-02-05 10:02:15] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:02:15] FOLD 2/40 — Test Subject: H_16
+[2026-02-05 10:02:15] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:02:17] Data preparation completed in 2.4s
+[2026-02-05 10:02:17]   Train: 17,550 samples | Val: 1,950 | Test: 1,472
+[2026-02-05 10:02:17]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 10:02:18] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 10:02:18] Starting training loop...
+[2026-02-05 10:02:56]   Epoch  1/30 | train_loss: 0.4497 | val_loss: 0.4322 | 37.8s
+[2026-02-05 10:03:34]   Epoch  2/30 | train_loss: 0.4326 | val_loss: 0.4178 | 38.2s
+[2026-02-05 10:04:12]   Epoch  3/30 | train_loss: 0.4280 | val_loss: 0.4106 | 38.4s
+[2026-02-05 10:04:51]   Epoch  4/30 | train_loss: 0.4243 | val_loss: 0.4087 | 38.4s
+[2026-02-05 10:05:29]   Epoch  5/30 | train_loss: 0.4256 | val_loss: 0.4104 | 38.5s
+[2026-02-05 10:06:08]   Epoch  6/30 | train_loss: 0.4207 | val_loss: 0.4062 | 38.8s
+[2026-02-05 10:06:48]   Epoch  7/30 | train_loss: 0.4226 | val_loss: 0.4062 | 39.7s
+[2026-02-05 10:07:28]   Epoch  8/30 | train_loss: 0.4208 | val_loss: 0.4045 | 39.9s
+[2026-02-05 10:08:07]   Epoch  9/30 | train_loss: 0.4197 | val_loss: 0.4046 | 39.1s
+[2026-02-05 10:08:46]   Epoch 10/30 | train_loss: 0.4198 | val_loss: 0.4031 | 39.1s
+[2026-02-05 10:09:25]   Epoch 11/30 | train_loss: 0.4191 | val_loss: 0.4043 | 38.7s
+[2026-02-05 10:10:04]   Epoch 12/30 | train_loss: 0.4176 | val_loss: 0.4031 | 38.7s
+[2026-02-05 10:10:42]   Epoch 13/30 | train_loss: 0.4179 | val_loss: 0.4044 | 38.7s
+[2026-02-05 10:11:21]   Epoch 14/30 | train_loss: 0.4163 | val_loss: 0.4035 | 38.8s
+[2026-02-05 10:12:00]   Epoch 15/30 | train_loss: 0.4167 | val_loss: 0.4069 | 38.7s
+[2026-02-05 10:12:39]   Epoch 16/30 | train_loss: 0.4152 | val_loss: 0.4042 | 39.1s
+[2026-02-05 10:13:18]   Epoch 17/30 | train_loss: 0.4162 | val_loss: 0.4007 | 39.2s
+[2026-02-05 10:13:57]   Epoch 18/30 | train_loss: 0.4147 | val_loss: 0.4009 | 38.5s
+[2026-02-05 10:14:35]   Epoch 19/30 | train_loss: 0.4142 | val_loss: 0.4024 | 38.5s
+[2026-02-05 10:15:14]   Epoch 20/30 | train_loss: 0.4132 | val_loss: 0.4000 | 38.4s
+[2026-02-05 10:15:52]   Epoch 21/30 | train_loss: 0.4137 | val_loss: 0.4010 | 38.7s
+[2026-02-05 10:16:31]   Epoch 22/30 | train_loss: 0.4145 | val_loss: 0.4002 | 38.8s
+[2026-02-05 10:17:10]   Epoch 23/30 | train_loss: 0.4129 | val_loss: 0.4012 | 38.8s
+[2026-02-05 10:17:49]   Epoch 24/30 | train_loss: 0.4120 | val_loss: 0.3995 | 38.9s
+[2026-02-05 10:18:28]   Epoch 25/30 | train_loss: 0.4110 | val_loss: 0.3991 | 38.8s
+[2026-02-05 10:19:07]   Epoch 26/30 | train_loss: 0.4122 | val_loss: 0.3986 | 38.7s
+[2026-02-05 10:19:45]   Epoch 27/30 | train_loss: 0.4114 | val_loss: 0.3988 | 38.7s
+[2026-02-05 10:20:24]   Epoch 28/30 | train_loss: 0.4094 | val_loss: 0.4003 | 38.6s
+[2026-02-05 10:21:03]   Epoch 29/30 | train_loss: 0.4085 | val_loss: 0.3974 | 38.8s
+[2026-02-05 10:21:42]   Epoch 30/30 | train_loss: 0.4077 | val_loss: 0.3981 | 38.8s
+[2026-02-05 10:21:45]   RESULTS: acc=0.192 | f1=0.000 | auc=nan
+[2026-02-05 10:21:45]            H_recall=0.192 | MDD_recall=0.000
+[2026-02-05 10:21:45]   Fold completed in 19.5 min
+[2026-02-05 10:21:45] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:21:45] FOLD 3/40 — Test Subject: H_19
+[2026-02-05 10:21:45] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:21:47] Data preparation completed in 2.5s
+[2026-02-05 10:21:47]   Train: 17,550 samples | Val: 1,950 | Test: 1,558
+[2026-02-05 10:21:47]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 10:21:47] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 10:21:47] Starting training loop...
+[2026-02-05 10:22:27]   Epoch  1/30 | train_loss: 0.4533 | val_loss: 0.4360 | 39.1s
+[2026-02-05 10:23:06]   Epoch  2/30 | train_loss: 0.4399 | val_loss: 0.4284 | 39.0s
+[2026-02-05 10:23:44]   Epoch  3/30 | train_loss: 0.4346 | val_loss: 0.4245 | 38.8s
+[2026-02-05 10:24:23]   Epoch  4/30 | train_loss: 0.4338 | val_loss: 0.4228 | 38.8s
+[2026-02-05 10:25:02]   Epoch  5/30 | train_loss: 0.4338 | val_loss: 0.4261 | 38.9s
+[2026-02-05 10:25:41]   Epoch  6/30 | train_loss: 0.4309 | val_loss: 0.4202 | 38.9s
+[2026-02-05 10:26:20]   Epoch  7/30 | train_loss: 0.4297 | val_loss: 0.4206 | 38.7s
+[2026-02-05 10:26:59]   Epoch  8/30 | train_loss: 0.4288 | val_loss: 0.4250 | 38.8s
+[2026-02-05 10:27:38]   Epoch  9/30 | train_loss: 0.4284 | val_loss: 0.4199 | 38.8s
+[2026-02-05 10:28:16]   Epoch 10/30 | train_loss: 0.4294 | val_loss: 0.4189 | 38.8s
+[2026-02-05 10:28:55]   Epoch 11/30 | train_loss: 0.4264 | val_loss: 0.4181 | 38.9s
+[2026-02-05 10:29:34]   Epoch 12/30 | train_loss: 0.4273 | val_loss: 0.4210 | 38.8s
+[2026-02-05 10:30:13]   Epoch 13/30 | train_loss: 0.4266 | val_loss: 0.4185 | 38.9s
+[2026-02-05 10:30:52]   Epoch 14/30 | train_loss: 0.4260 | val_loss: 0.4196 | 39.0s
+[2026-02-05 10:31:31]   Epoch 15/30 | train_loss: 0.4248 | val_loss: 0.4167 | 38.9s
+[2026-02-05 10:32:10]   Epoch 16/30 | train_loss: 0.4244 | val_loss: 0.4169 | 38.9s
+[2026-02-05 10:32:49]   Epoch 17/30 | train_loss: 0.4240 | val_loss: 0.4164 | 38.9s
+[2026-02-05 10:33:28]   Epoch 18/30 | train_loss: 0.4237 | val_loss: 0.4178 | 38.9s
+[2026-02-05 10:34:07]   Epoch 19/30 | train_loss: 0.4222 | val_loss: 0.4204 | 38.9s
+[2026-02-05 10:34:46]   Epoch 20/30 | train_loss: 0.4220 | val_loss: 0.4172 | 39.0s
+[2026-02-05 10:35:25]   Epoch 21/30 | train_loss: 0.4222 | val_loss: 0.4153 | 39.0s
+[2026-02-05 10:36:04]   Epoch 22/30 | train_loss: 0.4216 | val_loss: 0.4154 | 38.9s
+[2026-02-05 10:36:43]   Epoch 23/30 | train_loss: 0.4218 | val_loss: 0.4181 | 38.8s
+[2026-02-05 10:37:22]   Epoch 24/30 | train_loss: 0.4211 | val_loss: 0.4162 | 38.9s
+[2026-02-05 10:38:00]   Epoch 25/30 | train_loss: 0.4206 | val_loss: 0.4161 | 38.9s
+[2026-02-05 10:38:39]   Epoch 26/30 | train_loss: 0.4204 | val_loss: 0.4154 | 38.8s
+[2026-02-05 10:39:18]   Epoch 27/30 | train_loss: 0.4194 | val_loss: 0.4146 | 38.9s
+[2026-02-05 10:39:57]   Epoch 28/30 | train_loss: 0.4199 | val_loss: 0.4153 | 39.0s
+[2026-02-05 10:40:36]   Epoch 29/30 | train_loss: 0.4197 | val_loss: 0.4146 | 38.8s
+[2026-02-05 10:41:15]   Epoch 30/30 | train_loss: 0.4183 | val_loss: 0.4150 | 38.8s
+[2026-02-05 10:41:18]   RESULTS: acc=0.779 | f1=0.000 | auc=nan
+[2026-02-05 10:41:18]            H_recall=0.779 | MDD_recall=0.000
+[2026-02-05 10:41:18]   Fold completed in 19.6 min
+[2026-02-05 10:41:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:41:18] FOLD 4/40 — Test Subject: H_22
+[2026-02-05 10:41:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:41:21] Data preparation completed in 2.5s
+[2026-02-05 10:41:21]   Train: 17,550 samples | Val: 1,950 | Test: 1,538
+[2026-02-05 10:41:21]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 10:41:21] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 10:41:21] Starting training loop...
+[2026-02-05 10:42:00]   Epoch  1/30 | train_loss: 0.4528 | val_loss: 0.4322 | 39.1s
+[2026-02-05 10:42:39]   Epoch  2/30 | train_loss: 0.4374 | val_loss: 0.4222 | 38.9s
+[2026-02-05 10:43:18]   Epoch  3/30 | train_loss: 0.4319 | val_loss: 0.4204 | 38.8s
+[2026-02-05 10:43:57]   Epoch  4/30 | train_loss: 0.4322 | val_loss: 0.4197 | 39.0s
+[2026-02-05 10:44:36]   Epoch  5/30 | train_loss: 0.4288 | val_loss: 0.4176 | 38.9s
+[2026-02-05 10:45:15]   Epoch  6/30 | train_loss: 0.4280 | val_loss: 0.4180 | 38.8s
+[2026-02-05 10:45:54]   Epoch  7/30 | train_loss: 0.4273 | val_loss: 0.4257 | 39.1s
+[2026-02-05 10:46:33]   Epoch  8/30 | train_loss: 0.4285 | val_loss: 0.4132 | 38.9s
+[2026-02-05 10:47:12]   Epoch  9/30 | train_loss: 0.4268 | val_loss: 0.4148 | 38.8s
+[2026-02-05 10:47:51]   Epoch 10/30 | train_loss: 0.4270 | val_loss: 0.4168 | 39.2s
+[2026-02-05 10:48:30]   Epoch 11/30 | train_loss: 0.4271 | val_loss: 0.4143 | 39.0s
+[2026-02-05 10:49:09]   Epoch 12/30 | train_loss: 0.4247 | val_loss: 0.4150 | 38.9s
+[2026-02-05 10:49:48]   Epoch 13/30 | train_loss: 0.4245 | val_loss: 0.4176 | 39.0s
+[2026-02-05 10:50:27]   Epoch 14/30 | train_loss: 0.4237 | val_loss: 0.4129 | 39.0s
+[2026-02-05 10:51:06]   Epoch 15/30 | train_loss: 0.4234 | val_loss: 0.4135 | 38.9s
+[2026-02-05 10:51:45]   Epoch 16/30 | train_loss: 0.4238 | val_loss: 0.4140 | 38.9s
+[2026-02-05 10:52:24]   Epoch 17/30 | train_loss: 0.4258 | val_loss: 0.4128 | 38.9s
+[2026-02-05 10:53:03]   Epoch 18/30 | train_loss: 0.4230 | val_loss: 0.4105 | 39.0s
+[2026-02-05 10:53:42]   Epoch 19/30 | train_loss: 0.4227 | val_loss: 0.4115 | 38.9s
+[2026-02-05 10:54:21]   Epoch 20/30 | train_loss: 0.4216 | val_loss: 0.4124 | 38.8s
+[2026-02-05 10:54:59]   Epoch 21/30 | train_loss: 0.4207 | val_loss: 0.4119 | 38.9s
+[2026-02-05 10:55:38]   Epoch 22/30 | train_loss: 0.4213 | val_loss: 0.4153 | 38.8s
+[2026-02-05 10:56:17]   Epoch 23/30 | train_loss: 0.4206 | val_loss: 0.4115 | 38.8s
+[2026-02-05 10:56:56]   Epoch 24/30 | train_loss: 0.4210 | val_loss: 0.4121 | 38.9s
+[2026-02-05 10:57:35]   Epoch 25/30 | train_loss: 0.4184 | val_loss: 0.4105 | 38.9s
+[2026-02-05 10:57:35]   Early stopping at epoch 25 (best val_loss: 0.4105)
+[2026-02-05 10:57:38]   RESULTS: acc=0.635 | f1=0.000 | auc=nan
+[2026-02-05 10:57:38]            H_recall=0.635 | MDD_recall=0.000
+[2026-02-05 10:57:38]   Fold completed in 16.3 min
+[2026-02-05 10:57:39] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:57:39] FOLD 5/40 — Test Subject: H_23
+[2026-02-05 10:57:39] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 10:57:41] Data preparation completed in 2.6s
+[2026-02-05 10:57:41]   Train: 17,550 samples | Val: 1,950 | Test: 1,507
+[2026-02-05 10:57:41]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 10:57:41] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 10:57:41] Starting training loop...
+[2026-02-05 10:58:20]   Epoch  1/30 | train_loss: 0.4524 | val_loss: 0.4321 | 38.9s
+[2026-02-05 10:58:59]   Epoch  2/30 | train_loss: 0.4376 | val_loss: 0.4265 | 38.7s
+[2026-02-05 10:59:38]   Epoch  3/30 | train_loss: 0.4349 | val_loss: 0.4197 | 38.9s
+[2026-02-05 11:00:17]   Epoch  4/30 | train_loss: 0.4313 | val_loss: 0.4173 | 38.9s
+[2026-02-05 11:00:56]   Epoch  5/30 | train_loss: 0.4302 | val_loss: 0.4183 | 39.0s
+[2026-02-05 11:01:35]   Epoch  6/30 | train_loss: 0.4299 | val_loss: 0.4164 | 39.0s
+[2026-02-05 11:02:14]   Epoch  7/30 | train_loss: 0.4271 | val_loss: 0.4183 | 38.8s
+[2026-02-05 11:02:53]   Epoch  8/30 | train_loss: 0.4287 | val_loss: 0.4143 | 39.0s
+[2026-02-05 11:03:32]   Epoch  9/30 | train_loss: 0.4270 | val_loss: 0.4138 | 38.9s
+[2026-02-05 11:04:11]   Epoch 10/30 | train_loss: 0.4261 | val_loss: 0.4131 | 39.0s
+[2026-02-05 11:04:50]   Epoch 11/30 | train_loss: 0.4248 | val_loss: 0.4131 | 39.0s
+[2026-02-05 11:05:30]   Epoch 12/30 | train_loss: 0.4253 | val_loss: 0.4111 | 39.2s
+[2026-02-05 11:06:09]   Epoch 13/30 | train_loss: 0.4245 | val_loss: 0.4107 | 38.9s
+[2026-02-05 11:06:48]   Epoch 14/30 | train_loss: 0.4247 | val_loss: 0.4168 | 38.9s
+[2026-02-05 11:07:27]   Epoch 15/30 | train_loss: 0.4237 | val_loss: 0.4093 | 39.0s
+[2026-02-05 11:08:05]   Epoch 16/30 | train_loss: 0.4224 | val_loss: 0.4093 | 38.9s
+[2026-02-05 11:08:45]   Epoch 17/30 | train_loss: 0.4235 | val_loss: 0.4098 | 38.9s
+[2026-02-05 11:09:23]   Epoch 18/30 | train_loss: 0.4224 | val_loss: 0.4089 | 38.9s
+[2026-02-05 11:10:02]   Epoch 19/30 | train_loss: 0.4235 | val_loss: 0.4088 | 38.9s
+[2026-02-05 11:10:41]   Epoch 20/30 | train_loss: 0.4201 | val_loss: 0.4079 | 38.9s
+[2026-02-05 11:11:21]   Epoch 21/30 | train_loss: 0.4197 | val_loss: 0.4075 | 38.9s
+[2026-02-05 11:12:00]   Epoch 22/30 | train_loss: 0.4221 | val_loss: 0.4072 | 38.9s
+[2026-02-05 11:12:39]   Epoch 23/30 | train_loss: 0.4194 | val_loss: 0.4077 | 39.0s
+[2026-02-05 11:13:18]   Epoch 24/30 | train_loss: 0.4190 | val_loss: 0.4080 | 39.0s
+[2026-02-05 11:13:57]   Epoch 25/30 | train_loss: 0.4170 | val_loss: 0.4092 | 39.1s
+[2026-02-05 11:14:36]   Epoch 26/30 | train_loss: 0.4184 | val_loss: 0.4067 | 39.0s
+[2026-02-05 11:15:15]   Epoch 27/30 | train_loss: 0.4200 | val_loss: 0.4074 | 39.0s
+[2026-02-05 11:15:54]   Epoch 28/30 | train_loss: 0.4176 | val_loss: 0.4074 | 39.1s
+[2026-02-05 11:16:33]   Epoch 29/30 | train_loss: 0.4171 | val_loss: 0.4069 | 39.1s
+[2026-02-05 11:17:12]   Epoch 30/30 | train_loss: 0.4181 | val_loss: 0.4058 | 39.0s
+[2026-02-05 11:17:16]   RESULTS: acc=0.666 | f1=0.000 | auc=nan
+[2026-02-05 11:17:16]            H_recall=0.666 | MDD_recall=0.000
+[2026-02-05 11:17:16]   Fold completed in 19.6 min
+[2026-02-05 11:17:16] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:17:16] FOLD 6/40 — Test Subject: H_24
+[2026-02-05 11:17:16] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:17:18] Data preparation completed in 2.5s
+[2026-02-05 11:17:18]   Train: 17,550 samples | Val: 1,950 | Test: 1,544
+[2026-02-05 11:17:18]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 11:17:18] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 11:17:18] Starting training loop...
+[2026-02-05 11:17:58]   Epoch  1/30 | train_loss: 0.4491 | val_loss: 0.4251 | 39.4s
+[2026-02-05 11:18:37]   Epoch  2/30 | train_loss: 0.4330 | val_loss: 0.4159 | 38.7s
+[2026-02-05 11:19:16]   Epoch  3/30 | train_loss: 0.4257 | val_loss: 0.4148 | 38.8s
+[2026-02-05 11:19:55]   Epoch  4/30 | train_loss: 0.4245 | val_loss: 0.4079 | 39.0s
+[2026-02-05 11:20:34]   Epoch  5/30 | train_loss: 0.4241 | val_loss: 0.4069 | 39.0s
+[2026-02-05 11:21:13]   Epoch  6/30 | train_loss: 0.4214 | val_loss: 0.4058 | 39.1s
+[2026-02-05 11:21:52]   Epoch  7/30 | train_loss: 0.4192 | val_loss: 0.4069 | 39.0s
+[2026-02-05 11:22:31]   Epoch  8/30 | train_loss: 0.4200 | val_loss: 0.4068 | 39.0s
+[2026-02-05 11:23:10]   Epoch  9/30 | train_loss: 0.4185 | val_loss: 0.4051 | 39.0s
+[2026-02-05 11:23:49]   Epoch 10/30 | train_loss: 0.4183 | val_loss: 0.4039 | 39.0s
+[2026-02-05 11:24:28]   Epoch 11/30 | train_loss: 0.4184 | val_loss: 0.4043 | 39.0s
+[2026-02-05 11:25:07]   Epoch 12/30 | train_loss: 0.4165 | val_loss: 0.4080 | 39.0s
+[2026-02-05 11:25:46]   Epoch 13/30 | train_loss: 0.4154 | val_loss: 0.4016 | 39.0s
+[2026-02-05 11:26:26]   Epoch 14/30 | train_loss: 0.4160 | val_loss: 0.4027 | 39.0s
+[2026-02-05 11:27:05]   Epoch 15/30 | train_loss: 0.4149 | val_loss: 0.4028 | 39.0s
+[2026-02-05 11:27:44]   Epoch 16/30 | train_loss: 0.4147 | val_loss: 0.4032 | 39.0s
+[2026-02-05 11:28:23]   Epoch 17/30 | train_loss: 0.4146 | val_loss: 0.4025 | 39.0s
+[2026-02-05 11:29:02]   Epoch 18/30 | train_loss: 0.4121 | val_loss: 0.4044 | 39.1s
+[2026-02-05 11:29:41]   Epoch 19/30 | train_loss: 0.4146 | val_loss: 0.4024 | 39.1s
+[2026-02-05 11:30:20]   Epoch 20/30 | train_loss: 0.4134 | val_loss: 0.4003 | 39.1s
+[2026-02-05 11:30:59]   Epoch 21/30 | train_loss: 0.4111 | val_loss: 0.4026 | 39.0s
+[2026-02-05 11:31:38]   Epoch 22/30 | train_loss: 0.4114 | val_loss: 0.4002 | 39.0s
+[2026-02-05 11:32:17]   Epoch 23/30 | train_loss: 0.4106 | val_loss: 0.3994 | 39.0s
+[2026-02-05 11:32:56]   Epoch 24/30 | train_loss: 0.4105 | val_loss: 0.3999 | 39.0s
+[2026-02-05 11:33:35]   Epoch 25/30 | train_loss: 0.4115 | val_loss: 0.4002 | 39.0s
+[2026-02-05 11:34:14]   Epoch 26/30 | train_loss: 0.4112 | val_loss: 0.4002 | 38.9s
+[2026-02-05 11:34:53]   Epoch 27/30 | train_loss: 0.4103 | val_loss: 0.3978 | 39.0s
+[2026-02-05 11:35:32]   Epoch 28/30 | train_loss: 0.4100 | val_loss: 0.3971 | 39.0s
+[2026-02-05 11:36:11]   Epoch 29/30 | train_loss: 0.4092 | val_loss: 0.3979 | 39.1s
+[2026-02-05 11:36:51]   Epoch 30/30 | train_loss: 0.4092 | val_loss: 0.3979 | 39.3s
+[2026-02-05 11:36:54]   RESULTS: acc=0.166 | f1=0.000 | auc=nan
+[2026-02-05 11:36:54]            H_recall=0.166 | MDD_recall=0.000
+[2026-02-05 11:36:54]   Fold completed in 19.6 min
+[2026-02-05 11:36:54] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:36:54] FOLD 7/40 — Test Subject: H_26
+[2026-02-05 11:36:54] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:36:57] Data preparation completed in 2.7s
+[2026-02-05 11:36:57]   Train: 17,550 samples | Val: 1,950 | Test: 1,643
+[2026-02-05 11:36:57]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 11:36:57] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 11:36:57] Starting training loop...
+[2026-02-05 11:37:37]   Epoch  1/30 | train_loss: 0.4530 | val_loss: 0.4338 | 39.4s
+[2026-02-05 11:38:16]   Epoch  2/30 | train_loss: 0.4399 | val_loss: 0.4230 | 38.9s
+[2026-02-05 11:38:55]   Epoch  3/30 | train_loss: 0.4327 | val_loss: 0.4198 | 39.1s
+[2026-02-05 11:39:34]   Epoch  4/30 | train_loss: 0.4309 | val_loss: 0.4197 | 39.0s
+[2026-02-05 11:40:13]   Epoch  5/30 | train_loss: 0.4324 | val_loss: 0.4172 | 39.1s
+[2026-02-05 11:40:52]   Epoch  6/30 | train_loss: 0.4292 | val_loss: 0.4156 | 39.2s
+[2026-02-05 11:41:32]   Epoch  7/30 | train_loss: 0.4271 | val_loss: 0.4172 | 39.1s
+[2026-02-05 11:42:11]   Epoch  8/30 | train_loss: 0.4267 | val_loss: 0.4152 | 39.2s
+[2026-02-05 11:42:50]   Epoch  9/30 | train_loss: 0.4267 | val_loss: 0.4150 | 39.3s
+[2026-02-05 11:43:29]   Epoch 10/30 | train_loss: 0.4255 | val_loss: 0.4135 | 39.2s
+[2026-02-05 11:44:09]   Epoch 11/30 | train_loss: 0.4252 | val_loss: 0.4133 | 39.2s
+[2026-02-05 11:44:48]   Epoch 12/30 | train_loss: 0.4243 | val_loss: 0.4150 | 39.2s
+[2026-02-05 11:45:27]   Epoch 13/30 | train_loss: 0.4231 | val_loss: 0.4187 | 39.2s
+[2026-02-05 11:46:07]   Epoch 14/30 | train_loss: 0.4235 | val_loss: 0.4128 | 39.3s
+[2026-02-05 11:46:46]   Epoch 15/30 | train_loss: 0.4227 | val_loss: 0.4116 | 39.1s
+[2026-02-05 11:47:25]   Epoch 16/30 | train_loss: 0.4235 | val_loss: 0.4125 | 39.1s
+[2026-02-05 11:48:04]   Epoch 17/30 | train_loss: 0.4211 | val_loss: 0.4118 | 39.2s
+[2026-02-05 11:48:43]   Epoch 18/30 | train_loss: 0.4219 | val_loss: 0.4121 | 39.2s
+[2026-02-05 11:49:23]   Epoch 19/30 | train_loss: 0.4203 | val_loss: 0.4119 | 39.2s
+[2026-02-05 11:50:02]   Epoch 20/30 | train_loss: 0.4215 | val_loss: 0.4142 | 39.2s
+[2026-02-05 11:50:41]   Epoch 21/30 | train_loss: 0.4208 | val_loss: 0.4126 | 39.2s
+[2026-02-05 11:51:20]   Epoch 22/30 | train_loss: 0.4212 | val_loss: 0.4117 | 39.1s
+[2026-02-05 11:51:20]   Early stopping at epoch 22 (best val_loss: 0.4116)
+[2026-02-05 11:51:24]   RESULTS: acc=0.618 | f1=0.000 | auc=nan
+[2026-02-05 11:51:24]            H_recall=0.618 | MDD_recall=0.000
+[2026-02-05 11:51:24]   Fold completed in 14.5 min
+[2026-02-05 11:51:24] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:51:24] FOLD 8/40 — Test Subject: H_27
+[2026-02-05 11:51:24] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 11:51:26] Data preparation completed in 2.5s
+[2026-02-05 11:51:26]   Train: 17,550 samples | Val: 1,950 | Test: 1,738
+[2026-02-05 11:51:26]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 11:51:27] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 11:51:27] Starting training loop...
+[2026-02-05 11:52:06]   Epoch  1/30 | train_loss: 0.4472 | val_loss: 0.4278 | 39.3s
+[2026-02-05 11:52:45]   Epoch  2/30 | train_loss: 0.4278 | val_loss: 0.4153 | 38.9s
+[2026-02-05 11:53:24]   Epoch  3/30 | train_loss: 0.4236 | val_loss: 0.4127 | 39.0s
+[2026-02-05 11:54:03]   Epoch  4/30 | train_loss: 0.4197 | val_loss: 0.4109 | 39.1s
+[2026-02-05 11:54:43]   Epoch  5/30 | train_loss: 0.4199 | val_loss: 0.4091 | 39.2s
+[2026-02-05 11:55:22]   Epoch  6/30 | train_loss: 0.4182 | val_loss: 0.4074 | 39.3s
+[2026-02-05 11:56:01]   Epoch  7/30 | train_loss: 0.4188 | val_loss: 0.4091 | 39.2s
+[2026-02-05 11:56:41]   Epoch  8/30 | train_loss: 0.4172 | val_loss: 0.4100 | 39.2s
+[2026-02-05 11:57:20]   Epoch  9/30 | train_loss: 0.4153 | val_loss: 0.4048 | 39.2s
+[2026-02-05 11:57:59]   Epoch 10/30 | train_loss: 0.4148 | val_loss: 0.4025 | 39.2s
+[2026-02-05 11:58:39]   Epoch 11/30 | train_loss: 0.4138 | val_loss: 0.4044 | 39.2s
+[2026-02-05 11:59:18]   Epoch 12/30 | train_loss: 0.4139 | val_loss: 0.4035 | 39.2s
+[2026-02-05 11:59:57]   Epoch 13/30 | train_loss: 0.4145 | val_loss: 0.4035 | 39.4s
+[2026-02-05 12:00:36]   Epoch 14/30 | train_loss: 0.4122 | val_loss: 0.4022 | 39.3s
+[2026-02-05 12:01:16]   Epoch 15/30 | train_loss: 0.4119 | val_loss: 0.4015 | 39.2s
+[2026-02-05 12:01:55]   Epoch 16/30 | train_loss: 0.4128 | val_loss: 0.4010 | 39.2s
+[2026-02-05 12:02:34]   Epoch 17/30 | train_loss: 0.4132 | val_loss: 0.4021 | 39.3s
+[2026-02-05 12:03:14]   Epoch 18/30 | train_loss: 0.4117 | val_loss: 0.4050 | 39.3s
+[2026-02-05 12:03:53]   Epoch 19/30 | train_loss: 0.4115 | val_loss: 0.4028 | 39.3s
+[2026-02-05 12:04:33]   Epoch 20/30 | train_loss: 0.4095 | val_loss: 0.4007 | 39.5s
+[2026-02-05 12:05:12]   Epoch 21/30 | train_loss: 0.4100 | val_loss: 0.4063 | 39.3s
+[2026-02-05 12:05:51]   Epoch 22/30 | train_loss: 0.4102 | val_loss: 0.4004 | 39.4s
+[2026-02-05 12:06:31]   Epoch 23/30 | train_loss: 0.4098 | val_loss: 0.4001 | 39.4s
+[2026-02-05 12:07:10]   Epoch 24/30 | train_loss: 0.4086 | val_loss: 0.4017 | 39.3s
+[2026-02-05 12:07:50]   Epoch 25/30 | train_loss: 0.4081 | val_loss: 0.3989 | 39.3s
+[2026-02-05 12:08:29]   Epoch 26/30 | train_loss: 0.4075 | val_loss: 0.3997 | 39.2s
+[2026-02-05 12:09:08]   Epoch 27/30 | train_loss: 0.4090 | val_loss: 0.4007 | 39.3s
+[2026-02-05 12:09:47]   Epoch 28/30 | train_loss: 0.4062 | val_loss: 0.4012 | 39.2s
+[2026-02-05 12:10:27]   Epoch 29/30 | train_loss: 0.4049 | val_loss: 0.3988 | 39.3s
+[2026-02-05 12:11:06]   Epoch 30/30 | train_loss: 0.4042 | val_loss: 0.3992 | 39.4s
+[2026-02-05 12:11:10]   RESULTS: acc=0.129 | f1=0.000 | auc=nan
+[2026-02-05 12:11:10]            H_recall=0.129 | MDD_recall=0.000
+[2026-02-05 12:11:10]   Fold completed in 19.8 min
+[2026-02-05 12:11:10] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:11:10] FOLD 9/40 — Test Subject: H_28
+[2026-02-05 12:11:10] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:11:13] Data preparation completed in 2.9s
+[2026-02-05 12:11:13]   Train: 17,550 samples | Val: 1,950 | Test: 1,657
+[2026-02-05 12:11:13]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 12:11:13] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 12:11:13] Starting training loop...
+[2026-02-05 12:11:53]   Epoch  1/30 | train_loss: 0.4545 | val_loss: 0.4481 | 40.3s
+[2026-02-05 12:12:33]   Epoch  2/30 | train_loss: 0.4397 | val_loss: 0.4380 | 39.2s
+[2026-02-05 12:13:12]   Epoch  3/30 | train_loss: 0.4330 | val_loss: 0.4365 | 39.2s
+[2026-02-05 12:13:51]   Epoch  4/30 | train_loss: 0.4326 | val_loss: 0.4342 | 39.2s
+[2026-02-05 12:14:31]   Epoch  5/30 | train_loss: 0.4319 | val_loss: 0.4346 | 39.2s
+[2026-02-05 12:15:10]   Epoch  6/30 | train_loss: 0.4289 | val_loss: 0.4312 | 39.2s
+[2026-02-05 12:15:49]   Epoch  7/30 | train_loss: 0.4286 | val_loss: 0.4311 | 39.2s
+[2026-02-05 12:16:29]   Epoch  8/30 | train_loss: 0.4277 | val_loss: 0.4299 | 39.2s
+[2026-02-05 12:17:08]   Epoch  9/30 | train_loss: 0.4267 | val_loss: 0.4328 | 39.3s
+[2026-02-05 12:17:47]   Epoch 10/30 | train_loss: 0.4286 | val_loss: 0.4290 | 39.3s
+[2026-02-05 12:18:27]   Epoch 11/30 | train_loss: 0.4262 | val_loss: 0.4300 | 39.3s
+[2026-02-05 12:19:06]   Epoch 12/30 | train_loss: 0.4253 | val_loss: 0.4294 | 39.3s
+[2026-02-05 12:19:45]   Epoch 13/30 | train_loss: 0.4235 | val_loss: 0.4290 | 39.3s
+[2026-02-05 12:20:25]   Epoch 14/30 | train_loss: 0.4242 | val_loss: 0.4278 | 39.4s
+[2026-02-05 12:21:04]   Epoch 15/30 | train_loss: 0.4233 | val_loss: 0.4286 | 39.3s
+[2026-02-05 12:21:44]   Epoch 16/30 | train_loss: 0.4259 | val_loss: 0.4321 | 39.4s
+[2026-02-05 12:22:23]   Epoch 17/30 | train_loss: 0.4237 | val_loss: 0.4302 | 39.4s
+[2026-02-05 12:23:02]   Epoch 18/30 | train_loss: 0.4235 | val_loss: 0.4267 | 39.3s
+[2026-02-05 12:23:42]   Epoch 19/30 | train_loss: 0.4229 | val_loss: 0.4288 | 39.3s
+[2026-02-05 12:24:21]   Epoch 20/30 | train_loss: 0.4229 | val_loss: 0.4263 | 39.3s
+[2026-02-05 12:25:00]   Epoch 21/30 | train_loss: 0.4224 | val_loss: 0.4262 | 39.5s
+[2026-02-05 12:25:40]   Epoch 22/30 | train_loss: 0.4226 | val_loss: 0.4268 | 39.4s
+[2026-02-05 12:26:19]   Epoch 23/30 | train_loss: 0.4225 | val_loss: 0.4255 | 39.3s
+[2026-02-05 12:26:59]   Epoch 24/30 | train_loss: 0.4194 | val_loss: 0.4252 | 39.3s
+[2026-02-05 12:27:38]   Epoch 25/30 | train_loss: 0.4200 | val_loss: 0.4251 | 39.3s
+[2026-02-05 12:28:18]   Epoch 26/30 | train_loss: 0.4191 | val_loss: 0.4242 | 39.2s
+[2026-02-05 12:28:57]   Epoch 27/30 | train_loss: 0.4191 | val_loss: 0.4243 | 39.3s
+[2026-02-05 12:29:36]   Epoch 28/30 | train_loss: 0.4212 | val_loss: 0.4252 | 39.3s
+[2026-02-05 12:30:16]   Epoch 29/30 | train_loss: 0.4197 | val_loss: 0.4256 | 39.3s
+[2026-02-05 12:30:55]   Epoch 30/30 | train_loss: 0.4180 | val_loss: 0.4247 | 39.4s
+[2026-02-05 12:30:58]   RESULTS: acc=0.816 | f1=0.000 | auc=nan
+[2026-02-05 12:30:58]            H_recall=0.816 | MDD_recall=0.000
+[2026-02-05 12:30:58]   Fold completed in 19.8 min
+[2026-02-05 12:30:58] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:30:58] FOLD 10/40 — Test Subject: H_4
+[2026-02-05 12:30:58] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:31:01] Data preparation completed in 2.6s
+[2026-02-05 12:31:01]   Train: 17,550 samples | Val: 1,950 | Test: 1,677
+[2026-02-05 12:31:01]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 12:31:01] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 12:31:01] Starting training loop...
+[2026-02-05 12:31:41]   Epoch  1/30 | train_loss: 0.4532 | val_loss: 0.4346 | 39.9s
+[2026-02-05 12:32:21]   Epoch  2/30 | train_loss: 0.4389 | val_loss: 0.4274 | 39.2s
+[2026-02-05 12:33:00]   Epoch  3/30 | train_loss: 0.4335 | val_loss: 0.4229 | 39.4s
+[2026-02-05 12:33:40]   Epoch  4/30 | train_loss: 0.4328 | val_loss: 0.4176 | 39.3s
+[2026-02-05 12:34:19]   Epoch  5/30 | train_loss: 0.4317 | val_loss: 0.4160 | 39.4s
+[2026-02-05 12:34:59]   Epoch  6/30 | train_loss: 0.4289 | val_loss: 0.4151 | 39.6s
+[2026-02-05 12:35:38]   Epoch  7/30 | train_loss: 0.4268 | val_loss: 0.4147 | 39.4s
+[2026-02-05 12:36:18]   Epoch  8/30 | train_loss: 0.4278 | val_loss: 0.4130 | 39.4s
+[2026-02-05 12:36:58]   Epoch  9/30 | train_loss: 0.4253 | val_loss: 0.4131 | 39.6s
+[2026-02-05 12:37:37]   Epoch 10/30 | train_loss: 0.4233 | val_loss: 0.4109 | 39.5s
+[2026-02-05 12:38:16]   Epoch 11/30 | train_loss: 0.4242 | val_loss: 0.4128 | 39.4s
+[2026-02-05 12:38:56]   Epoch 12/30 | train_loss: 0.4263 | val_loss: 0.4124 | 39.5s
+[2026-02-05 12:39:35]   Epoch 13/30 | train_loss: 0.4240 | val_loss: 0.4131 | 39.4s
+[2026-02-05 12:40:15]   Epoch 14/30 | train_loss: 0.4216 | val_loss: 0.4120 | 39.5s
+[2026-02-05 12:40:54]   Epoch 15/30 | train_loss: 0.4233 | val_loss: 0.4145 | 39.5s
+[2026-02-05 12:41:34]   Epoch 16/30 | train_loss: 0.4227 | val_loss: 0.4153 | 39.4s
+[2026-02-05 12:42:13]   Epoch 17/30 | train_loss: 0.4206 | val_loss: 0.4127 | 39.5s
+[2026-02-05 12:42:13]   Early stopping at epoch 17 (best val_loss: 0.4109)
+[2026-02-05 12:42:17]   RESULTS: acc=0.551 | f1=0.000 | auc=nan
+[2026-02-05 12:42:17]            H_recall=0.551 | MDD_recall=0.000
+[2026-02-05 12:42:17]   Fold completed in 11.3 min
+[2026-02-05 12:42:17] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:42:17] FOLD 11/40 — Test Subject: H_5
+[2026-02-05 12:42:17] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 12:42:20] Data preparation completed in 2.7s
+[2026-02-05 12:42:20]   Train: 17,550 samples | Val: 1,950 | Test: 1,598
+[2026-02-05 12:42:20]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 12:42:20] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 12:42:20] Starting training loop...
+[2026-02-05 12:43:00]   Epoch  1/30 | train_loss: 0.4520 | val_loss: 0.4396 | 39.7s
+[2026-02-05 12:43:39]   Epoch  2/30 | train_loss: 0.4395 | val_loss: 0.4317 | 39.2s
+[2026-02-05 12:44:18]   Epoch  3/30 | train_loss: 0.4351 | val_loss: 0.4293 | 39.3s
+[2026-02-05 12:44:58]   Epoch  4/30 | train_loss: 0.4339 | val_loss: 0.4292 | 39.3s
+[2026-02-05 12:45:37]   Epoch  5/30 | train_loss: 0.4294 | val_loss: 0.4280 | 39.2s
+[2026-02-05 12:46:17]   Epoch  6/30 | train_loss: 0.4288 | val_loss: 0.4290 | 39.3s
+[2026-02-05 12:46:56]   Epoch  7/30 | train_loss: 0.4308 | val_loss: 0.4286 | 39.5s
+[2026-02-05 12:47:36]   Epoch  8/30 | train_loss: 0.4287 | val_loss: 0.4295 | 39.5s
+[2026-02-05 12:48:15]   Epoch  9/30 | train_loss: 0.4266 | val_loss: 0.4281 | 39.4s
+[2026-02-05 12:48:54]   Epoch 10/30 | train_loss: 0.4285 | val_loss: 0.4269 | 39.5s
+[2026-02-05 12:49:34]   Epoch 11/30 | train_loss: 0.4266 | val_loss: 0.4267 | 39.4s
+[2026-02-05 12:50:13]   Epoch 12/30 | train_loss: 0.4256 | val_loss: 0.4262 | 39.4s
+[2026-02-05 12:50:53]   Epoch 13/30 | train_loss: 0.4260 | val_loss: 0.4266 | 39.6s
+[2026-02-05 12:51:33]   Epoch 14/30 | train_loss: 0.4245 | val_loss: 0.4256 | 39.7s
+[2026-02-05 12:52:13]   Epoch 15/30 | train_loss: 0.4265 | val_loss: 0.4255 | 39.7s
+[2026-02-05 12:52:52]   Epoch 16/30 | train_loss: 0.4242 | val_loss: 0.4250 | 39.7s
+[2026-02-05 12:53:32]   Epoch 17/30 | train_loss: 0.4247 | val_loss: 0.4237 | 39.7s
+[2026-02-05 12:54:12]   Epoch 18/30 | train_loss: 0.4208 | val_loss: 0.4241 | 39.5s
+[2026-02-05 12:54:51]   Epoch 19/30 | train_loss: 0.4231 | val_loss: 0.4236 | 39.5s
+[2026-02-05 12:55:31]   Epoch 20/30 | train_loss: 0.4224 | val_loss: 0.4244 | 39.5s
+[2026-02-05 12:56:11]   Epoch 21/30 | train_loss: 0.4231 | val_loss: 0.4256 | 39.7s
+[2026-02-05 12:56:50]   Epoch 22/30 | train_loss: 0.4209 | val_loss: 0.4246 | 39.7s
+[2026-02-05 12:57:30]   Epoch 23/30 | train_loss: 0.4204 | val_loss: 0.4271 | 39.9s
+[2026-02-05 12:58:10]   Epoch 24/30 | train_loss: 0.4198 | val_loss: 0.4291 | 39.7s
+[2026-02-05 12:58:50]   Epoch 25/30 | train_loss: 0.4218 | val_loss: 0.4228 | 39.8s
+[2026-02-05 12:59:30]   Epoch 26/30 | train_loss: 0.4188 | val_loss: 0.4244 | 39.6s
+[2026-02-05 13:00:09]   Epoch 27/30 | train_loss: 0.4209 | val_loss: 0.4223 | 39.6s
+[2026-02-05 13:00:49]   Epoch 28/30 | train_loss: 0.4207 | val_loss: 0.4278 | 39.6s
+[2026-02-05 13:01:28]   Epoch 29/30 | train_loss: 0.4190 | val_loss: 0.4263 | 39.6s
+[2026-02-05 13:02:08]   Epoch 30/30 | train_loss: 0.4197 | val_loss: 0.4218 | 39.6s
+[2026-02-05 13:02:11]   RESULTS: acc=0.755 | f1=0.000 | auc=nan
+[2026-02-05 13:02:11]            H_recall=0.755 | MDD_recall=0.000
+[2026-02-05 13:02:11]   Fold completed in 19.9 min
+[2026-02-05 13:02:11] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:02:11] FOLD 12/40 — Test Subject: H_6
+[2026-02-05 13:02:11] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:02:14] Data preparation completed in 2.7s
+[2026-02-05 13:02:14]   Train: 17,550 samples | Val: 1,950 | Test: 1,270
+[2026-02-05 13:02:14]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 13:02:14] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 13:02:14] Starting training loop...
+[2026-02-05 13:02:55]   Epoch  1/30 | train_loss: 0.4558 | val_loss: 0.4363 | 40.7s
+[2026-02-05 13:03:35]   Epoch  2/30 | train_loss: 0.4433 | val_loss: 0.4265 | 39.3s
+[2026-02-05 13:04:14]   Epoch  3/30 | train_loss: 0.4377 | val_loss: 0.4211 | 39.6s
+[2026-02-05 13:04:54]   Epoch  4/30 | train_loss: 0.4341 | val_loss: 0.4169 | 39.8s
+[2026-02-05 13:05:34]   Epoch  5/30 | train_loss: 0.4335 | val_loss: 0.4205 | 39.6s
+[2026-02-05 13:06:14]   Epoch  6/30 | train_loss: 0.4317 | val_loss: 0.4169 | 39.6s
+[2026-02-05 13:06:53]   Epoch  7/30 | train_loss: 0.4317 | val_loss: 0.4218 | 39.8s
+[2026-02-05 13:07:33]   Epoch  8/30 | train_loss: 0.4327 | val_loss: 0.4162 | 39.7s
+[2026-02-05 13:08:13]   Epoch  9/30 | train_loss: 0.4301 | val_loss: 0.4133 | 39.7s
+[2026-02-05 13:08:53]   Epoch 10/30 | train_loss: 0.4301 | val_loss: 0.4135 | 39.8s
+[2026-02-05 13:09:32]   Epoch 11/30 | train_loss: 0.4293 | val_loss: 0.4138 | 39.8s
+[2026-02-05 13:10:12]   Epoch 12/30 | train_loss: 0.4290 | val_loss: 0.4128 | 39.9s
+[2026-02-05 13:10:52]   Epoch 13/30 | train_loss: 0.4285 | val_loss: 0.4117 | 39.9s
+[2026-02-05 13:11:32]   Epoch 14/30 | train_loss: 0.4272 | val_loss: 0.4126 | 39.8s
+[2026-02-05 13:12:12]   Epoch 15/30 | train_loss: 0.4261 | val_loss: 0.4115 | 39.8s
+[2026-02-05 13:12:52]   Epoch 16/30 | train_loss: 0.4249 | val_loss: 0.4093 | 39.8s
+[2026-02-05 13:13:32]   Epoch 17/30 | train_loss: 0.4267 | val_loss: 0.4123 | 39.8s
+[2026-02-05 13:14:12]   Epoch 18/30 | train_loss: 0.4263 | val_loss: 0.4108 | 39.8s
+[2026-02-05 13:14:51]   Epoch 19/30 | train_loss: 0.4257 | val_loss: 0.4117 | 39.9s
+[2026-02-05 13:15:31]   Epoch 20/30 | train_loss: 0.4269 | val_loss: 0.4136 | 39.8s
+[2026-02-05 13:16:11]   Epoch 21/30 | train_loss: 0.4244 | val_loss: 0.4150 | 39.8s
+[2026-02-05 13:16:51]   Epoch 22/30 | train_loss: 0.4248 | val_loss: 0.4098 | 39.9s
+[2026-02-05 13:17:31]   Epoch 23/30 | train_loss: 0.4257 | val_loss: 0.4096 | 39.8s
+[2026-02-05 13:17:31]   Early stopping at epoch 23 (best val_loss: 0.4093)
+[2026-02-05 13:17:33]   RESULTS: acc=0.783 | f1=0.000 | auc=nan
+[2026-02-05 13:17:33]            H_recall=0.783 | MDD_recall=0.000
+[2026-02-05 13:17:33]   Fold completed in 15.4 min
+[2026-02-05 13:17:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:17:33] FOLD 13/40 — Test Subject: H_8
+[2026-02-05 13:17:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:17:36] Data preparation completed in 2.8s
+[2026-02-05 13:17:36]   Train: 17,550 samples | Val: 1,950 | Test: 1,684
+[2026-02-05 13:17:36]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 13:17:36] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 13:17:36] Starting training loop...
+[2026-02-05 13:18:17]   Epoch  1/30 | train_loss: 0.4521 | val_loss: 0.4332 | 40.8s
+[2026-02-05 13:18:57]   Epoch  2/30 | train_loss: 0.4365 | val_loss: 0.4219 | 39.6s
+[2026-02-05 13:19:37]   Epoch  3/30 | train_loss: 0.4346 | val_loss: 0.4213 | 39.6s
+[2026-02-05 13:20:17]   Epoch  4/30 | train_loss: 0.4294 | val_loss: 0.4243 | 39.7s
+[2026-02-05 13:20:56]   Epoch  5/30 | train_loss: 0.4295 | val_loss: 0.4215 | 39.8s
+[2026-02-05 13:21:36]   Epoch  6/30 | train_loss: 0.4283 | val_loss: 0.4158 | 39.8s
+[2026-02-05 13:22:16]   Epoch  7/30 | train_loss: 0.4261 | val_loss: 0.4153 | 39.8s
+[2026-02-05 13:22:56]   Epoch  8/30 | train_loss: 0.4260 | val_loss: 0.4159 | 39.9s
+[2026-02-05 13:23:36]   Epoch  9/30 | train_loss: 0.4253 | val_loss: 0.4145 | 39.9s
+[2026-02-05 13:24:16]   Epoch 10/30 | train_loss: 0.4268 | val_loss: 0.4137 | 39.8s
+[2026-02-05 13:24:56]   Epoch 11/30 | train_loss: 0.4269 | val_loss: 0.4193 | 39.9s
+[2026-02-05 13:25:36]   Epoch 12/30 | train_loss: 0.4248 | val_loss: 0.4151 | 39.9s
+[2026-02-05 13:26:16]   Epoch 13/30 | train_loss: 0.4256 | val_loss: 0.4147 | 39.9s
+[2026-02-05 13:26:56]   Epoch 14/30 | train_loss: 0.4252 | val_loss: 0.4148 | 39.9s
+[2026-02-05 13:27:36]   Epoch 15/30 | train_loss: 0.4228 | val_loss: 0.4127 | 40.1s
+[2026-02-05 13:28:16]   Epoch 16/30 | train_loss: 0.4236 | val_loss: 0.4131 | 39.9s
+[2026-02-05 13:28:55]   Epoch 17/30 | train_loss: 0.4226 | val_loss: 0.4141 | 39.9s
+[2026-02-05 13:29:35]   Epoch 18/30 | train_loss: 0.4216 | val_loss: 0.4120 | 39.9s
+[2026-02-05 13:30:15]   Epoch 19/30 | train_loss: 0.4238 | val_loss: 0.4136 | 39.9s
+[2026-02-05 13:30:55]   Epoch 20/30 | train_loss: 0.4212 | val_loss: 0.4130 | 40.0s
+[2026-02-05 13:31:35]   Epoch 21/30 | train_loss: 0.4216 | val_loss: 0.4099 | 39.9s
+[2026-02-05 13:32:15]   Epoch 22/30 | train_loss: 0.4207 | val_loss: 0.4119 | 39.8s
+[2026-02-05 13:32:55]   Epoch 23/30 | train_loss: 0.4202 | val_loss: 0.4109 | 40.0s
+[2026-02-05 13:33:35]   Epoch 24/30 | train_loss: 0.4190 | val_loss: 0.4106 | 39.9s
+[2026-02-05 13:34:15]   Epoch 25/30 | train_loss: 0.4189 | val_loss: 0.4114 | 39.9s
+[2026-02-05 13:34:55]   Epoch 26/30 | train_loss: 0.4197 | val_loss: 0.4106 | 40.0s
+[2026-02-05 13:35:35]   Epoch 27/30 | train_loss: 0.4186 | val_loss: 0.4111 | 40.0s
+[2026-02-05 13:36:15]   Epoch 28/30 | train_loss: 0.4165 | val_loss: 0.4123 | 40.0s
+[2026-02-05 13:36:15]   Early stopping at epoch 28 (best val_loss: 0.4099)
+[2026-02-05 13:36:18]   RESULTS: acc=0.591 | f1=0.000 | auc=nan
+[2026-02-05 13:36:18]            H_recall=0.591 | MDD_recall=0.000
+[2026-02-05 13:36:18]   Fold completed in 18.7 min
+[2026-02-05 13:36:19] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:36:19] FOLD 14/40 — Test Subject: H_9
+[2026-02-05 13:36:19] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:36:21] Data preparation completed in 2.8s
+[2026-02-05 13:36:21]   Train: 17,550 samples | Val: 1,950 | Test: 1,380
+[2026-02-05 13:36:21]   Class balance: H=5,850, MDD=11,700 | pos_weight=0.500
+[2026-02-05 13:36:22] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 13:36:22] Starting training loop...
+[2026-02-05 13:37:02]   Epoch  1/30 | train_loss: 0.4518 | val_loss: 0.4325 | 40.7s
+[2026-02-05 13:37:42]   Epoch  2/30 | train_loss: 0.4378 | val_loss: 0.4252 | 39.8s
+[2026-02-05 13:38:22]   Epoch  3/30 | train_loss: 0.4353 | val_loss: 0.4145 | 39.8s
+[2026-02-05 13:39:02]   Epoch  4/30 | train_loss: 0.4317 | val_loss: 0.4165 | 39.9s
+[2026-02-05 13:39:42]   Epoch  5/30 | train_loss: 0.4282 | val_loss: 0.4202 | 39.9s
+[2026-02-05 13:40:22]   Epoch  6/30 | train_loss: 0.4291 | val_loss: 0.4113 | 39.9s
+[2026-02-05 13:41:02]   Epoch  7/30 | train_loss: 0.4285 | val_loss: 0.4098 | 40.0s
+[2026-02-05 13:41:42]   Epoch  8/30 | train_loss: 0.4261 | val_loss: 0.4077 | 39.9s
+[2026-02-05 13:42:22]   Epoch  9/30 | train_loss: 0.4265 | val_loss: 0.4084 | 40.0s
+[2026-02-05 13:43:02]   Epoch 10/30 | train_loss: 0.4260 | val_loss: 0.4114 | 40.0s
+[2026-02-05 13:43:42]   Epoch 11/30 | train_loss: 0.4260 | val_loss: 0.4083 | 39.9s
+[2026-02-05 13:44:22]   Epoch 12/30 | train_loss: 0.4247 | val_loss: 0.4098 | 39.9s
+[2026-02-05 13:45:02]   Epoch 13/30 | train_loss: 0.4243 | val_loss: 0.4064 | 40.0s
+[2026-02-05 13:45:42]   Epoch 14/30 | train_loss: 0.4253 | val_loss: 0.4083 | 39.9s
+[2026-02-05 13:46:22]   Epoch 15/30 | train_loss: 0.4239 | val_loss: 0.4068 | 40.0s
+[2026-02-05 13:47:02]   Epoch 16/30 | train_loss: 0.4229 | val_loss: 0.4061 | 40.1s
+[2026-02-05 13:47:42]   Epoch 17/30 | train_loss: 0.4234 | val_loss: 0.4059 | 40.0s
+[2026-02-05 13:48:22]   Epoch 18/30 | train_loss: 0.4230 | val_loss: 0.4048 | 39.9s
+[2026-02-05 13:49:02]   Epoch 19/30 | train_loss: 0.4219 | val_loss: 0.4053 | 39.9s
+[2026-02-05 13:49:42]   Epoch 20/30 | train_loss: 0.4202 | val_loss: 0.4046 | 39.9s
+[2026-02-05 13:50:22]   Epoch 21/30 | train_loss: 0.4206 | val_loss: 0.4058 | 39.8s
+[2026-02-05 13:51:02]   Epoch 22/30 | train_loss: 0.4208 | val_loss: 0.4047 | 40.0s
+[2026-02-05 13:51:42]   Epoch 23/30 | train_loss: 0.4189 | val_loss: 0.4029 | 40.0s
+[2026-02-05 13:52:22]   Epoch 24/30 | train_loss: 0.4196 | val_loss: 0.4057 | 39.9s
+[2026-02-05 13:53:02]   Epoch 25/30 | train_loss: 0.4195 | val_loss: 0.4042 | 40.0s
+[2026-02-05 13:53:42]   Epoch 26/30 | train_loss: 0.4189 | val_loss: 0.4049 | 39.9s
+[2026-02-05 13:54:22]   Epoch 27/30 | train_loss: 0.4192 | val_loss: 0.4048 | 40.0s
+[2026-02-05 13:55:02]   Epoch 28/30 | train_loss: 0.4188 | val_loss: 0.4028 | 40.0s
+[2026-02-05 13:55:42]   Epoch 29/30 | train_loss: 0.4176 | val_loss: 0.4009 | 40.0s
+[2026-02-05 13:56:22]   Epoch 30/30 | train_loss: 0.4182 | val_loss: 0.4017 | 40.1s
+[2026-02-05 13:56:26]   RESULTS: acc=0.642 | f1=0.000 | auc=nan
+[2026-02-05 13:56:26]            H_recall=0.642 | MDD_recall=0.000
+[2026-02-05 13:56:26]   Fold completed in 20.1 min
+[2026-02-05 13:56:26] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:56:26] FOLD 15/40 — Test Subject: MDD_1
+[2026-02-05 13:56:26] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 13:56:29] Data preparation completed in 2.9s
+[2026-02-05 13:56:29]   Train: 17,550 samples | Val: 1,950 | Test: 1,659
+[2026-02-05 13:56:29]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 13:56:29] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 13:56:29] Starting training loop...
+[2026-02-05 13:57:10]   Epoch  1/30 | train_loss: 0.4866 | val_loss: 0.4772 | 40.9s
+[2026-02-05 13:57:50]   Epoch  2/30 | train_loss: 0.4709 | val_loss: 0.4543 | 39.8s
+[2026-02-05 13:58:30]   Epoch  3/30 | train_loss: 0.4651 | val_loss: 0.4517 | 39.7s
+[2026-02-05 13:59:09]   Epoch  4/30 | train_loss: 0.4633 | val_loss: 0.4495 | 39.7s
+[2026-02-05 13:59:49]   Epoch  5/30 | train_loss: 0.4595 | val_loss: 0.4485 | 39.8s
+[2026-02-05 14:00:29]   Epoch  6/30 | train_loss: 0.4589 | val_loss: 0.4482 | 39.8s
+[2026-02-05 14:01:09]   Epoch  7/30 | train_loss: 0.4599 | val_loss: 0.4501 | 39.8s
+[2026-02-05 14:01:49]   Epoch  8/30 | train_loss: 0.4569 | val_loss: 0.4476 | 39.8s
+[2026-02-05 14:02:29]   Epoch  9/30 | train_loss: 0.4571 | val_loss: 0.4489 | 39.8s
+[2026-02-05 14:03:09]   Epoch 10/30 | train_loss: 0.4574 | val_loss: 0.4490 | 39.9s
+[2026-02-05 14:03:49]   Epoch 11/30 | train_loss: 0.4558 | val_loss: 0.4450 | 40.2s
+[2026-02-05 14:04:29]   Epoch 12/30 | train_loss: 0.4552 | val_loss: 0.4469 | 40.0s
+[2026-02-05 14:05:09]   Epoch 13/30 | train_loss: 0.4558 | val_loss: 0.4470 | 39.9s
+[2026-02-05 14:05:49]   Epoch 14/30 | train_loss: 0.4551 | val_loss: 0.4449 | 39.9s
+[2026-02-05 14:06:29]   Epoch 15/30 | train_loss: 0.4560 | val_loss: 0.4436 | 39.9s
+[2026-02-05 14:07:09]   Epoch 16/30 | train_loss: 0.4545 | val_loss: 0.4454 | 39.9s
+[2026-02-05 14:07:49]   Epoch 17/30 | train_loss: 0.4537 | val_loss: 0.4457 | 40.0s
+[2026-02-05 14:08:29]   Epoch 18/30 | train_loss: 0.4548 | val_loss: 0.4445 | 39.9s
+[2026-02-05 14:09:09]   Epoch 19/30 | train_loss: 0.4514 | val_loss: 0.4432 | 39.9s
+[2026-02-05 14:09:49]   Epoch 20/30 | train_loss: 0.4509 | val_loss: 0.4447 | 39.8s
+[2026-02-05 14:10:29]   Epoch 21/30 | train_loss: 0.4506 | val_loss: 0.4433 | 39.9s
+[2026-02-05 14:11:09]   Epoch 22/30 | train_loss: 0.4502 | val_loss: 0.4447 | 40.0s
+[2026-02-05 14:11:48]   Epoch 23/30 | train_loss: 0.4494 | val_loss: 0.4421 | 39.9s
+[2026-02-05 14:12:29]   Epoch 24/30 | train_loss: 0.4519 | val_loss: 0.4432 | 40.0s
+[2026-02-05 14:13:09]   Epoch 25/30 | train_loss: 0.4496 | val_loss: 0.4427 | 40.0s
+[2026-02-05 14:13:49]   Epoch 26/30 | train_loss: 0.4476 | val_loss: 0.4430 | 40.0s
+[2026-02-05 14:14:29]   Epoch 27/30 | train_loss: 0.4495 | val_loss: 0.4415 | 40.1s
+[2026-02-05 14:15:09]   Epoch 28/30 | train_loss: 0.4488 | val_loss: 0.4451 | 40.0s
+[2026-02-05 14:15:49]   Epoch 29/30 | train_loss: 0.4484 | val_loss: 0.4415 | 40.1s
+[2026-02-05 14:16:29]   Epoch 30/30 | train_loss: 0.4492 | val_loss: 0.4405 | 40.0s
+[2026-02-05 14:16:33]   RESULTS: acc=0.769 | f1=0.870 | auc=nan
+[2026-02-05 14:16:33]            H_recall=0.000 | MDD_recall=0.769
+[2026-02-05 14:16:33]   Fold completed in 20.1 min
+[2026-02-05 14:16:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:16:33] FOLD 16/40 — Test Subject: MDD_10
+[2026-02-05 14:16:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:16:36] Data preparation completed in 2.9s
+[2026-02-05 14:16:36]   Train: 17,550 samples | Val: 1,950 | Test: 1,726
+[2026-02-05 14:16:36]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 14:16:36] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 14:16:36] Starting training loop...
+[2026-02-05 14:17:17]   Epoch  1/30 | train_loss: 0.4855 | val_loss: 0.4644 | 40.9s
+[2026-02-05 14:17:57]   Epoch  2/30 | train_loss: 0.4679 | val_loss: 0.4603 | 39.9s
+[2026-02-05 14:18:37]   Epoch  3/30 | train_loss: 0.4645 | val_loss: 0.4540 | 39.9s
+[2026-02-05 14:19:17]   Epoch  4/30 | train_loss: 0.4626 | val_loss: 0.4491 | 39.9s
+[2026-02-05 14:19:57]   Epoch  5/30 | train_loss: 0.4615 | val_loss: 0.4474 | 39.9s
+[2026-02-05 14:20:37]   Epoch  6/30 | train_loss: 0.4592 | val_loss: 0.4467 | 39.9s
+[2026-02-05 14:21:17]   Epoch  7/30 | train_loss: 0.4588 | val_loss: 0.4469 | 39.9s
+[2026-02-05 14:21:57]   Epoch  8/30 | train_loss: 0.4597 | val_loss: 0.4459 | 40.2s
+[2026-02-05 14:22:38]   Epoch  9/30 | train_loss: 0.4566 | val_loss: 0.4463 | 40.5s
+[2026-02-05 14:23:18]   Epoch 10/30 | train_loss: 0.4570 | val_loss: 0.4440 | 40.4s
+[2026-02-05 14:23:59]   Epoch 11/30 | train_loss: 0.4554 | val_loss: 0.4439 | 40.4s
+[2026-02-05 14:24:39]   Epoch 12/30 | train_loss: 0.4564 | val_loss: 0.4448 | 40.0s
+[2026-02-05 14:25:19]   Epoch 13/30 | train_loss: 0.4547 | val_loss: 0.4470 | 39.9s
+[2026-02-05 14:25:59]   Epoch 14/30 | train_loss: 0.4541 | val_loss: 0.4445 | 40.0s
+[2026-02-05 14:26:39]   Epoch 15/30 | train_loss: 0.4551 | val_loss: 0.4442 | 40.0s
+[2026-02-05 14:27:19]   Epoch 16/30 | train_loss: 0.4527 | val_loss: 0.4420 | 40.1s
+[2026-02-05 14:27:59]   Epoch 17/30 | train_loss: 0.4522 | val_loss: 0.4414 | 40.1s
+[2026-02-05 14:28:39]   Epoch 18/30 | train_loss: 0.4520 | val_loss: 0.4405 | 40.0s
+[2026-02-05 14:29:19]   Epoch 19/30 | train_loss: 0.4527 | val_loss: 0.4393 | 40.0s
+[2026-02-05 14:29:59]   Epoch 20/30 | train_loss: 0.4499 | val_loss: 0.4405 | 40.1s
+[2026-02-05 14:30:39]   Epoch 21/30 | train_loss: 0.4516 | val_loss: 0.4403 | 40.0s
+[2026-02-05 14:31:19]   Epoch 22/30 | train_loss: 0.4495 | val_loss: 0.4377 | 40.0s
+[2026-02-05 14:31:59]   Epoch 23/30 | train_loss: 0.4511 | val_loss: 0.4382 | 40.0s
+[2026-02-05 14:32:39]   Epoch 24/30 | train_loss: 0.4505 | val_loss: 0.4395 | 39.9s
+[2026-02-05 14:33:19]   Epoch 25/30 | train_loss: 0.4475 | val_loss: 0.4374 | 40.0s
+[2026-02-05 14:34:00]   Epoch 26/30 | train_loss: 0.4484 | val_loss: 0.4392 | 40.1s
+[2026-02-05 14:34:40]   Epoch 27/30 | train_loss: 0.4502 | val_loss: 0.4391 | 40.1s
+[2026-02-05 14:35:20]   Epoch 28/30 | train_loss: 0.4477 | val_loss: 0.4353 | 40.1s
+[2026-02-05 14:36:00]   Epoch 29/30 | train_loss: 0.4475 | val_loss: 0.4370 | 40.1s
+[2026-02-05 14:36:40]   Epoch 30/30 | train_loss: 0.4482 | val_loss: 0.4369 | 40.0s
+[2026-02-05 14:36:43]   RESULTS: acc=0.829 | f1=0.907 | auc=nan
+[2026-02-05 14:36:43]            H_recall=0.000 | MDD_recall=0.829
+[2026-02-05 14:36:43]   Fold completed in 20.2 min
+[2026-02-05 14:36:44] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:36:44] FOLD 17/40 — Test Subject: MDD_11
+[2026-02-05 14:36:44] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:36:46] Data preparation completed in 2.8s
+[2026-02-05 14:36:46]   Train: 17,550 samples | Val: 1,950 | Test: 1,329
+[2026-02-05 14:36:46]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 14:36:47] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 14:36:47] Starting training loop...
+[2026-02-05 14:37:28]   Epoch  1/30 | train_loss: 0.4849 | val_loss: 0.4691 | 41.0s
+[2026-02-05 14:38:08]   Epoch  2/30 | train_loss: 0.4694 | val_loss: 0.4538 | 39.8s
+[2026-02-05 14:38:48]   Epoch  3/30 | train_loss: 0.4632 | val_loss: 0.4515 | 39.8s
+[2026-02-05 14:39:28]   Epoch  4/30 | train_loss: 0.4630 | val_loss: 0.4520 | 40.0s
+[2026-02-05 14:40:08]   Epoch  5/30 | train_loss: 0.4620 | val_loss: 0.4505 | 40.1s
+[2026-02-05 14:40:48]   Epoch  6/30 | train_loss: 0.4604 | val_loss: 0.4478 | 40.0s
+[2026-02-05 14:41:28]   Epoch  7/30 | train_loss: 0.4599 | val_loss: 0.4499 | 39.9s
+[2026-02-05 14:42:08]   Epoch  8/30 | train_loss: 0.4569 | val_loss: 0.4483 | 40.0s
+[2026-02-05 14:42:48]   Epoch  9/30 | train_loss: 0.4564 | val_loss: 0.4466 | 40.0s
+[2026-02-05 14:43:28]   Epoch 10/30 | train_loss: 0.4570 | val_loss: 0.4472 | 39.9s
+[2026-02-05 14:44:08]   Epoch 11/30 | train_loss: 0.4574 | val_loss: 0.4486 | 40.0s
+[2026-02-05 14:44:48]   Epoch 12/30 | train_loss: 0.4554 | val_loss: 0.4491 | 40.0s
+[2026-02-05 14:45:28]   Epoch 13/30 | train_loss: 0.4552 | val_loss: 0.4469 | 40.0s
+[2026-02-05 14:46:08]   Epoch 14/30 | train_loss: 0.4550 | val_loss: 0.4453 | 40.0s
+[2026-02-05 14:46:48]   Epoch 15/30 | train_loss: 0.4558 | val_loss: 0.4470 | 40.0s
+[2026-02-05 14:47:28]   Epoch 16/30 | train_loss: 0.4537 | val_loss: 0.4451 | 40.0s
+[2026-02-05 14:48:08]   Epoch 17/30 | train_loss: 0.4523 | val_loss: 0.4439 | 40.0s
+[2026-02-05 14:48:48]   Epoch 18/30 | train_loss: 0.4533 | val_loss: 0.4443 | 40.1s
+[2026-02-05 14:49:28]   Epoch 19/30 | train_loss: 0.4522 | val_loss: 0.4455 | 40.1s
+[2026-02-05 14:50:08]   Epoch 20/30 | train_loss: 0.4512 | val_loss: 0.4467 | 40.0s
+[2026-02-05 14:50:48]   Epoch 21/30 | train_loss: 0.4492 | val_loss: 0.4462 | 40.0s
+[2026-02-05 14:51:28]   Epoch 22/30 | train_loss: 0.4496 | val_loss: 0.4454 | 39.9s
+[2026-02-05 14:52:08]   Epoch 23/30 | train_loss: 0.4481 | val_loss: 0.4445 | 40.0s
+[2026-02-05 14:52:48]   Epoch 24/30 | train_loss: 0.4498 | val_loss: 0.4427 | 40.0s
+[2026-02-05 14:53:29]   Epoch 25/30 | train_loss: 0.4497 | val_loss: 0.4428 | 40.1s
+[2026-02-05 14:54:09]   Epoch 26/30 | train_loss: 0.4483 | val_loss: 0.4413 | 40.1s
+[2026-02-05 14:54:49]   Epoch 27/30 | train_loss: 0.4487 | val_loss: 0.4434 | 39.9s
+[2026-02-05 14:55:29]   Epoch 28/30 | train_loss: 0.4479 | val_loss: 0.4439 | 40.0s
+[2026-02-05 14:56:08]   Epoch 29/30 | train_loss: 0.4465 | val_loss: 0.4425 | 39.9s
+[2026-02-05 14:56:48]   Epoch 30/30 | train_loss: 0.4468 | val_loss: 0.4421 | 40.0s
+[2026-02-05 14:56:51]   RESULTS: acc=0.807 | f1=0.893 | auc=nan
+[2026-02-05 14:56:51]            H_recall=0.000 | MDD_recall=0.807
+[2026-02-05 14:56:51]   Fold completed in 20.1 min
+[2026-02-05 14:56:51] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:56:51] FOLD 18/40 — Test Subject: MDD_13
+[2026-02-05 14:56:51] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 14:56:54] Data preparation completed in 2.8s
+[2026-02-05 14:56:54]   Train: 17,550 samples | Val: 1,950 | Test: 983
+[2026-02-05 14:56:54]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 14:56:54] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 14:56:54] Starting training loop...
+[2026-02-05 14:57:35]   Epoch  1/30 | train_loss: 0.4883 | val_loss: 0.4765 | 40.8s
+[2026-02-05 14:58:15]   Epoch  2/30 | train_loss: 0.4696 | val_loss: 0.4715 | 39.9s
+[2026-02-05 14:58:55]   Epoch  3/30 | train_loss: 0.4653 | val_loss: 0.4649 | 39.9s
+[2026-02-05 14:59:35]   Epoch  4/30 | train_loss: 0.4623 | val_loss: 0.4641 | 39.9s
+[2026-02-05 15:00:15]   Epoch  5/30 | train_loss: 0.4623 | val_loss: 0.4650 | 39.8s
+[2026-02-05 15:00:55]   Epoch  6/30 | train_loss: 0.4630 | val_loss: 0.4708 | 40.0s
+[2026-02-05 15:01:35]   Epoch  7/30 | train_loss: 0.4602 | val_loss: 0.4617 | 39.9s
+[2026-02-05 15:02:15]   Epoch  8/30 | train_loss: 0.4590 | val_loss: 0.4678 | 39.9s
+[2026-02-05 15:02:55]   Epoch  9/30 | train_loss: 0.4581 | val_loss: 0.4627 | 40.1s
+[2026-02-05 15:03:35]   Epoch 10/30 | train_loss: 0.4558 | val_loss: 0.4614 | 40.0s
+[2026-02-05 15:04:15]   Epoch 11/30 | train_loss: 0.4585 | val_loss: 0.4622 | 40.1s
+[2026-02-05 15:04:55]   Epoch 12/30 | train_loss: 0.4576 | val_loss: 0.4604 | 40.0s
+[2026-02-05 15:05:35]   Epoch 13/30 | train_loss: 0.4565 | val_loss: 0.4604 | 39.9s
+[2026-02-05 15:06:15]   Epoch 14/30 | train_loss: 0.4565 | val_loss: 0.4605 | 39.9s
+[2026-02-05 15:06:55]   Epoch 15/30 | train_loss: 0.4554 | val_loss: 0.4591 | 40.0s
+[2026-02-05 15:07:35]   Epoch 16/30 | train_loss: 0.4533 | val_loss: 0.4613 | 39.9s
+[2026-02-05 15:08:15]   Epoch 17/30 | train_loss: 0.4539 | val_loss: 0.4585 | 40.0s
+[2026-02-05 15:08:55]   Epoch 18/30 | train_loss: 0.4531 | val_loss: 0.4600 | 40.0s
+[2026-02-05 15:09:35]   Epoch 19/30 | train_loss: 0.4544 | val_loss: 0.4588 | 40.0s
+[2026-02-05 15:10:15]   Epoch 20/30 | train_loss: 0.4542 | val_loss: 0.4593 | 40.0s
+[2026-02-05 15:10:55]   Epoch 21/30 | train_loss: 0.4524 | val_loss: 0.4588 | 40.1s
+[2026-02-05 15:11:35]   Epoch 22/30 | train_loss: 0.4519 | val_loss: 0.4580 | 40.0s
+[2026-02-05 15:12:16]   Epoch 23/30 | train_loss: 0.4511 | val_loss: 0.4591 | 40.0s
+[2026-02-05 15:12:56]   Epoch 24/30 | train_loss: 0.4499 | val_loss: 0.4605 | 40.1s
+[2026-02-05 15:13:35]   Epoch 25/30 | train_loss: 0.4490 | val_loss: 0.4620 | 39.9s
+[2026-02-05 15:14:15]   Epoch 26/30 | train_loss: 0.4497 | val_loss: 0.4585 | 39.9s
+[2026-02-05 15:14:55]   Epoch 27/30 | train_loss: 0.4503 | val_loss: 0.4584 | 40.0s
+[2026-02-05 15:15:35]   Epoch 28/30 | train_loss: 0.4488 | val_loss: 0.4606 | 40.0s
+[2026-02-05 15:16:15]   Epoch 29/30 | train_loss: 0.4471 | val_loss: 0.4587 | 40.0s
+[2026-02-05 15:16:15]   Early stopping at epoch 29 (best val_loss: 0.4580)
+[2026-02-05 15:16:17]   RESULTS: acc=0.768 | f1=0.869 | auc=nan
+[2026-02-05 15:16:17]            H_recall=0.000 | MDD_recall=0.768
+[2026-02-05 15:16:17]   Fold completed in 19.4 min
+[2026-02-05 15:16:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:16:18] FOLD 19/40 — Test Subject: MDD_14
+[2026-02-05 15:16:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:16:20] Data preparation completed in 2.7s
+[2026-02-05 15:16:20]   Train: 17,550 samples | Val: 1,950 | Test: 967
+[2026-02-05 15:16:20]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 15:16:21] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 15:16:21] Starting training loop...
+[2026-02-05 15:17:01]   Epoch  1/30 | train_loss: 0.4863 | val_loss: 0.4787 | 40.8s
+[2026-02-05 15:17:41]   Epoch  2/30 | train_loss: 0.4709 | val_loss: 0.4564 | 40.0s
+[2026-02-05 15:18:21]   Epoch  3/30 | train_loss: 0.4659 | val_loss: 0.4536 | 39.9s
+[2026-02-05 15:19:02]   Epoch  4/30 | train_loss: 0.4632 | val_loss: 0.4533 | 39.9s
+[2026-02-05 15:19:41]   Epoch  5/30 | train_loss: 0.4628 | val_loss: 0.4559 | 39.8s
+[2026-02-05 15:20:21]   Epoch  6/30 | train_loss: 0.4616 | val_loss: 0.4491 | 39.8s
+[2026-02-05 15:21:01]   Epoch  7/30 | train_loss: 0.4602 | val_loss: 0.4491 | 39.8s
+[2026-02-05 15:21:41]   Epoch  8/30 | train_loss: 0.4590 | val_loss: 0.4477 | 39.8s
+[2026-02-05 15:22:21]   Epoch  9/30 | train_loss: 0.4595 | val_loss: 0.4518 | 39.9s
+[2026-02-05 15:23:01]   Epoch 10/30 | train_loss: 0.4577 | val_loss: 0.4485 | 40.0s
+[2026-02-05 15:23:41]   Epoch 11/30 | train_loss: 0.4593 | val_loss: 0.4473 | 39.9s
+[2026-02-05 15:24:21]   Epoch 12/30 | train_loss: 0.4576 | val_loss: 0.4501 | 39.8s
+[2026-02-05 15:25:01]   Epoch 13/30 | train_loss: 0.4574 | val_loss: 0.4486 | 40.0s
+[2026-02-05 15:25:41]   Epoch 14/30 | train_loss: 0.4568 | val_loss: 0.4496 | 40.0s
+[2026-02-05 15:26:21]   Epoch 15/30 | train_loss: 0.4531 | val_loss: 0.4486 | 40.1s
+[2026-02-05 15:27:01]   Epoch 16/30 | train_loss: 0.4549 | val_loss: 0.4482 | 40.1s
+[2026-02-05 15:27:41]   Epoch 17/30 | train_loss: 0.4545 | val_loss: 0.4497 | 40.1s
+[2026-02-05 15:28:21]   Epoch 18/30 | train_loss: 0.4531 | val_loss: 0.4471 | 40.1s
+[2026-02-05 15:29:01]   Epoch 19/30 | train_loss: 0.4541 | val_loss: 0.4463 | 40.0s
+[2026-02-05 15:29:41]   Epoch 20/30 | train_loss: 0.4542 | val_loss: 0.4525 | 40.0s
+[2026-02-05 15:30:21]   Epoch 21/30 | train_loss: 0.4533 | val_loss: 0.4464 | 40.0s
+[2026-02-05 15:31:01]   Epoch 22/30 | train_loss: 0.4512 | val_loss: 0.4478 | 40.0s
+[2026-02-05 15:31:41]   Epoch 23/30 | train_loss: 0.4515 | val_loss: 0.4455 | 40.0s
+[2026-02-05 15:32:21]   Epoch 24/30 | train_loss: 0.4515 | val_loss: 0.4446 | 39.9s
+[2026-02-05 15:33:02]   Epoch 25/30 | train_loss: 0.4502 | val_loss: 0.4445 | 40.2s
+[2026-02-05 15:33:42]   Epoch 26/30 | train_loss: 0.4500 | val_loss: 0.4477 | 40.0s
+[2026-02-05 15:34:22]   Epoch 27/30 | train_loss: 0.4497 | val_loss: 0.4463 | 40.0s
+[2026-02-05 15:35:02]   Epoch 28/30 | train_loss: 0.4486 | val_loss: 0.4442 | 40.0s
+[2026-02-05 15:35:42]   Epoch 29/30 | train_loss: 0.4474 | val_loss: 0.4443 | 40.0s
+[2026-02-05 15:36:22]   Epoch 30/30 | train_loss: 0.4504 | val_loss: 0.4465 | 40.1s
+[2026-02-05 15:36:24]   RESULTS: acc=0.787 | f1=0.881 | auc=nan
+[2026-02-05 15:36:24]            H_recall=0.000 | MDD_recall=0.787
+[2026-02-05 15:36:24]   Fold completed in 20.1 min
+[2026-02-05 15:36:24] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:36:24] FOLD 20/40 — Test Subject: MDD_15
+[2026-02-05 15:36:24] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:36:27] Data preparation completed in 2.8s
+[2026-02-05 15:36:27]   Train: 17,550 samples | Val: 1,950 | Test: 1,543
+[2026-02-05 15:36:27]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 15:36:27] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 15:36:27] Starting training loop...
+[2026-02-05 15:37:09]   Epoch  1/30 | train_loss: 0.4859 | val_loss: 0.4658 | 41.2s
+[2026-02-05 15:37:49]   Epoch  2/30 | train_loss: 0.4709 | val_loss: 0.4551 | 40.0s
+[2026-02-05 15:38:29]   Epoch  3/30 | train_loss: 0.4651 | val_loss: 0.4539 | 40.2s
+[2026-02-05 15:39:09]   Epoch  4/30 | train_loss: 0.4621 | val_loss: 0.4529 | 40.0s
+[2026-02-05 15:39:49]   Epoch  5/30 | train_loss: 0.4629 | val_loss: 0.4525 | 39.9s
+[2026-02-05 15:40:29]   Epoch  6/30 | train_loss: 0.4579 | val_loss: 0.4489 | 39.9s
+[2026-02-05 15:41:09]   Epoch  7/30 | train_loss: 0.4585 | val_loss: 0.4484 | 39.9s
+[2026-02-05 15:41:49]   Epoch  8/30 | train_loss: 0.4585 | val_loss: 0.4480 | 40.0s
+[2026-02-05 15:42:29]   Epoch  9/30 | train_loss: 0.4567 | val_loss: 0.4473 | 40.1s
+[2026-02-05 15:43:09]   Epoch 10/30 | train_loss: 0.4563 | val_loss: 0.4474 | 39.9s
+[2026-02-05 15:43:49]   Epoch 11/30 | train_loss: 0.4560 | val_loss: 0.4493 | 39.9s
+[2026-02-05 15:44:29]   Epoch 12/30 | train_loss: 0.4557 | val_loss: 0.4472 | 39.9s
+[2026-02-05 15:45:09]   Epoch 13/30 | train_loss: 0.4543 | val_loss: 0.4462 | 40.0s
+[2026-02-05 15:45:49]   Epoch 14/30 | train_loss: 0.4558 | val_loss: 0.4520 | 40.0s
+[2026-02-05 15:46:29]   Epoch 15/30 | train_loss: 0.4532 | val_loss: 0.4467 | 40.0s
+[2026-02-05 15:47:09]   Epoch 16/30 | train_loss: 0.4546 | val_loss: 0.4462 | 40.0s
+[2026-02-05 15:47:49]   Epoch 17/30 | train_loss: 0.4531 | val_loss: 0.4481 | 40.0s
+[2026-02-05 15:48:30]   Epoch 18/30 | train_loss: 0.4514 | val_loss: 0.4452 | 40.1s
+[2026-02-05 15:49:10]   Epoch 19/30 | train_loss: 0.4524 | val_loss: 0.4477 | 40.0s
+[2026-02-05 15:49:50]   Epoch 20/30 | train_loss: 0.4518 | val_loss: 0.4455 | 40.0s
+[2026-02-05 15:50:30]   Epoch 21/30 | train_loss: 0.4509 | val_loss: 0.4451 | 40.1s
+[2026-02-05 15:51:10]   Epoch 22/30 | train_loss: 0.4499 | val_loss: 0.4439 | 40.0s
+[2026-02-05 15:51:50]   Epoch 23/30 | train_loss: 0.4493 | val_loss: 0.4457 | 39.9s
+[2026-02-05 15:52:30]   Epoch 24/30 | train_loss: 0.4480 | val_loss: 0.4449 | 40.0s
+[2026-02-05 15:53:10]   Epoch 25/30 | train_loss: 0.4495 | val_loss: 0.4430 | 40.1s
+[2026-02-05 15:53:50]   Epoch 26/30 | train_loss: 0.4480 | val_loss: 0.4446 | 39.9s
+[2026-02-05 15:54:30]   Epoch 27/30 | train_loss: 0.4477 | val_loss: 0.4427 | 40.0s
+[2026-02-05 15:55:10]   Epoch 28/30 | train_loss: 0.4463 | val_loss: 0.4458 | 40.1s
+[2026-02-05 15:55:50]   Epoch 29/30 | train_loss: 0.4464 | val_loss: 0.4425 | 40.0s
+[2026-02-05 15:56:30]   Epoch 30/30 | train_loss: 0.4461 | val_loss: 0.4411 | 40.0s
+[2026-02-05 15:56:33]   RESULTS: acc=0.815 | f1=0.898 | auc=nan
+[2026-02-05 15:56:33]            H_recall=0.000 | MDD_recall=0.815
+[2026-02-05 15:56:33]   Fold completed in 20.1 min
+[2026-02-05 15:56:34] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:56:34] FOLD 21/40 — Test Subject: MDD_17
+[2026-02-05 15:56:34] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 15:56:36] Data preparation completed in 2.9s
+[2026-02-05 15:56:36]   Train: 17,550 samples | Val: 1,950 | Test: 1,741
+[2026-02-05 15:56:36]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 15:56:37] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 15:56:37] Starting training loop...
+[2026-02-05 15:57:18]   Epoch  1/30 | train_loss: 0.4875 | val_loss: 0.4707 | 41.1s
+[2026-02-05 15:57:58]   Epoch  2/30 | train_loss: 0.4687 | val_loss: 0.4642 | 39.9s
+[2026-02-05 15:58:38]   Epoch  3/30 | train_loss: 0.4648 | val_loss: 0.4640 | 39.9s
+[2026-02-05 15:59:18]   Epoch  4/30 | train_loss: 0.4617 | val_loss: 0.4629 | 39.9s
+[2026-02-05 15:59:58]   Epoch  5/30 | train_loss: 0.4611 | val_loss: 0.4614 | 39.9s
+[2026-02-05 16:00:38]   Epoch  6/30 | train_loss: 0.4606 | val_loss: 0.4597 | 39.9s
+[2026-02-05 16:01:18]   Epoch  7/30 | train_loss: 0.4600 | val_loss: 0.4635 | 40.0s
+[2026-02-05 16:01:58]   Epoch  8/30 | train_loss: 0.4584 | val_loss: 0.4582 | 40.0s
+[2026-02-05 16:02:38]   Epoch  9/30 | train_loss: 0.4562 | val_loss: 0.4562 | 40.0s
+[2026-02-05 16:03:18]   Epoch 10/30 | train_loss: 0.4557 | val_loss: 0.4600 | 40.0s
+[2026-02-05 16:03:58]   Epoch 11/30 | train_loss: 0.4563 | val_loss: 0.4567 | 40.1s
+[2026-02-05 16:04:38]   Epoch 12/30 | train_loss: 0.4549 | val_loss: 0.4583 | 40.1s
+[2026-02-05 16:05:18]   Epoch 13/30 | train_loss: 0.4541 | val_loss: 0.4549 | 39.9s
+[2026-02-05 16:05:58]   Epoch 14/30 | train_loss: 0.4557 | val_loss: 0.4541 | 40.0s
+[2026-02-05 16:06:38]   Epoch 15/30 | train_loss: 0.4536 | val_loss: 0.4561 | 39.9s
+[2026-02-05 16:07:18]   Epoch 16/30 | train_loss: 0.4548 | val_loss: 0.4547 | 39.9s
+[2026-02-05 16:07:58]   Epoch 17/30 | train_loss: 0.4534 | val_loss: 0.4532 | 40.0s
+[2026-02-05 16:08:38]   Epoch 18/30 | train_loss: 0.4543 | val_loss: 0.4555 | 39.8s
+[2026-02-05 16:09:18]   Epoch 19/30 | train_loss: 0.4535 | val_loss: 0.4543 | 39.9s
+[2026-02-05 16:09:58]   Epoch 20/30 | train_loss: 0.4508 | val_loss: 0.4546 | 40.1s
+[2026-02-05 16:10:38]   Epoch 21/30 | train_loss: 0.4512 | val_loss: 0.4548 | 40.1s
+[2026-02-05 16:11:18]   Epoch 22/30 | train_loss: 0.4512 | val_loss: 0.4524 | 40.0s
+[2026-02-05 16:11:58]   Epoch 23/30 | train_loss: 0.4509 | val_loss: 0.4519 | 40.0s
+[2026-02-05 16:12:39]   Epoch 24/30 | train_loss: 0.4502 | val_loss: 0.4528 | 40.1s
+[2026-02-05 16:13:19]   Epoch 25/30 | train_loss: 0.4499 | val_loss: 0.4538 | 40.1s
+[2026-02-05 16:13:59]   Epoch 26/30 | train_loss: 0.4477 | val_loss: 0.4535 | 40.0s
+[2026-02-05 16:14:39]   Epoch 27/30 | train_loss: 0.4462 | val_loss: 0.4558 | 40.0s
+[2026-02-05 16:15:19]   Epoch 28/30 | train_loss: 0.4467 | val_loss: 0.4538 | 40.0s
+[2026-02-05 16:15:59]   Epoch 29/30 | train_loss: 0.4478 | val_loss: 0.4503 | 40.2s
+[2026-02-05 16:16:39]   Epoch 30/30 | train_loss: 0.4472 | val_loss: 0.4509 | 40.1s
+[2026-02-05 16:16:42]   RESULTS: acc=0.812 | f1=0.896 | auc=nan
+[2026-02-05 16:16:42]            H_recall=0.000 | MDD_recall=0.812
+[2026-02-05 16:16:42]   Fold completed in 20.1 min
+[2026-02-05 16:16:43] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:16:43] FOLD 22/40 — Test Subject: MDD_18
+[2026-02-05 16:16:43] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:16:46] Data preparation completed in 2.8s
+[2026-02-05 16:16:46]   Train: 17,550 samples | Val: 1,950 | Test: 1,618
+[2026-02-05 16:16:46]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 16:16:46] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 16:16:46] Starting training loop...
+[2026-02-05 16:17:27]   Epoch  1/30 | train_loss: 0.4853 | val_loss: 0.4629 | 41.2s
+[2026-02-05 16:18:07]   Epoch  2/30 | train_loss: 0.4698 | val_loss: 0.4565 | 39.9s
+[2026-02-05 16:18:47]   Epoch  3/30 | train_loss: 0.4645 | val_loss: 0.4516 | 39.8s
+[2026-02-05 16:19:27]   Epoch  4/30 | train_loss: 0.4615 | val_loss: 0.4505 | 39.9s
+[2026-02-05 16:20:07]   Epoch  5/30 | train_loss: 0.4623 | val_loss: 0.4480 | 39.9s
+[2026-02-05 16:20:47]   Epoch  6/30 | train_loss: 0.4576 | val_loss: 0.4474 | 39.9s
+[2026-02-05 16:21:27]   Epoch  7/30 | train_loss: 0.4610 | val_loss: 0.4694 | 40.0s
+[2026-02-05 16:22:07]   Epoch  8/30 | train_loss: 0.4590 | val_loss: 0.4462 | 40.1s
+[2026-02-05 16:22:47]   Epoch  9/30 | train_loss: 0.4574 | val_loss: 0.4465 | 40.0s
+[2026-02-05 16:23:27]   Epoch 10/30 | train_loss: 0.4568 | val_loss: 0.4514 | 39.9s
+[2026-02-05 16:24:07]   Epoch 11/30 | train_loss: 0.4561 | val_loss: 0.4489 | 39.9s
+[2026-02-05 16:24:47]   Epoch 12/30 | train_loss: 0.4555 | val_loss: 0.4443 | 39.9s
+[2026-02-05 16:25:27]   Epoch 13/30 | train_loss: 0.4547 | val_loss: 0.4447 | 40.0s
+[2026-02-05 16:26:07]   Epoch 14/30 | train_loss: 0.4542 | val_loss: 0.4449 | 40.0s
+[2026-02-05 16:26:47]   Epoch 15/30 | train_loss: 0.4543 | val_loss: 0.4453 | 39.9s
+[2026-02-05 16:27:27]   Epoch 16/30 | train_loss: 0.4528 | val_loss: 0.4450 | 40.0s
+[2026-02-05 16:28:07]   Epoch 17/30 | train_loss: 0.4544 | val_loss: 0.4443 | 40.0s
+[2026-02-05 16:28:47]   Epoch 18/30 | train_loss: 0.4517 | val_loss: 0.4445 | 39.9s
+[2026-02-05 16:29:27]   Epoch 19/30 | train_loss: 0.4501 | val_loss: 0.4442 | 40.2s
+[2026-02-05 16:30:07]   Epoch 20/30 | train_loss: 0.4525 | val_loss: 0.4456 | 40.1s
+[2026-02-05 16:30:47]   Epoch 21/30 | train_loss: 0.4528 | val_loss: 0.4435 | 40.1s
+[2026-02-05 16:31:27]   Epoch 22/30 | train_loss: 0.4520 | val_loss: 0.4438 | 40.0s
+[2026-02-05 16:32:07]   Epoch 23/30 | train_loss: 0.4502 | val_loss: 0.4444 | 40.0s
+[2026-02-05 16:32:47]   Epoch 24/30 | train_loss: 0.4506 | val_loss: 0.4446 | 39.9s
+[2026-02-05 16:33:27]   Epoch 25/30 | train_loss: 0.4510 | val_loss: 0.4450 | 39.9s
+[2026-02-05 16:34:07]   Epoch 26/30 | train_loss: 0.4484 | val_loss: 0.4448 | 39.9s
+[2026-02-05 16:34:47]   Epoch 27/30 | train_loss: 0.4481 | val_loss: 0.4433 | 39.9s
+[2026-02-05 16:35:27]   Epoch 28/30 | train_loss: 0.4473 | val_loss: 0.4425 | 39.9s
+[2026-02-05 16:36:07]   Epoch 29/30 | train_loss: 0.4486 | val_loss: 0.4421 | 39.9s
+[2026-02-05 16:36:47]   Epoch 30/30 | train_loss: 0.4468 | val_loss: 0.4452 | 39.8s
+[2026-02-05 16:36:50]   RESULTS: acc=0.777 | f1=0.874 | auc=nan
+[2026-02-05 16:36:50]            H_recall=0.000 | MDD_recall=0.777
+[2026-02-05 16:36:50]   Fold completed in 20.1 min
+[2026-02-05 16:36:51] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:36:51] FOLD 23/40 — Test Subject: MDD_19
+[2026-02-05 16:36:51] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:36:53] Data preparation completed in 2.9s
+[2026-02-05 16:36:53]   Train: 17,550 samples | Val: 1,950 | Test: 1,707
+[2026-02-05 16:36:53]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 16:36:54] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 16:36:54] Starting training loop...
+[2026-02-05 16:37:35]   Epoch  1/30 | train_loss: 0.4841 | val_loss: 0.4639 | 41.1s
+[2026-02-05 16:38:15]   Epoch  2/30 | train_loss: 0.4680 | val_loss: 0.4565 | 39.8s
+[2026-02-05 16:38:55]   Epoch  3/30 | train_loss: 0.4618 | val_loss: 0.4544 | 40.2s
+[2026-02-05 16:39:35]   Epoch  4/30 | train_loss: 0.4580 | val_loss: 0.4543 | 40.1s
+[2026-02-05 16:40:16]   Epoch  5/30 | train_loss: 0.4577 | val_loss: 0.4485 | 40.1s
+[2026-02-05 16:40:56]   Epoch  6/30 | train_loss: 0.4569 | val_loss: 0.4487 | 40.1s
+[2026-02-05 16:41:36]   Epoch  7/30 | train_loss: 0.4529 | val_loss: 0.4479 | 39.9s
+[2026-02-05 16:42:16]   Epoch  8/30 | train_loss: 0.4536 | val_loss: 0.4527 | 39.8s
+[2026-02-05 16:42:56]   Epoch  9/30 | train_loss: 0.4532 | val_loss: 0.4459 | 40.0s
+[2026-02-05 16:43:35]   Epoch 10/30 | train_loss: 0.4538 | val_loss: 0.4436 | 39.8s
+[2026-02-05 16:44:16]   Epoch 11/30 | train_loss: 0.4515 | val_loss: 0.4462 | 39.9s
+[2026-02-05 16:44:56]   Epoch 12/30 | train_loss: 0.4522 | val_loss: 0.4419 | 40.0s
+[2026-02-05 16:45:36]   Epoch 13/30 | train_loss: 0.4497 | val_loss: 0.4425 | 40.0s
+[2026-02-05 16:46:16]   Epoch 14/30 | train_loss: 0.4499 | val_loss: 0.4419 | 40.0s
+[2026-02-05 16:46:56]   Epoch 15/30 | train_loss: 0.4500 | val_loss: 0.4418 | 40.0s
+[2026-02-05 16:47:36]   Epoch 16/30 | train_loss: 0.4479 | val_loss: 0.4420 | 39.9s
+[2026-02-05 16:48:16]   Epoch 17/30 | train_loss: 0.4484 | val_loss: 0.4421 | 40.1s
+[2026-02-05 16:48:56]   Epoch 18/30 | train_loss: 0.4463 | val_loss: 0.4396 | 40.1s
+[2026-02-05 16:49:36]   Epoch 19/30 | train_loss: 0.4445 | val_loss: 0.4395 | 40.1s
+[2026-02-05 16:50:16]   Epoch 20/30 | train_loss: 0.4464 | val_loss: 0.4394 | 40.2s
+[2026-02-05 16:50:57]   Epoch 21/30 | train_loss: 0.4456 | val_loss: 0.4408 | 40.4s
+[2026-02-05 16:51:37]   Epoch 22/30 | train_loss: 0.4455 | val_loss: 0.4428 | 40.3s
+[2026-02-05 16:52:17]   Epoch 23/30 | train_loss: 0.4451 | val_loss: 0.4387 | 40.4s
+[2026-02-05 16:52:58]   Epoch 24/30 | train_loss: 0.4444 | val_loss: 0.4396 | 40.6s
+[2026-02-05 16:53:39]   Epoch 25/30 | train_loss: 0.4445 | val_loss: 0.4386 | 40.5s
+[2026-02-05 16:54:19]   Epoch 26/30 | train_loss: 0.4426 | val_loss: 0.4379 | 40.6s
+[2026-02-05 16:55:00]   Epoch 27/30 | train_loss: 0.4426 | val_loss: 0.4389 | 40.5s
+[2026-02-05 16:55:40]   Epoch 28/30 | train_loss: 0.4423 | val_loss: 0.4375 | 40.6s
+[2026-02-05 16:56:21]   Epoch 29/30 | train_loss: 0.4421 | val_loss: 0.4387 | 40.2s
+[2026-02-05 16:57:01]   Epoch 30/30 | train_loss: 0.4398 | val_loss: 0.4380 | 40.4s
+[2026-02-05 16:57:04]   RESULTS: acc=0.364 | f1=0.534 | auc=nan
+[2026-02-05 16:57:04]            H_recall=0.000 | MDD_recall=0.364
+[2026-02-05 16:57:04]   Fold completed in 20.2 min
+[2026-02-05 16:57:05] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:57:05] FOLD 24/40 — Test Subject: MDD_2
+[2026-02-05 16:57:05] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 16:57:08] Data preparation completed in 3.0s
+[2026-02-05 16:57:08]   Train: 17,550 samples | Val: 1,950 | Test: 1,710
+[2026-02-05 16:57:08]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 16:57:08] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 16:57:08] Starting training loop...
+[2026-02-05 16:57:50]   Epoch  1/30 | train_loss: 0.4849 | val_loss: 0.4735 | 42.0s
+[2026-02-05 16:58:30]   Epoch  2/30 | train_loss: 0.4680 | val_loss: 0.4665 | 40.4s
+[2026-02-05 16:59:11]   Epoch  3/30 | train_loss: 0.4645 | val_loss: 0.4659 | 40.2s
+[2026-02-05 16:59:51]   Epoch  4/30 | train_loss: 0.4623 | val_loss: 0.4720 | 40.3s
+[2026-02-05 17:00:32]   Epoch  5/30 | train_loss: 0.4613 | val_loss: 0.4677 | 40.3s
+[2026-02-05 17:01:12]   Epoch  6/30 | train_loss: 0.4578 | val_loss: 0.4605 | 40.5s
+[2026-02-05 17:01:53]   Epoch  7/30 | train_loss: 0.4594 | val_loss: 0.4651 | 40.8s
+[2026-02-05 17:02:34]   Epoch  8/30 | train_loss: 0.4584 | val_loss: 0.4596 | 41.2s
+[2026-02-05 17:03:15]   Epoch  9/30 | train_loss: 0.4572 | val_loss: 0.4597 | 41.0s
+[2026-02-05 17:03:56]   Epoch 10/30 | train_loss: 0.4543 | val_loss: 0.4582 | 40.7s
+[2026-02-05 17:04:37]   Epoch 11/30 | train_loss: 0.4554 | val_loss: 0.4579 | 41.0s
+[2026-02-05 17:05:18]   Epoch 12/30 | train_loss: 0.4566 | val_loss: 0.4574 | 40.5s
+[2026-02-05 17:05:58]   Epoch 13/30 | train_loss: 0.4552 | val_loss: 0.4591 | 40.4s
+[2026-02-05 17:06:39]   Epoch 14/30 | train_loss: 0.4537 | val_loss: 0.4602 | 40.4s
+[2026-02-05 17:07:19]   Epoch 15/30 | train_loss: 0.4537 | val_loss: 0.4568 | 40.6s
+[2026-02-05 17:08:00]   Epoch 16/30 | train_loss: 0.4528 | val_loss: 0.4569 | 40.4s
+[2026-02-05 17:08:40]   Epoch 17/30 | train_loss: 0.4534 | val_loss: 0.4558 | 40.6s
+[2026-02-05 17:09:21]   Epoch 18/30 | train_loss: 0.4524 | val_loss: 0.4554 | 40.7s
+[2026-02-05 17:10:02]   Epoch 19/30 | train_loss: 0.4540 | val_loss: 0.4547 | 40.7s
+[2026-02-05 17:10:42]   Epoch 20/30 | train_loss: 0.4512 | val_loss: 0.4537 | 40.5s
+[2026-02-05 17:11:23]   Epoch 21/30 | train_loss: 0.4519 | val_loss: 0.4549 | 40.5s
+[2026-02-05 17:12:03]   Epoch 22/30 | train_loss: 0.4495 | val_loss: 0.4588 | 40.4s
+[2026-02-05 17:12:44]   Epoch 23/30 | train_loss: 0.4512 | val_loss: 0.4536 | 40.7s
+[2026-02-05 17:13:25]   Epoch 24/30 | train_loss: 0.4478 | val_loss: 0.4554 | 40.7s
+[2026-02-05 17:14:05]   Epoch 25/30 | train_loss: 0.4483 | val_loss: 0.4546 | 40.5s
+[2026-02-05 17:14:46]   Epoch 26/30 | train_loss: 0.4476 | val_loss: 0.4546 | 40.4s
+[2026-02-05 17:15:27]   Epoch 27/30 | train_loss: 0.4481 | val_loss: 0.4553 | 40.8s
+[2026-02-05 17:16:08]   Epoch 28/30 | train_loss: 0.4471 | val_loss: 0.4543 | 41.0s
+[2026-02-05 17:16:48]   Epoch 29/30 | train_loss: 0.4461 | val_loss: 0.4535 | 40.8s
+[2026-02-05 17:17:29]   Epoch 30/30 | train_loss: 0.4475 | val_loss: 0.4524 | 40.4s
+[2026-02-05 17:17:32]   RESULTS: acc=0.737 | f1=0.849 | auc=nan
+[2026-02-05 17:17:32]            H_recall=0.000 | MDD_recall=0.737
+[2026-02-05 17:17:32]   Fold completed in 20.5 min
+[2026-02-05 17:17:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:17:33] FOLD 25/40 — Test Subject: MDD_20
+[2026-02-05 17:17:33] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:17:36] Data preparation completed in 3.1s
+[2026-02-05 17:17:36]   Train: 17,550 samples | Val: 1,950 | Test: 1,614
+[2026-02-05 17:17:36]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 17:17:36] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 17:17:36] Starting training loop...
+[2026-02-05 17:18:18]   Epoch  1/30 | train_loss: 0.4850 | val_loss: 0.4638 | 41.9s
+[2026-02-05 17:18:59]   Epoch  2/30 | train_loss: 0.4678 | val_loss: 0.4563 | 40.7s
+[2026-02-05 17:19:40]   Epoch  3/30 | train_loss: 0.4648 | val_loss: 0.4528 | 41.3s
+[2026-02-05 17:20:21]   Epoch  4/30 | train_loss: 0.4612 | val_loss: 0.4499 | 40.9s
+[2026-02-05 17:21:02]   Epoch  5/30 | train_loss: 0.4605 | val_loss: 0.4488 | 40.6s
+[2026-02-05 17:21:43]   Epoch  6/30 | train_loss: 0.4573 | val_loss: 0.4528 | 40.8s
+[2026-02-05 17:22:24]   Epoch  7/30 | train_loss: 0.4568 | val_loss: 0.4513 | 41.1s
+[2026-02-05 17:23:05]   Epoch  8/30 | train_loss: 0.4566 | val_loss: 0.4479 | 41.2s
+[2026-02-05 17:23:46]   Epoch  9/30 | train_loss: 0.4581 | val_loss: 0.4476 | 40.8s
+[2026-02-05 17:24:27]   Epoch 10/30 | train_loss: 0.4555 | val_loss: 0.4467 | 41.2s
+[2026-02-05 17:25:08]   Epoch 11/30 | train_loss: 0.4546 | val_loss: 0.4458 | 40.9s
+[2026-02-05 17:25:49]   Epoch 12/30 | train_loss: 0.4545 | val_loss: 0.4453 | 40.7s
+[2026-02-05 17:26:30]   Epoch 13/30 | train_loss: 0.4540 | val_loss: 0.4450 | 40.5s
+[2026-02-05 17:27:10]   Epoch 14/30 | train_loss: 0.4543 | val_loss: 0.4436 | 40.6s
+[2026-02-05 17:27:51]   Epoch 15/30 | train_loss: 0.4533 | val_loss: 0.4475 | 40.4s
+[2026-02-05 17:28:31]   Epoch 16/30 | train_loss: 0.4514 | val_loss: 0.4431 | 40.5s
+[2026-02-05 17:29:12]   Epoch 17/30 | train_loss: 0.4511 | val_loss: 0.4458 | 40.5s
+[2026-02-05 17:29:53]   Epoch 18/30 | train_loss: 0.4514 | val_loss: 0.4457 | 40.7s
+[2026-02-05 17:30:33]   Epoch 19/30 | train_loss: 0.4495 | val_loss: 0.4427 | 40.5s
+[2026-02-05 17:31:14]   Epoch 20/30 | train_loss: 0.4502 | val_loss: 0.4452 | 40.6s
+[2026-02-05 17:31:54]   Epoch 21/30 | train_loss: 0.4506 | val_loss: 0.4441 | 40.4s
+[2026-02-05 17:32:35]   Epoch 22/30 | train_loss: 0.4494 | val_loss: 0.4420 | 40.2s
+[2026-02-05 17:33:15]   Epoch 23/30 | train_loss: 0.4504 | val_loss: 0.4412 | 40.3s
+[2026-02-05 17:33:55]   Epoch 24/30 | train_loss: 0.4485 | val_loss: 0.4446 | 40.3s
+[2026-02-05 17:34:36]   Epoch 25/30 | train_loss: 0.4476 | val_loss: 0.4421 | 40.3s
+[2026-02-05 17:35:16]   Epoch 26/30 | train_loss: 0.4464 | val_loss: 0.4418 | 40.4s
+[2026-02-05 17:35:56]   Epoch 27/30 | train_loss: 0.4471 | val_loss: 0.4421 | 40.4s
+[2026-02-05 17:36:37]   Epoch 28/30 | train_loss: 0.4492 | val_loss: 0.4417 | 40.5s
+[2026-02-05 17:37:17]   Epoch 29/30 | train_loss: 0.4446 | val_loss: 0.4405 | 40.3s
+[2026-02-05 17:37:58]   Epoch 30/30 | train_loss: 0.4468 | val_loss: 0.4408 | 40.3s
+[2026-02-05 17:38:01]   RESULTS: acc=0.816 | f1=0.899 | auc=nan
+[2026-02-05 17:38:01]            H_recall=0.000 | MDD_recall=0.816
+[2026-02-05 17:38:01]   Fold completed in 20.5 min
+[2026-02-05 17:38:01] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:38:01] FOLD 26/40 — Test Subject: MDD_21
+[2026-02-05 17:38:01] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:38:04] Data preparation completed in 2.9s
+[2026-02-05 17:38:04]   Train: 17,550 samples | Val: 1,950 | Test: 1,406
+[2026-02-05 17:38:04]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 17:38:04] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 17:38:04] Starting training loop...
+[2026-02-05 17:38:46]   Epoch  1/30 | train_loss: 0.4848 | val_loss: 0.4664 | 41.6s
+[2026-02-05 17:39:26]   Epoch  2/30 | train_loss: 0.4672 | val_loss: 0.4680 | 40.2s
+[2026-02-05 17:40:07]   Epoch  3/30 | train_loss: 0.4644 | val_loss: 0.4625 | 40.3s
+[2026-02-05 17:40:47]   Epoch  4/30 | train_loss: 0.4581 | val_loss: 0.4559 | 40.4s
+[2026-02-05 17:41:27]   Epoch  5/30 | train_loss: 0.4581 | val_loss: 0.4591 | 40.3s
+[2026-02-05 17:42:08]   Epoch  6/30 | train_loss: 0.4582 | val_loss: 0.4566 | 40.4s
+[2026-02-05 17:42:48]   Epoch  7/30 | train_loss: 0.4559 | val_loss: 0.4539 | 40.4s
+[2026-02-05 17:43:29]   Epoch  8/30 | train_loss: 0.4553 | val_loss: 0.4528 | 40.2s
+[2026-02-05 17:44:09]   Epoch  9/30 | train_loss: 0.4564 | val_loss: 0.4527 | 40.3s
+[2026-02-05 17:44:49]   Epoch 10/30 | train_loss: 0.4525 | val_loss: 0.4551 | 40.2s
+[2026-02-05 17:45:30]   Epoch 11/30 | train_loss: 0.4531 | val_loss: 0.4531 | 40.4s
+[2026-02-05 17:46:10]   Epoch 12/30 | train_loss: 0.4532 | val_loss: 0.4528 | 40.4s
+[2026-02-05 17:46:50]   Epoch 13/30 | train_loss: 0.4525 | val_loss: 0.4515 | 40.3s
+[2026-02-05 17:47:31]   Epoch 14/30 | train_loss: 0.4520 | val_loss: 0.4498 | 40.3s
+[2026-02-05 17:48:11]   Epoch 15/30 | train_loss: 0.4524 | val_loss: 0.4504 | 40.3s
+[2026-02-05 17:48:51]   Epoch 16/30 | train_loss: 0.4503 | val_loss: 0.4514 | 40.3s
+[2026-02-05 17:49:32]   Epoch 17/30 | train_loss: 0.4501 | val_loss: 0.4513 | 40.3s
+[2026-02-05 17:50:12]   Epoch 18/30 | train_loss: 0.4496 | val_loss: 0.4531 | 40.2s
+[2026-02-05 17:50:52]   Epoch 19/30 | train_loss: 0.4506 | val_loss: 0.4521 | 40.2s
+[2026-02-05 17:51:32]   Epoch 20/30 | train_loss: 0.4490 | val_loss: 0.4495 | 40.2s
+[2026-02-05 17:52:12]   Epoch 21/30 | train_loss: 0.4488 | val_loss: 0.4534 | 40.0s
+[2026-02-05 17:52:52]   Epoch 22/30 | train_loss: 0.4497 | val_loss: 0.4497 | 40.2s
+[2026-02-05 17:53:33]   Epoch 23/30 | train_loss: 0.4473 | val_loss: 0.4526 | 40.2s
+[2026-02-05 17:54:13]   Epoch 24/30 | train_loss: 0.4450 | val_loss: 0.4499 | 40.2s
+[2026-02-05 17:54:53]   Epoch 25/30 | train_loss: 0.4463 | val_loss: 0.4463 | 40.1s
+[2026-02-05 17:55:33]   Epoch 26/30 | train_loss: 0.4469 | val_loss: 0.4487 | 40.2s
+[2026-02-05 17:56:14]   Epoch 27/30 | train_loss: 0.4459 | val_loss: 0.4466 | 40.2s
+[2026-02-05 17:56:54]   Epoch 28/30 | train_loss: 0.4459 | val_loss: 0.4491 | 40.4s
+[2026-02-05 17:57:34]   Epoch 29/30 | train_loss: 0.4473 | val_loss: 0.4458 | 40.5s
+[2026-02-05 17:58:15]   Epoch 30/30 | train_loss: 0.4439 | val_loss: 0.4477 | 40.3s
+[2026-02-05 17:58:17]   RESULTS: acc=0.730 | f1=0.844 | auc=nan
+[2026-02-05 17:58:17]            H_recall=0.000 | MDD_recall=0.730
+[2026-02-05 17:58:17]   Fold completed in 20.3 min
+[2026-02-05 17:58:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:58:18] FOLD 27/40 — Test Subject: MDD_22
+[2026-02-05 17:58:18] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 17:58:21] Data preparation completed in 2.9s
+[2026-02-05 17:58:21]   Train: 17,550 samples | Val: 1,950 | Test: 1,477
+[2026-02-05 17:58:21]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 17:58:21] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 17:58:21] Starting training loop...
+[2026-02-05 17:59:03]   Epoch  1/30 | train_loss: 0.4860 | val_loss: 0.4654 | 41.8s
+[2026-02-05 17:59:43]   Epoch  2/30 | train_loss: 0.4696 | val_loss: 0.4580 | 39.9s
+[2026-02-05 18:00:23]   Epoch  3/30 | train_loss: 0.4672 | val_loss: 0.4507 | 40.4s
+[2026-02-05 18:01:04]   Epoch  4/30 | train_loss: 0.4640 | val_loss: 0.4516 | 40.4s
+[2026-02-05 18:01:44]   Epoch  5/30 | train_loss: 0.4631 | val_loss: 0.4464 | 40.4s
+[2026-02-05 18:02:25]   Epoch  6/30 | train_loss: 0.4627 | val_loss: 0.4485 | 40.4s
+[2026-02-05 18:03:05]   Epoch  7/30 | train_loss: 0.4594 | val_loss: 0.4444 | 40.3s
+[2026-02-05 18:03:45]   Epoch  8/30 | train_loss: 0.4606 | val_loss: 0.4459 | 40.2s
+[2026-02-05 18:04:26]   Epoch  9/30 | train_loss: 0.4581 | val_loss: 0.4433 | 40.6s
+[2026-02-05 18:05:06]   Epoch 10/30 | train_loss: 0.4597 | val_loss: 0.4439 | 40.1s
+[2026-02-05 18:05:46]   Epoch 11/30 | train_loss: 0.4598 | val_loss: 0.4446 | 40.3s
+[2026-02-05 18:06:27]   Epoch 12/30 | train_loss: 0.4582 | val_loss: 0.4428 | 40.3s
+[2026-02-05 18:07:07]   Epoch 13/30 | train_loss: 0.4569 | val_loss: 0.4423 | 40.2s
+[2026-02-05 18:07:47]   Epoch 14/30 | train_loss: 0.4573 | val_loss: 0.4436 | 40.3s
+[2026-02-05 18:08:28]   Epoch 15/30 | train_loss: 0.4557 | val_loss: 0.4422 | 40.2s
+[2026-02-05 18:09:08]   Epoch 16/30 | train_loss: 0.4559 | val_loss: 0.4432 | 40.3s
+[2026-02-05 18:09:49]   Epoch 17/30 | train_loss: 0.4559 | val_loss: 0.4434 | 40.7s
+[2026-02-05 18:10:29]   Epoch 18/30 | train_loss: 0.4561 | val_loss: 0.4412 | 40.7s
+[2026-02-05 18:11:10]   Epoch 19/30 | train_loss: 0.4559 | val_loss: 0.4411 | 40.8s
+[2026-02-05 18:11:51]   Epoch 20/30 | train_loss: 0.4550 | val_loss: 0.4408 | 40.4s
+[2026-02-05 18:12:31]   Epoch 21/30 | train_loss: 0.4536 | val_loss: 0.4433 | 40.0s
+[2026-02-05 18:13:11]   Epoch 22/30 | train_loss: 0.4528 | val_loss: 0.4396 | 40.1s
+[2026-02-05 18:13:51]   Epoch 23/30 | train_loss: 0.4530 | val_loss: 0.4387 | 40.2s
+[2026-02-05 18:14:32]   Epoch 24/30 | train_loss: 0.4510 | val_loss: 0.4392 | 40.2s
+[2026-02-05 18:15:12]   Epoch 25/30 | train_loss: 0.4512 | val_loss: 0.4387 | 40.3s
+[2026-02-05 18:15:52]   Epoch 26/30 | train_loss: 0.4521 | val_loss: 0.4379 | 40.3s
+[2026-02-05 18:16:33]   Epoch 27/30 | train_loss: 0.4517 | val_loss: 0.4384 | 40.2s
+[2026-02-05 18:17:13]   Epoch 28/30 | train_loss: 0.4493 | val_loss: 0.4380 | 40.1s
+[2026-02-05 18:17:53]   Epoch 29/30 | train_loss: 0.4501 | val_loss: 0.4372 | 40.3s
+[2026-02-05 18:18:33]   Epoch 30/30 | train_loss: 0.4517 | val_loss: 0.4439 | 40.0s
+[2026-02-05 18:18:36]   RESULTS: acc=0.808 | f1=0.894 | auc=nan
+[2026-02-05 18:18:36]            H_recall=0.000 | MDD_recall=0.808
+[2026-02-05 18:18:36]   Fold completed in 20.3 min
+[2026-02-05 18:18:37] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:18:37] FOLD 28/40 — Test Subject: MDD_23
+[2026-02-05 18:18:37] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:18:40] Data preparation completed in 3.0s
+[2026-02-05 18:18:40]   Train: 17,550 samples | Val: 1,950 | Test: 1,275
+[2026-02-05 18:18:40]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 18:18:40] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 18:18:40] Starting training loop...
+[2026-02-05 18:19:21]   Epoch  1/30 | train_loss: 0.4870 | val_loss: 0.4653 | 41.2s
+[2026-02-05 18:20:01]   Epoch  2/30 | train_loss: 0.4698 | val_loss: 0.4574 | 40.0s
+[2026-02-05 18:20:41]   Epoch  3/30 | train_loss: 0.4657 | val_loss: 0.4546 | 40.1s
+[2026-02-05 18:21:22]   Epoch  4/30 | train_loss: 0.4612 | val_loss: 0.4547 | 40.2s
+[2026-02-05 18:22:02]   Epoch  5/30 | train_loss: 0.4623 | val_loss: 0.4511 | 40.1s
+[2026-02-05 18:22:42]   Epoch  6/30 | train_loss: 0.4609 | val_loss: 0.4509 | 40.1s
+[2026-02-05 18:23:22]   Epoch  7/30 | train_loss: 0.4577 | val_loss: 0.4527 | 40.0s
+[2026-02-05 18:24:02]   Epoch  8/30 | train_loss: 0.4582 | val_loss: 0.4534 | 40.0s
+[2026-02-05 18:24:42]   Epoch  9/30 | train_loss: 0.4577 | val_loss: 0.4495 | 40.1s
+[2026-02-05 18:25:22]   Epoch 10/30 | train_loss: 0.4566 | val_loss: 0.4495 | 40.1s
+[2026-02-05 18:26:03]   Epoch 11/30 | train_loss: 0.4571 | val_loss: 0.4486 | 40.0s
+[2026-02-05 18:26:43]   Epoch 12/30 | train_loss: 0.4548 | val_loss: 0.4501 | 40.0s
+[2026-02-05 18:27:23]   Epoch 13/30 | train_loss: 0.4543 | val_loss: 0.4493 | 40.2s
+[2026-02-05 18:28:03]   Epoch 14/30 | train_loss: 0.4556 | val_loss: 0.4482 | 40.0s
+[2026-02-05 18:28:43]   Epoch 15/30 | train_loss: 0.4548 | val_loss: 0.4473 | 40.0s
+[2026-02-05 18:29:23]   Epoch 16/30 | train_loss: 0.4523 | val_loss: 0.4486 | 40.0s
+[2026-02-05 18:30:03]   Epoch 17/30 | train_loss: 0.4550 | val_loss: 0.4464 | 40.1s
+[2026-02-05 18:30:43]   Epoch 18/30 | train_loss: 0.4516 | val_loss: 0.4482 | 40.1s
+[2026-02-05 18:31:24]   Epoch 19/30 | train_loss: 0.4525 | val_loss: 0.4460 | 40.2s
+[2026-02-05 18:32:04]   Epoch 20/30 | train_loss: 0.4505 | val_loss: 0.4461 | 40.0s
+[2026-02-05 18:32:44]   Epoch 21/30 | train_loss: 0.4511 | val_loss: 0.4467 | 40.0s
+[2026-02-05 18:33:24]   Epoch 22/30 | train_loss: 0.4504 | val_loss: 0.4519 | 40.1s
+[2026-02-05 18:34:04]   Epoch 23/30 | train_loss: 0.4495 | val_loss: 0.4459 | 40.1s
+[2026-02-05 18:34:44]   Epoch 24/30 | train_loss: 0.4498 | val_loss: 0.4475 | 39.9s
+[2026-02-05 18:35:24]   Epoch 25/30 | train_loss: 0.4500 | val_loss: 0.4483 | 40.2s
+[2026-02-05 18:36:04]   Epoch 26/30 | train_loss: 0.4470 | val_loss: 0.4490 | 40.0s
+[2026-02-05 18:36:44]   Epoch 27/30 | train_loss: 0.4472 | val_loss: 0.4438 | 40.0s
+[2026-02-05 18:37:24]   Epoch 28/30 | train_loss: 0.4480 | val_loss: 0.4435 | 40.0s
+[2026-02-05 18:38:04]   Epoch 29/30 | train_loss: 0.4488 | val_loss: 0.4443 | 40.1s
+[2026-02-05 18:38:44]   Epoch 30/30 | train_loss: 0.4475 | val_loss: 0.4446 | 40.0s
+[2026-02-05 18:38:47]   RESULTS: acc=0.800 | f1=0.889 | auc=nan
+[2026-02-05 18:38:47]            H_recall=0.000 | MDD_recall=0.800
+[2026-02-05 18:38:47]   Fold completed in 20.2 min
+[2026-02-05 18:38:47] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:38:47] FOLD 29/40 — Test Subject: MDD_24
+[2026-02-05 18:38:47] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:38:50] Data preparation completed in 2.9s
+[2026-02-05 18:38:50]   Train: 17,550 samples | Val: 1,950 | Test: 1,409
+[2026-02-05 18:38:50]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 18:38:50] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 18:38:50] Starting training loop...
+[2026-02-05 18:39:32]   Epoch  1/30 | train_loss: 0.4854 | val_loss: 0.4665 | 41.6s
+[2026-02-05 18:40:12]   Epoch  2/30 | train_loss: 0.4697 | val_loss: 0.4497 | 39.9s
+[2026-02-05 18:40:52]   Epoch  3/30 | train_loss: 0.4666 | val_loss: 0.4464 | 39.9s
+[2026-02-05 18:41:32]   Epoch  4/30 | train_loss: 0.4627 | val_loss: 0.4447 | 39.9s
+[2026-02-05 18:42:12]   Epoch  5/30 | train_loss: 0.4622 | val_loss: 0.4433 | 40.0s
+[2026-02-05 18:42:52]   Epoch  6/30 | train_loss: 0.4608 | val_loss: 0.4408 | 40.3s
+[2026-02-05 18:43:33]   Epoch  7/30 | train_loss: 0.4606 | val_loss: 0.4425 | 40.5s
+[2026-02-05 18:44:14]   Epoch  8/30 | train_loss: 0.4582 | val_loss: 0.4410 | 41.2s
+[2026-02-05 18:44:57]   Epoch  9/30 | train_loss: 0.4582 | val_loss: 0.4401 | 42.6s
+[2026-02-05 18:45:38]   Epoch 10/30 | train_loss: 0.4586 | val_loss: 0.4398 | 40.8s
+[2026-02-05 18:46:18]   Epoch 11/30 | train_loss: 0.4585 | val_loss: 0.4404 | 40.2s
+[2026-02-05 18:46:58]   Epoch 12/30 | train_loss: 0.4565 | val_loss: 0.4388 | 40.3s
+[2026-02-05 18:47:39]   Epoch 13/30 | train_loss: 0.4539 | val_loss: 0.4408 | 40.3s
+[2026-02-05 18:48:19]   Epoch 14/30 | train_loss: 0.4556 | val_loss: 0.4398 | 40.2s
+[2026-02-05 18:48:59]   Epoch 15/30 | train_loss: 0.4540 | val_loss: 0.4384 | 40.3s
+[2026-02-05 18:49:40]   Epoch 16/30 | train_loss: 0.4540 | val_loss: 0.4391 | 40.4s
+[2026-02-05 18:50:20]   Epoch 17/30 | train_loss: 0.4541 | val_loss: 0.4386 | 40.5s
+[2026-02-05 18:51:00]   Epoch 18/30 | train_loss: 0.4536 | val_loss: 0.4383 | 40.3s
+[2026-02-05 18:51:41]   Epoch 19/30 | train_loss: 0.4519 | val_loss: 0.4376 | 40.3s
+[2026-02-05 18:52:21]   Epoch 20/30 | train_loss: 0.4535 | val_loss: 0.4390 | 40.1s
+[2026-02-05 18:53:01]   Epoch 21/30 | train_loss: 0.4537 | val_loss: 0.4382 | 40.2s
+[2026-02-05 18:53:41]   Epoch 22/30 | train_loss: 0.4507 | val_loss: 0.4369 | 40.0s
+[2026-02-05 18:54:21]   Epoch 23/30 | train_loss: 0.4520 | val_loss: 0.4371 | 40.2s
+[2026-02-05 18:55:02]   Epoch 24/30 | train_loss: 0.4504 | val_loss: 0.4412 | 40.2s
+[2026-02-05 18:55:42]   Epoch 25/30 | train_loss: 0.4500 | val_loss: 0.4371 | 40.1s
+[2026-02-05 18:56:22]   Epoch 26/30 | train_loss: 0.4511 | val_loss: 0.4367 | 40.1s
+[2026-02-05 18:57:02]   Epoch 27/30 | train_loss: 0.4492 | val_loss: 0.4371 | 40.2s
+[2026-02-05 18:57:42]   Epoch 28/30 | train_loss: 0.4471 | val_loss: 0.4353 | 40.3s
+[2026-02-05 18:58:23]   Epoch 29/30 | train_loss: 0.4464 | val_loss: 0.4368 | 40.2s
+[2026-02-05 18:59:03]   Epoch 30/30 | train_loss: 0.4482 | val_loss: 0.4359 | 40.2s
+[2026-02-05 18:59:07]   RESULTS: acc=0.785 | f1=0.880 | auc=nan
+[2026-02-05 18:59:07]            H_recall=0.000 | MDD_recall=0.785
+[2026-02-05 18:59:07]   Fold completed in 20.3 min
+[2026-02-05 18:59:07] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:59:07] FOLD 30/40 — Test Subject: MDD_26
+[2026-02-05 18:59:07] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 18:59:10] Data preparation completed in 3.0s
+[2026-02-05 18:59:10]   Train: 17,550 samples | Val: 1,950 | Test: 1,246
+[2026-02-05 18:59:10]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 18:59:10] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 18:59:10] Starting training loop...
+[2026-02-05 18:59:51]   Epoch  1/30 | train_loss: 0.4868 | val_loss: 0.4717 | 41.2s
+[2026-02-05 19:00:31]   Epoch  2/30 | train_loss: 0.4715 | val_loss: 0.4649 | 39.8s
+[2026-02-05 19:01:12]   Epoch  3/30 | train_loss: 0.4676 | val_loss: 0.4628 | 40.1s
+[2026-02-05 19:01:52]   Epoch  4/30 | train_loss: 0.4629 | val_loss: 0.4638 | 40.1s
+[2026-02-05 19:02:32]   Epoch  5/30 | train_loss: 0.4614 | val_loss: 0.4608 | 40.6s
+[2026-02-05 19:03:13]   Epoch  6/30 | train_loss: 0.4622 | val_loss: 0.4605 | 40.1s
+[2026-02-05 19:03:53]   Epoch  7/30 | train_loss: 0.4599 | val_loss: 0.4598 | 40.4s
+[2026-02-05 19:04:34]   Epoch  8/30 | train_loss: 0.4567 | val_loss: 0.4638 | 40.6s
+[2026-02-05 19:05:14]   Epoch  9/30 | train_loss: 0.4605 | val_loss: 0.4591 | 40.4s
+[2026-02-05 19:05:55]   Epoch 10/30 | train_loss: 0.4577 | val_loss: 0.4562 | 40.4s
+[2026-02-05 19:06:35]   Epoch 11/30 | train_loss: 0.4586 | val_loss: 0.4559 | 40.1s
+[2026-02-05 19:07:15]   Epoch 12/30 | train_loss: 0.4574 | val_loss: 0.4566 | 40.2s
+[2026-02-05 19:07:55]   Epoch 13/30 | train_loss: 0.4573 | val_loss: 0.4565 | 40.2s
+[2026-02-05 19:08:36]   Epoch 14/30 | train_loss: 0.4553 | val_loss: 0.4548 | 40.3s
+[2026-02-05 19:09:16]   Epoch 15/30 | train_loss: 0.4560 | val_loss: 0.4581 | 40.2s
+[2026-02-05 19:09:56]   Epoch 16/30 | train_loss: 0.4541 | val_loss: 0.4562 | 40.2s
+[2026-02-05 19:10:36]   Epoch 17/30 | train_loss: 0.4531 | val_loss: 0.4561 | 40.3s
+[2026-02-05 19:11:17]   Epoch 18/30 | train_loss: 0.4533 | val_loss: 0.4551 | 40.2s
+[2026-02-05 19:11:57]   Epoch 19/30 | train_loss: 0.4541 | val_loss: 0.4541 | 40.2s
+[2026-02-05 19:12:37]   Epoch 20/30 | train_loss: 0.4554 | val_loss: 0.4587 | 40.3s
+[2026-02-05 19:13:18]   Epoch 21/30 | train_loss: 0.4522 | val_loss: 0.4545 | 40.4s
+[2026-02-05 19:13:58]   Epoch 22/30 | train_loss: 0.4528 | val_loss: 0.4527 | 40.1s
+[2026-02-05 19:14:38]   Epoch 23/30 | train_loss: 0.4528 | val_loss: 0.4543 | 40.2s
+[2026-02-05 19:15:18]   Epoch 24/30 | train_loss: 0.4509 | val_loss: 0.4547 | 40.0s
+[2026-02-05 19:15:58]   Epoch 25/30 | train_loss: 0.4514 | val_loss: 0.4546 | 40.2s
+[2026-02-05 19:16:38]   Epoch 26/30 | train_loss: 0.4513 | val_loss: 0.4547 | 40.1s
+[2026-02-05 19:17:19]   Epoch 27/30 | train_loss: 0.4508 | val_loss: 0.4523 | 40.2s
+[2026-02-05 19:17:59]   Epoch 28/30 | train_loss: 0.4476 | val_loss: 0.4563 | 40.1s
+[2026-02-05 19:18:39]   Epoch 29/30 | train_loss: 0.4479 | val_loss: 0.4533 | 40.2s
+[2026-02-05 19:19:19]   Epoch 30/30 | train_loss: 0.4487 | val_loss: 0.4535 | 40.1s
+[2026-02-05 19:19:22]   RESULTS: acc=0.819 | f1=0.901 | auc=nan
+[2026-02-05 19:19:22]            H_recall=0.000 | MDD_recall=0.819
+[2026-02-05 19:19:22]   Fold completed in 20.2 min
+[2026-02-05 19:19:22] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:19:22] FOLD 31/40 — Test Subject: MDD_27
+[2026-02-05 19:19:22] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:19:25] Data preparation completed in 2.9s
+[2026-02-05 19:19:25]   Train: 17,550 samples | Val: 1,950 | Test: 1,002
+[2026-02-05 19:19:25]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 19:19:25] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 19:19:25] Starting training loop...
+[2026-02-05 19:20:06]   Epoch  1/30 | train_loss: 0.4861 | val_loss: 0.4663 | 41.5s
+[2026-02-05 19:20:46]   Epoch  2/30 | train_loss: 0.4705 | val_loss: 0.4610 | 39.8s
+[2026-02-05 19:21:27]   Epoch  3/30 | train_loss: 0.4660 | val_loss: 0.4545 | 40.1s
+[2026-02-05 19:22:07]   Epoch  4/30 | train_loss: 0.4633 | val_loss: 0.4540 | 40.1s
+[2026-02-05 19:22:47]   Epoch  5/30 | train_loss: 0.4598 | val_loss: 0.4511 | 40.2s
+[2026-02-05 19:23:27]   Epoch  6/30 | train_loss: 0.4591 | val_loss: 0.4548 | 40.1s
+[2026-02-05 19:24:07]   Epoch  7/30 | train_loss: 0.4600 | val_loss: 0.4508 | 40.2s
+[2026-02-05 19:24:48]   Epoch  8/30 | train_loss: 0.4603 | val_loss: 0.4529 | 40.1s
+[2026-02-05 19:25:28]   Epoch  9/30 | train_loss: 0.4574 | val_loss: 0.4546 | 40.0s
+[2026-02-05 19:26:08]   Epoch 10/30 | train_loss: 0.4586 | val_loss: 0.4511 | 40.3s
+[2026-02-05 19:26:48]   Epoch 11/30 | train_loss: 0.4575 | val_loss: 0.4508 | 40.1s
+[2026-02-05 19:27:28]   Epoch 12/30 | train_loss: 0.4555 | val_loss: 0.4485 | 40.3s
+[2026-02-05 19:28:08]   Epoch 13/30 | train_loss: 0.4574 | val_loss: 0.4495 | 40.2s
+[2026-02-05 19:28:49]   Epoch 14/30 | train_loss: 0.4532 | val_loss: 0.4487 | 40.1s
+[2026-02-05 19:29:29]   Epoch 15/30 | train_loss: 0.4542 | val_loss: 0.4499 | 40.1s
+[2026-02-05 19:30:09]   Epoch 16/30 | train_loss: 0.4535 | val_loss: 0.4474 | 40.1s
+[2026-02-05 19:30:49]   Epoch 17/30 | train_loss: 0.4521 | val_loss: 0.4484 | 40.0s
+[2026-02-05 19:31:29]   Epoch 18/30 | train_loss: 0.4530 | val_loss: 0.4474 | 40.1s
+[2026-02-05 19:32:09]   Epoch 19/30 | train_loss: 0.4514 | val_loss: 0.4477 | 40.1s
+[2026-02-05 19:32:49]   Epoch 20/30 | train_loss: 0.4509 | val_loss: 0.4491 | 40.2s
+[2026-02-05 19:33:29]   Epoch 21/30 | train_loss: 0.4500 | val_loss: 0.4500 | 40.1s
+[2026-02-05 19:34:09]   Epoch 22/30 | train_loss: 0.4514 | val_loss: 0.4463 | 40.0s
+[2026-02-05 19:34:49]   Epoch 23/30 | train_loss: 0.4514 | val_loss: 0.4497 | 40.0s
+[2026-02-05 19:35:29]   Epoch 24/30 | train_loss: 0.4499 | val_loss: 0.4458 | 39.9s
+[2026-02-05 19:36:09]   Epoch 25/30 | train_loss: 0.4493 | val_loss: 0.4471 | 40.0s
+[2026-02-05 19:36:50]   Epoch 26/30 | train_loss: 0.4467 | val_loss: 0.4453 | 40.1s
+[2026-02-05 19:37:30]   Epoch 27/30 | train_loss: 0.4489 | val_loss: 0.4460 | 40.2s
+[2026-02-05 19:38:10]   Epoch 28/30 | train_loss: 0.4493 | val_loss: 0.4442 | 40.1s
+[2026-02-05 19:38:50]   Epoch 29/30 | train_loss: 0.4467 | val_loss: 0.4488 | 39.9s
+[2026-02-05 19:39:30]   Epoch 30/30 | train_loss: 0.4465 | val_loss: 0.4472 | 40.2s
+[2026-02-05 19:39:32]   RESULTS: acc=0.811 | f1=0.896 | auc=nan
+[2026-02-05 19:39:32]            H_recall=0.000 | MDD_recall=0.811
+[2026-02-05 19:39:32]   Fold completed in 20.2 min
+[2026-02-05 19:39:32] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:39:32] FOLD 32/40 — Test Subject: MDD_28
+[2026-02-05 19:39:32] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:39:35] Data preparation completed in 3.1s
+[2026-02-05 19:39:35]   Train: 17,550 samples | Val: 1,950 | Test: 1,704
+[2026-02-05 19:39:35]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 19:39:36] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 19:39:36] Starting training loop...
+[2026-02-05 19:40:17]   Epoch  1/30 | train_loss: 0.4869 | val_loss: 0.4668 | 41.2s
+[2026-02-05 19:40:57]   Epoch  2/30 | train_loss: 0.4706 | val_loss: 0.4577 | 39.6s
+[2026-02-05 19:41:36]   Epoch  3/30 | train_loss: 0.4646 | val_loss: 0.4599 | 39.7s
+[2026-02-05 19:42:16]   Epoch  4/30 | train_loss: 0.4649 | val_loss: 0.4570 | 39.8s
+[2026-02-05 19:42:56]   Epoch  5/30 | train_loss: 0.4625 | val_loss: 0.4542 | 39.8s
+[2026-02-05 19:43:36]   Epoch  6/30 | train_loss: 0.4607 | val_loss: 0.4535 | 39.7s
+[2026-02-05 19:44:16]   Epoch  7/30 | train_loss: 0.4605 | val_loss: 0.4528 | 39.8s
+[2026-02-05 19:44:56]   Epoch  8/30 | train_loss: 0.4581 | val_loss: 0.4577 | 39.9s
+[2026-02-05 19:45:36]   Epoch  9/30 | train_loss: 0.4581 | val_loss: 0.4515 | 39.8s
+[2026-02-05 19:46:16]   Epoch 10/30 | train_loss: 0.4561 | val_loss: 0.4504 | 39.8s
+[2026-02-05 19:46:55]   Epoch 11/30 | train_loss: 0.4566 | val_loss: 0.4516 | 39.8s
+[2026-02-05 19:47:35]   Epoch 12/30 | train_loss: 0.4566 | val_loss: 0.4511 | 39.8s
+[2026-02-05 19:48:15]   Epoch 13/30 | train_loss: 0.4553 | val_loss: 0.4502 | 39.8s
+[2026-02-05 19:48:55]   Epoch 14/30 | train_loss: 0.4538 | val_loss: 0.4503 | 39.8s
+[2026-02-05 19:49:35]   Epoch 15/30 | train_loss: 0.4560 | val_loss: 0.4588 | 40.0s
+[2026-02-05 19:50:15]   Epoch 16/30 | train_loss: 0.4531 | val_loss: 0.4528 | 40.1s
+[2026-02-05 19:50:55]   Epoch 17/30 | train_loss: 0.4534 | val_loss: 0.4501 | 39.9s
+[2026-02-05 19:51:35]   Epoch 18/30 | train_loss: 0.4509 | val_loss: 0.4497 | 39.7s
+[2026-02-05 19:52:14]   Epoch 19/30 | train_loss: 0.4506 | val_loss: 0.4504 | 39.7s
+[2026-02-05 19:52:54]   Epoch 20/30 | train_loss: 0.4512 | val_loss: 0.4487 | 39.8s
+[2026-02-05 19:53:34]   Epoch 21/30 | train_loss: 0.4517 | val_loss: 0.4506 | 39.7s
+[2026-02-05 19:54:14]   Epoch 22/30 | train_loss: 0.4520 | val_loss: 0.4490 | 39.7s
+[2026-02-05 19:54:54]   Epoch 23/30 | train_loss: 0.4489 | val_loss: 0.4484 | 39.8s
+[2026-02-05 19:55:33]   Epoch 24/30 | train_loss: 0.4492 | val_loss: 0.4470 | 39.7s
+[2026-02-05 19:56:13]   Epoch 25/30 | train_loss: 0.4502 | val_loss: 0.4477 | 39.8s
+[2026-02-05 19:56:53]   Epoch 26/30 | train_loss: 0.4498 | val_loss: 0.4479 | 39.8s
+[2026-02-05 19:57:33]   Epoch 27/30 | train_loss: 0.4471 | val_loss: 0.4484 | 39.8s
+[2026-02-05 19:58:13]   Epoch 28/30 | train_loss: 0.4493 | val_loss: 0.4469 | 39.8s
+[2026-02-05 19:58:53]   Epoch 29/30 | train_loss: 0.4457 | val_loss: 0.4467 | 39.8s
+[2026-02-05 19:59:33]   Epoch 30/30 | train_loss: 0.4474 | val_loss: 0.4464 | 39.8s
+[2026-02-05 19:59:36]   RESULTS: acc=0.762 | f1=0.865 | auc=nan
+[2026-02-05 19:59:36]            H_recall=0.000 | MDD_recall=0.762
+[2026-02-05 19:59:36]   Fold completed in 20.1 min
+[2026-02-05 19:59:36] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:59:36] FOLD 33/40 — Test Subject: MDD_29
+[2026-02-05 19:59:36] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 19:59:39] Data preparation completed in 3.1s
+[2026-02-05 19:59:39]   Train: 17,550 samples | Val: 1,950 | Test: 1,443
+[2026-02-05 19:59:39]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 19:59:39] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 19:59:39] Starting training loop...
+[2026-02-05 20:00:20]   Epoch  1/30 | train_loss: 0.4877 | val_loss: 0.4698 | 40.9s
+[2026-02-05 20:01:00]   Epoch  2/30 | train_loss: 0.4707 | val_loss: 0.4614 | 39.7s
+[2026-02-05 20:01:40]   Epoch  3/30 | train_loss: 0.4661 | val_loss: 0.4547 | 39.8s
+[2026-02-05 20:02:20]   Epoch  4/30 | train_loss: 0.4639 | val_loss: 0.4550 | 39.9s
+[2026-02-05 20:03:00]   Epoch  5/30 | train_loss: 0.4638 | val_loss: 0.4553 | 40.0s
+[2026-02-05 20:03:40]   Epoch  6/30 | train_loss: 0.4622 | val_loss: 0.4524 | 39.9s
+[2026-02-05 20:04:20]   Epoch  7/30 | train_loss: 0.4598 | val_loss: 0.4526 | 40.0s
+[2026-02-05 20:05:00]   Epoch  8/30 | train_loss: 0.4582 | val_loss: 0.4508 | 39.8s
+[2026-02-05 20:05:40]   Epoch  9/30 | train_loss: 0.4602 | val_loss: 0.4505 | 39.8s
+[2026-02-05 20:06:19]   Epoch 10/30 | train_loss: 0.4579 | val_loss: 0.4492 | 39.8s
+[2026-02-05 20:06:59]   Epoch 11/30 | train_loss: 0.4566 | val_loss: 0.4515 | 39.8s
+[2026-02-05 20:07:39]   Epoch 12/30 | train_loss: 0.4582 | val_loss: 0.4490 | 39.8s
+[2026-02-05 20:08:19]   Epoch 13/30 | train_loss: 0.4569 | val_loss: 0.4503 | 39.7s
+[2026-02-05 20:08:59]   Epoch 14/30 | train_loss: 0.4570 | val_loss: 0.4477 | 39.8s
+[2026-02-05 20:09:39]   Epoch 15/30 | train_loss: 0.4566 | val_loss: 0.4485 | 39.9s
+[2026-02-05 20:10:19]   Epoch 16/30 | train_loss: 0.4537 | val_loss: 0.4472 | 39.9s
+[2026-02-05 20:10:59]   Epoch 17/30 | train_loss: 0.4544 | val_loss: 0.4469 | 39.8s
+[2026-02-05 20:11:38]   Epoch 18/30 | train_loss: 0.4554 | val_loss: 0.4469 | 39.8s
+[2026-02-05 20:12:18]   Epoch 19/30 | train_loss: 0.4541 | val_loss: 0.4472 | 39.9s
+[2026-02-05 20:12:58]   Epoch 20/30 | train_loss: 0.4524 | val_loss: 0.4467 | 39.9s
+[2026-02-05 20:13:38]   Epoch 21/30 | train_loss: 0.4546 | val_loss: 0.4469 | 39.8s
+[2026-02-05 20:14:18]   Epoch 22/30 | train_loss: 0.4537 | val_loss: 0.4470 | 40.1s
+[2026-02-05 20:14:58]   Epoch 23/30 | train_loss: 0.4529 | val_loss: 0.4454 | 39.9s
+[2026-02-05 20:15:38]   Epoch 24/30 | train_loss: 0.4517 | val_loss: 0.4436 | 39.8s
+[2026-02-05 20:16:18]   Epoch 25/30 | train_loss: 0.4511 | val_loss: 0.4464 | 39.8s
+[2026-02-05 20:16:58]   Epoch 26/30 | train_loss: 0.4518 | val_loss: 0.4458 | 39.9s
+[2026-02-05 20:17:38]   Epoch 27/30 | train_loss: 0.4511 | val_loss: 0.4437 | 39.9s
+[2026-02-05 20:18:18]   Epoch 28/30 | train_loss: 0.4511 | val_loss: 0.4492 | 39.9s
+[2026-02-05 20:18:58]   Epoch 29/30 | train_loss: 0.4495 | val_loss: 0.4444 | 39.9s
+[2026-02-05 20:19:37]   Epoch 30/30 | train_loss: 0.4482 | val_loss: 0.4442 | 39.8s
+[2026-02-05 20:19:40]   RESULTS: acc=0.839 | f1=0.912 | auc=nan
+[2026-02-05 20:19:40]            H_recall=0.000 | MDD_recall=0.839
+[2026-02-05 20:19:40]   Fold completed in 20.1 min
+[2026-02-05 20:19:40] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:19:40] FOLD 34/40 — Test Subject: MDD_3
+[2026-02-05 20:19:40] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:19:43] Data preparation completed in 2.7s
+[2026-02-05 20:19:43]   Train: 17,550 samples | Val: 1,950 | Test: 1,082
+[2026-02-05 20:19:43]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 20:19:43] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 20:19:43] Starting training loop...
+[2026-02-05 20:20:25]   Epoch  1/30 | train_loss: 0.4858 | val_loss: 0.4697 | 41.2s
+[2026-02-05 20:21:04]   Epoch  2/30 | train_loss: 0.4673 | val_loss: 0.4617 | 39.6s
+[2026-02-05 20:21:44]   Epoch  3/30 | train_loss: 0.4644 | val_loss: 0.4608 | 39.7s
+[2026-02-05 20:22:24]   Epoch  4/30 | train_loss: 0.4629 | val_loss: 0.4615 | 39.8s
+[2026-02-05 20:23:04]   Epoch  5/30 | train_loss: 0.4608 | val_loss: 0.4594 | 39.8s
+[2026-02-05 20:23:44]   Epoch  6/30 | train_loss: 0.4598 | val_loss: 0.4591 | 39.8s
+[2026-02-05 20:24:24]   Epoch  7/30 | train_loss: 0.4592 | val_loss: 0.4572 | 39.7s
+[2026-02-05 20:25:04]   Epoch  8/30 | train_loss: 0.4607 | val_loss: 0.4588 | 39.8s
+[2026-02-05 20:25:43]   Epoch  9/30 | train_loss: 0.4559 | val_loss: 0.4593 | 39.8s
+[2026-02-05 20:26:23]   Epoch 10/30 | train_loss: 0.4560 | val_loss: 0.4574 | 39.8s
+[2026-02-05 20:27:03]   Epoch 11/30 | train_loss: 0.4567 | val_loss: 0.4561 | 39.8s
+[2026-02-05 20:27:43]   Epoch 12/30 | train_loss: 0.4558 | val_loss: 0.4586 | 39.8s
+[2026-02-05 20:28:23]   Epoch 13/30 | train_loss: 0.4562 | val_loss: 0.4580 | 39.9s
+[2026-02-05 20:29:02]   Epoch 14/30 | train_loss: 0.4561 | val_loss: 0.4569 | 39.8s
+[2026-02-05 20:29:42]   Epoch 15/30 | train_loss: 0.4544 | val_loss: 0.4558 | 39.8s
+[2026-02-05 20:30:22]   Epoch 16/30 | train_loss: 0.4538 | val_loss: 0.4543 | 39.8s
+[2026-02-05 20:31:02]   Epoch 17/30 | train_loss: 0.4529 | val_loss: 0.4546 | 39.8s
+[2026-02-05 20:31:42]   Epoch 18/30 | train_loss: 0.4526 | val_loss: 0.4538 | 39.7s
+[2026-02-05 20:32:22]   Epoch 19/30 | train_loss: 0.4531 | val_loss: 0.4564 | 39.8s
+[2026-02-05 20:33:01]   Epoch 20/30 | train_loss: 0.4514 | val_loss: 0.4564 | 39.8s
+[2026-02-05 20:33:41]   Epoch 21/30 | train_loss: 0.4521 | val_loss: 0.4524 | 39.8s
+[2026-02-05 20:34:21]   Epoch 22/30 | train_loss: 0.4521 | val_loss: 0.4530 | 39.8s
+[2026-02-05 20:35:01]   Epoch 23/30 | train_loss: 0.4535 | val_loss: 0.4520 | 39.9s
+[2026-02-05 20:35:41]   Epoch 24/30 | train_loss: 0.4506 | val_loss: 0.4532 | 39.7s
+[2026-02-05 20:36:21]   Epoch 25/30 | train_loss: 0.4511 | val_loss: 0.4525 | 39.8s
+[2026-02-05 20:37:00]   Epoch 26/30 | train_loss: 0.4505 | val_loss: 0.4515 | 39.7s
+[2026-02-05 20:37:40]   Epoch 27/30 | train_loss: 0.4486 | val_loss: 0.4526 | 39.7s
+[2026-02-05 20:38:20]   Epoch 28/30 | train_loss: 0.4489 | val_loss: 0.4510 | 39.8s
+[2026-02-05 20:39:00]   Epoch 29/30 | train_loss: 0.4473 | val_loss: 0.4510 | 39.8s
+[2026-02-05 20:39:39]   Epoch 30/30 | train_loss: 0.4481 | val_loss: 0.4494 | 39.8s
+[2026-02-05 20:39:42]   RESULTS: acc=0.840 | f1=0.913 | auc=nan
+[2026-02-05 20:39:42]            H_recall=0.000 | MDD_recall=0.840
+[2026-02-05 20:39:42]   Fold completed in 20.0 min
+[2026-02-05 20:39:42] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:39:42] FOLD 35/40 — Test Subject: MDD_30
+[2026-02-05 20:39:42] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:39:45] Data preparation completed in 2.9s
+[2026-02-05 20:39:45]   Train: 17,550 samples | Val: 1,950 | Test: 1,606
+[2026-02-05 20:39:45]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 20:39:45] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 20:39:45] Starting training loop...
+[2026-02-05 20:40:26]   Epoch  1/30 | train_loss: 0.4854 | val_loss: 0.4660 | 40.8s
+[2026-02-05 20:41:06]   Epoch  2/30 | train_loss: 0.4681 | val_loss: 0.4559 | 39.6s
+[2026-02-05 20:41:46]   Epoch  3/30 | train_loss: 0.4646 | val_loss: 0.4506 | 39.7s
+[2026-02-05 20:42:26]   Epoch  4/30 | train_loss: 0.4603 | val_loss: 0.4496 | 39.8s
+[2026-02-05 20:43:05]   Epoch  5/30 | train_loss: 0.4594 | val_loss: 0.4498 | 39.7s
+[2026-02-05 20:43:45]   Epoch  6/30 | train_loss: 0.4608 | val_loss: 0.4496 | 39.7s
+[2026-02-05 20:44:25]   Epoch  7/30 | train_loss: 0.4581 | val_loss: 0.4474 | 39.8s
+[2026-02-05 20:45:05]   Epoch  8/30 | train_loss: 0.4563 | val_loss: 0.4551 | 39.8s
+[2026-02-05 20:45:44]   Epoch  9/30 | train_loss: 0.4581 | val_loss: 0.4491 | 39.7s
+[2026-02-05 20:46:24]   Epoch 10/30 | train_loss: 0.4534 | val_loss: 0.4482 | 39.7s
+[2026-02-05 20:47:04]   Epoch 11/30 | train_loss: 0.4568 | val_loss: 0.4470 | 39.7s
+[2026-02-05 20:47:44]   Epoch 12/30 | train_loss: 0.4553 | val_loss: 0.4476 | 39.7s
+[2026-02-05 20:48:23]   Epoch 13/30 | train_loss: 0.4539 | val_loss: 0.4472 | 39.7s
+[2026-02-05 20:49:03]   Epoch 14/30 | train_loss: 0.4519 | val_loss: 0.4474 | 39.8s
+[2026-02-05 20:49:43]   Epoch 15/30 | train_loss: 0.4538 | val_loss: 0.4456 | 39.7s
+[2026-02-05 20:50:23]   Epoch 16/30 | train_loss: 0.4514 | val_loss: 0.4494 | 39.7s
+[2026-02-05 20:51:02]   Epoch 17/30 | train_loss: 0.4521 | val_loss: 0.4459 | 39.8s
+[2026-02-05 20:51:42]   Epoch 18/30 | train_loss: 0.4499 | val_loss: 0.4474 | 39.8s
+[2026-02-05 20:52:22]   Epoch 19/30 | train_loss: 0.4504 | val_loss: 0.4461 | 39.9s
+[2026-02-05 20:53:02]   Epoch 20/30 | train_loss: 0.4497 | val_loss: 0.4491 | 39.8s
+[2026-02-05 20:53:42]   Epoch 21/30 | train_loss: 0.4491 | val_loss: 0.4464 | 39.8s
+[2026-02-05 20:54:22]   Epoch 22/30 | train_loss: 0.4504 | val_loss: 0.4489 | 39.8s
+[2026-02-05 20:54:22]   Early stopping at epoch 22 (best val_loss: 0.4456)
+[2026-02-05 20:54:25]   RESULTS: acc=0.765 | f1=0.867 | auc=nan
+[2026-02-05 20:54:25]            H_recall=0.000 | MDD_recall=0.765
+[2026-02-05 20:54:25]   Fold completed in 14.7 min
+[2026-02-05 20:54:25] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:54:25] FOLD 36/40 — Test Subject: MDD_31
+[2026-02-05 20:54:25] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 20:54:28] Data preparation completed in 2.8s
+[2026-02-05 20:54:28]   Train: 17,550 samples | Val: 1,950 | Test: 1,736
+[2026-02-05 20:54:28]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 20:54:28] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 20:54:28] Starting training loop...
+[2026-02-05 20:55:10]   Epoch  1/30 | train_loss: 0.4838 | val_loss: 0.4621 | 41.2s
+[2026-02-05 20:55:49]   Epoch  2/30 | train_loss: 0.4686 | val_loss: 0.4536 | 39.6s
+[2026-02-05 20:56:29]   Epoch  3/30 | train_loss: 0.4632 | val_loss: 0.4518 | 39.7s
+[2026-02-05 20:57:09]   Epoch  4/30 | train_loss: 0.4613 | val_loss: 0.4494 | 39.9s
+[2026-02-05 20:57:49]   Epoch  5/30 | train_loss: 0.4594 | val_loss: 0.4467 | 39.9s
+[2026-02-05 20:58:29]   Epoch  6/30 | train_loss: 0.4590 | val_loss: 0.4460 | 39.8s
+[2026-02-05 20:59:09]   Epoch  7/30 | train_loss: 0.4561 | val_loss: 0.4468 | 39.8s
+[2026-02-05 20:59:49]   Epoch  8/30 | train_loss: 0.4583 | val_loss: 0.4457 | 39.8s
+[2026-02-05 21:00:29]   Epoch  9/30 | train_loss: 0.4574 | val_loss: 0.4440 | 39.7s
+[2026-02-05 21:01:08]   Epoch 10/30 | train_loss: 0.4564 | val_loss: 0.4443 | 39.7s
+[2026-02-05 21:01:48]   Epoch 11/30 | train_loss: 0.4525 | val_loss: 0.4434 | 39.7s
+[2026-02-05 21:02:28]   Epoch 12/30 | train_loss: 0.4536 | val_loss: 0.4470 | 39.7s
+[2026-02-05 21:03:08]   Epoch 13/30 | train_loss: 0.4527 | val_loss: 0.4428 | 39.8s
+[2026-02-05 21:03:47]   Epoch 14/30 | train_loss: 0.4537 | val_loss: 0.4426 | 39.7s
+[2026-02-05 21:04:28]   Epoch 15/30 | train_loss: 0.4510 | val_loss: 0.4423 | 40.0s
+[2026-02-05 21:05:08]   Epoch 16/30 | train_loss: 0.4513 | val_loss: 0.4423 | 39.9s
+[2026-02-05 21:05:47]   Epoch 17/30 | train_loss: 0.4514 | val_loss: 0.4440 | 39.7s
+[2026-02-05 21:06:27]   Epoch 18/30 | train_loss: 0.4497 | val_loss: 0.4422 | 39.8s
+[2026-02-05 21:07:07]   Epoch 19/30 | train_loss: 0.4510 | val_loss: 0.4422 | 39.7s
+[2026-02-05 21:07:47]   Epoch 20/30 | train_loss: 0.4494 | val_loss: 0.4416 | 39.8s
+[2026-02-05 21:08:27]   Epoch 21/30 | train_loss: 0.4506 | val_loss: 0.4415 | 39.8s
+[2026-02-05 21:09:07]   Epoch 22/30 | train_loss: 0.4481 | val_loss: 0.4411 | 39.8s
+[2026-02-05 21:09:47]   Epoch 23/30 | train_loss: 0.4496 | val_loss: 0.4409 | 39.8s
+[2026-02-05 21:10:26]   Epoch 24/30 | train_loss: 0.4473 | val_loss: 0.4417 | 39.8s
+[2026-02-05 21:11:06]   Epoch 25/30 | train_loss: 0.4479 | val_loss: 0.4415 | 39.9s
+[2026-02-05 21:11:46]   Epoch 26/30 | train_loss: 0.4473 | val_loss: 0.4398 | 39.8s
+[2026-02-05 21:12:26]   Epoch 27/30 | train_loss: 0.4469 | val_loss: 0.4402 | 39.9s
+[2026-02-05 21:13:06]   Epoch 28/30 | train_loss: 0.4463 | val_loss: 0.4404 | 39.9s
+[2026-02-05 21:13:46]   Epoch 29/30 | train_loss: 0.4482 | val_loss: 0.4403 | 40.0s
+[2026-02-05 21:14:26]   Epoch 30/30 | train_loss: 0.4470 | val_loss: 0.4407 | 39.9s
+[2026-02-05 21:14:29]   RESULTS: acc=0.779 | f1=0.876 | auc=nan
+[2026-02-05 21:14:29]            H_recall=0.000 | MDD_recall=0.779
+[2026-02-05 21:14:29]   Fold completed in 20.1 min
+[2026-02-05 21:14:30] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:14:30] FOLD 37/40 — Test Subject: MDD_32
+[2026-02-05 21:14:30] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:14:33] Data preparation completed in 3.0s
+[2026-02-05 21:14:33]   Train: 17,550 samples | Val: 1,950 | Test: 1,716
+[2026-02-05 21:14:33]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 21:14:33] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 21:14:33] Starting training loop...
+[2026-02-05 21:15:14]   Epoch  1/30 | train_loss: 0.4856 | val_loss: 0.4675 | 41.3s
+[2026-02-05 21:15:54]   Epoch  2/30 | train_loss: 0.4701 | val_loss: 0.4641 | 39.6s
+[2026-02-05 21:16:34]   Epoch  3/30 | train_loss: 0.4634 | val_loss: 0.4555 | 39.8s
+[2026-02-05 21:17:14]   Epoch  4/30 | train_loss: 0.4639 | val_loss: 0.4538 | 40.0s
+[2026-02-05 21:17:54]   Epoch  5/30 | train_loss: 0.4615 | val_loss: 0.4535 | 40.0s
+[2026-02-05 21:18:34]   Epoch  6/30 | train_loss: 0.4613 | val_loss: 0.4511 | 39.8s
+[2026-02-05 21:19:14]   Epoch  7/30 | train_loss: 0.4591 | val_loss: 0.4509 | 39.8s
+[2026-02-05 21:19:54]   Epoch  8/30 | train_loss: 0.4580 | val_loss: 0.4587 | 39.8s
+[2026-02-05 21:20:34]   Epoch  9/30 | train_loss: 0.4570 | val_loss: 0.4528 | 39.8s
+[2026-02-05 21:21:13]   Epoch 10/30 | train_loss: 0.4561 | val_loss: 0.4509 | 39.9s
+[2026-02-05 21:21:53]   Epoch 11/30 | train_loss: 0.4558 | val_loss: 0.4503 | 39.9s
+[2026-02-05 21:22:33]   Epoch 12/30 | train_loss: 0.4563 | val_loss: 0.4502 | 39.8s
+[2026-02-05 21:23:13]   Epoch 13/30 | train_loss: 0.4548 | val_loss: 0.4485 | 39.8s
+[2026-02-05 21:23:53]   Epoch 14/30 | train_loss: 0.4552 | val_loss: 0.4479 | 39.8s
+[2026-02-05 21:24:33]   Epoch 15/30 | train_loss: 0.4547 | val_loss: 0.4476 | 39.8s
+[2026-02-05 21:25:13]   Epoch 16/30 | train_loss: 0.4541 | val_loss: 0.4469 | 39.8s
+[2026-02-05 21:25:53]   Epoch 17/30 | train_loss: 0.4525 | val_loss: 0.4478 | 39.8s
+[2026-02-05 21:26:33]   Epoch 18/30 | train_loss: 0.4527 | val_loss: 0.4481 | 39.8s
+[2026-02-05 21:27:13]   Epoch 19/30 | train_loss: 0.4546 | val_loss: 0.4465 | 39.9s
+[2026-02-05 21:27:53]   Epoch 20/30 | train_loss: 0.4500 | val_loss: 0.4479 | 39.9s
+[2026-02-05 21:28:33]   Epoch 21/30 | train_loss: 0.4507 | val_loss: 0.4453 | 39.9s
+[2026-02-05 21:29:12]   Epoch 22/30 | train_loss: 0.4517 | val_loss: 0.4578 | 39.8s
+[2026-02-05 21:29:52]   Epoch 23/30 | train_loss: 0.4503 | val_loss: 0.4474 | 39.9s
+[2026-02-05 21:30:32]   Epoch 24/30 | train_loss: 0.4508 | val_loss: 0.4490 | 39.8s
+[2026-02-05 21:31:12]   Epoch 25/30 | train_loss: 0.4523 | val_loss: 0.4450 | 39.8s
+[2026-02-05 21:31:52]   Epoch 26/30 | train_loss: 0.4498 | val_loss: 0.4462 | 39.8s
+[2026-02-05 21:32:32]   Epoch 27/30 | train_loss: 0.4495 | val_loss: 0.4444 | 39.8s
+[2026-02-05 21:33:12]   Epoch 28/30 | train_loss: 0.4480 | val_loss: 0.4443 | 39.8s
+[2026-02-05 21:33:51]   Epoch 29/30 | train_loss: 0.4485 | val_loss: 0.4443 | 39.7s
+[2026-02-05 21:34:31]   Epoch 30/30 | train_loss: 0.4473 | val_loss: 0.4454 | 39.8s
+[2026-02-05 21:34:35]   RESULTS: acc=0.801 | f1=0.890 | auc=nan
+[2026-02-05 21:34:35]            H_recall=0.000 | MDD_recall=0.801
+[2026-02-05 21:34:35]   Fold completed in 20.1 min
+[2026-02-05 21:34:35] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:34:35] FOLD 38/40 — Test Subject: MDD_33
+[2026-02-05 21:34:35] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:34:38] Data preparation completed in 2.8s
+[2026-02-05 21:34:38]   Train: 17,550 samples | Val: 1,950 | Test: 1,546
+[2026-02-05 21:34:38]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 21:34:38] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 21:34:38] Starting training loop...
+[2026-02-05 21:35:19]   Epoch  1/30 | train_loss: 0.4848 | val_loss: 0.4628 | 41.2s
+[2026-02-05 21:35:59]   Epoch  2/30 | train_loss: 0.4702 | val_loss: 0.4571 | 39.5s
+[2026-02-05 21:36:39]   Epoch  3/30 | train_loss: 0.4657 | val_loss: 0.4557 | 39.7s
+[2026-02-05 21:37:19]   Epoch  4/30 | train_loss: 0.4652 | val_loss: 0.4522 | 40.3s
+[2026-02-05 21:37:59]   Epoch  5/30 | train_loss: 0.4632 | val_loss: 0.4523 | 39.8s
+[2026-02-05 21:38:39]   Epoch  6/30 | train_loss: 0.4605 | val_loss: 0.4503 | 39.8s
+[2026-02-05 21:39:18]   Epoch  7/30 | train_loss: 0.4598 | val_loss: 0.4578 | 39.7s
+[2026-02-05 21:39:58]   Epoch  8/30 | train_loss: 0.4602 | val_loss: 0.4503 | 39.8s
+[2026-02-05 21:40:38]   Epoch  9/30 | train_loss: 0.4596 | val_loss: 0.4548 | 39.7s
+[2026-02-05 21:41:18]   Epoch 10/30 | train_loss: 0.4599 | val_loss: 0.4486 | 39.8s
+[2026-02-05 21:41:58]   Epoch 11/30 | train_loss: 0.4588 | val_loss: 0.4514 | 39.8s
+[2026-02-05 21:42:38]   Epoch 12/30 | train_loss: 0.4576 | val_loss: 0.4502 | 39.9s
+[2026-02-05 21:43:17]   Epoch 13/30 | train_loss: 0.4540 | val_loss: 0.4536 | 39.8s
+[2026-02-05 21:43:57]   Epoch 14/30 | train_loss: 0.4573 | val_loss: 0.4483 | 39.8s
+[2026-02-05 21:44:37]   Epoch 15/30 | train_loss: 0.4564 | val_loss: 0.4494 | 39.8s
+[2026-02-05 21:45:17]   Epoch 16/30 | train_loss: 0.4548 | val_loss: 0.4552 | 39.8s
+[2026-02-05 21:45:57]   Epoch 17/30 | train_loss: 0.4542 | val_loss: 0.4483 | 39.9s
+[2026-02-05 21:46:37]   Epoch 18/30 | train_loss: 0.4537 | val_loss: 0.4469 | 39.8s
+[2026-02-05 21:47:17]   Epoch 19/30 | train_loss: 0.4540 | val_loss: 0.4520 | 39.8s
+[2026-02-05 21:47:56]   Epoch 20/30 | train_loss: 0.4529 | val_loss: 0.4474 | 39.8s
+[2026-02-05 21:48:36]   Epoch 21/30 | train_loss: 0.4531 | val_loss: 0.4483 | 39.7s
+[2026-02-05 21:49:16]   Epoch 22/30 | train_loss: 0.4515 | val_loss: 0.4476 | 39.7s
+[2026-02-05 21:49:55]   Epoch 23/30 | train_loss: 0.4511 | val_loss: 0.4483 | 39.7s
+[2026-02-05 21:50:35]   Epoch 24/30 | train_loss: 0.4515 | val_loss: 0.4485 | 39.8s
+[2026-02-05 21:51:15]   Epoch 25/30 | train_loss: 0.4492 | val_loss: 0.4452 | 39.8s
+[2026-02-05 21:51:55]   Epoch 26/30 | train_loss: 0.4508 | val_loss: 0.4465 | 39.7s
+[2026-02-05 21:52:35]   Epoch 27/30 | train_loss: 0.4504 | val_loss: 0.4462 | 39.7s
+[2026-02-05 21:53:14]   Epoch 28/30 | train_loss: 0.4508 | val_loss: 0.4455 | 39.8s
+[2026-02-05 21:53:54]   Epoch 29/30 | train_loss: 0.4514 | val_loss: 0.4469 | 39.8s
+[2026-02-05 21:54:34]   Epoch 30/30 | train_loss: 0.4491 | val_loss: 0.4452 | 39.8s
+[2026-02-05 21:54:37]   RESULTS: acc=0.739 | f1=0.850 | auc=nan
+[2026-02-05 21:54:37]            H_recall=0.000 | MDD_recall=0.739
+[2026-02-05 21:54:37]   Fold completed in 20.0 min
+[2026-02-05 21:54:37] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:54:37] FOLD 39/40 — Test Subject: MDD_5
+[2026-02-05 21:54:37] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 21:54:40] Data preparation completed in 2.8s
+[2026-02-05 21:54:40]   Train: 17,550 samples | Val: 1,950 | Test: 1,585
+[2026-02-05 21:54:40]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 21:54:40] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 21:54:40] Starting training loop...
+[2026-02-05 21:55:21]   Epoch  1/30 | train_loss: 0.4822 | val_loss: 0.4594 | 41.2s
+[2026-02-05 21:56:01]   Epoch  2/30 | train_loss: 0.4639 | val_loss: 0.4519 | 39.4s
+[2026-02-05 21:56:41]   Epoch  3/30 | train_loss: 0.4587 | val_loss: 0.4483 | 39.6s
+[2026-02-05 21:57:21]   Epoch  4/30 | train_loss: 0.4564 | val_loss: 0.4440 | 39.8s
+[2026-02-05 21:58:01]   Epoch  5/30 | train_loss: 0.4559 | val_loss: 0.4444 | 39.8s
+[2026-02-05 21:58:40]   Epoch  6/30 | train_loss: 0.4516 | val_loss: 0.4474 | 39.7s
+[2026-02-05 21:59:20]   Epoch  7/30 | train_loss: 0.4509 | val_loss: 0.4419 | 39.7s
+[2026-02-05 22:00:00]   Epoch  8/30 | train_loss: 0.4472 | val_loss: 0.4395 | 39.6s
+[2026-02-05 22:00:39]   Epoch  9/30 | train_loss: 0.4491 | val_loss: 0.4399 | 39.7s
+[2026-02-05 22:01:19]   Epoch 10/30 | train_loss: 0.4479 | val_loss: 0.4371 | 39.8s
+[2026-02-05 22:01:59]   Epoch 11/30 | train_loss: 0.4480 | val_loss: 0.4379 | 39.7s
+[2026-02-05 22:02:39]   Epoch 12/30 | train_loss: 0.4487 | val_loss: 0.4401 | 39.7s
+[2026-02-05 22:03:18]   Epoch 13/30 | train_loss: 0.4463 | val_loss: 0.4372 | 39.7s
+[2026-02-05 22:03:58]   Epoch 14/30 | train_loss: 0.4464 | val_loss: 0.4396 | 39.8s
+[2026-02-05 22:04:38]   Epoch 15/30 | train_loss: 0.4454 | val_loss: 0.4367 | 39.8s
+[2026-02-05 22:05:18]   Epoch 16/30 | train_loss: 0.4423 | val_loss: 0.4378 | 39.7s
+[2026-02-05 22:05:58]   Epoch 17/30 | train_loss: 0.4442 | val_loss: 0.4365 | 40.0s
+[2026-02-05 22:06:38]   Epoch 18/30 | train_loss: 0.4429 | val_loss: 0.4341 | 39.7s
+[2026-02-05 22:07:18]   Epoch 19/30 | train_loss: 0.4410 | val_loss: 0.4346 | 39.7s
+[2026-02-05 22:07:57]   Epoch 20/30 | train_loss: 0.4423 | val_loss: 0.4350 | 39.8s
+[2026-02-05 22:08:37]   Epoch 21/30 | train_loss: 0.4400 | val_loss: 0.4327 | 39.7s
+[2026-02-05 22:09:17]   Epoch 22/30 | train_loss: 0.4405 | val_loss: 0.4334 | 40.2s
+[2026-02-05 22:09:58]   Epoch 23/30 | train_loss: 0.4396 | val_loss: 0.4341 | 40.2s
+[2026-02-05 22:10:38]   Epoch 24/30 | train_loss: 0.4378 | val_loss: 0.4311 | 40.4s
+[2026-02-05 22:11:18]   Epoch 25/30 | train_loss: 0.4397 | val_loss: 0.4360 | 40.2s
+[2026-02-05 22:11:58]   Epoch 26/30 | train_loss: 0.4393 | val_loss: 0.4303 | 40.2s
+[2026-02-05 22:12:39]   Epoch 27/30 | train_loss: 0.4397 | val_loss: 0.4304 | 40.0s
+[2026-02-05 22:13:18]   Epoch 28/30 | train_loss: 0.4372 | val_loss: 0.4314 | 40.0s
+[2026-02-05 22:13:58]   Epoch 29/30 | train_loss: 0.4381 | val_loss: 0.4311 | 39.9s
+[2026-02-05 22:14:38]   Epoch 30/30 | train_loss: 0.4364 | val_loss: 0.4317 | 40.0s
+[2026-02-05 22:14:42]   RESULTS: acc=0.264 | f1=0.418 | auc=nan
+[2026-02-05 22:14:42]            H_recall=0.000 | MDD_recall=0.264
+[2026-02-05 22:14:42]   Fold completed in 20.1 min
+[2026-02-05 22:14:42] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 22:14:42] FOLD 40/40 — Test Subject: MDD_6
+[2026-02-05 22:14:42] ──────────────────────────────────────────────────────────────────────
+[2026-02-05 22:14:45] Data preparation completed in 2.8s
+[2026-02-05 22:14:45]   Train: 17,550 samples | Val: 1,950 | Test: 1,382
+[2026-02-05 22:14:45]   Class balance: H=6,300, MDD=11,250 | pos_weight=0.560
+[2026-02-05 22:14:45] Model: InceptionV3+LSTM | Total: 24,147,169 | Trainable: 2,361,601
+[2026-02-05 22:14:45] Starting training loop...
+[2026-02-05 22:15:26]   Epoch  1/30 | train_loss: 0.4876 | val_loss: 0.4677 | 41.4s
+[2026-02-05 22:16:06]   Epoch  2/30 | train_loss: 0.4713 | val_loss: 0.4520 | 39.8s
+[2026-02-05 22:16:47]   Epoch  3/30 | train_loss: 0.4660 | val_loss: 0.4495 | 40.1s
+[2026-02-05 22:17:27]   Epoch  4/30 | train_loss: 0.4652 | val_loss: 0.4485 | 40.1s
+[2026-02-05 22:18:07]   Epoch  5/30 | train_loss: 0.4625 | val_loss: 0.4448 | 40.1s
+[2026-02-05 22:18:47]   Epoch  6/30 | train_loss: 0.4633 | val_loss: 0.4450 | 40.0s
+[2026-02-05 22:19:27]   Epoch  7/30 | train_loss: 0.4595 | val_loss: 0.4433 | 40.1s
+[2026-02-05 22:20:07]   Epoch  8/30 | train_loss: 0.4598 | val_loss: 0.4471 | 40.0s
+[2026-02-05 22:20:47]   Epoch  9/30 | train_loss: 0.4586 | val_loss: 0.4412 | 40.1s
+[2026-02-05 22:21:27]   Epoch 10/30 | train_loss: 0.4596 | val_loss: 0.4458 | 40.2s
+[2026-02-05 22:22:08]   Epoch 11/30 | train_loss: 0.4584 | val_loss: 0.4413 | 40.3s
+[2026-02-05 22:22:48]   Epoch 12/30 | train_loss: 0.4589 | val_loss: 0.4415 | 40.1s
+[2026-02-05 22:23:28]   Epoch 13/30 | train_loss: 0.4573 | val_loss: 0.4402 | 40.1s
+[2026-02-05 22:24:08]   Epoch 14/30 | train_loss: 0.4580 | val_loss: 0.4402 | 40.0s
+[2026-02-05 22:24:48]   Epoch 15/30 | train_loss: 0.4549 | val_loss: 0.4395 | 40.1s
+[2026-02-05 22:25:30]   Epoch 16/30 | train_loss: 0.4539 | val_loss: 0.4390 | 41.4s
+[2026-02-05 22:26:10]   Epoch 17/30 | train_loss: 0.4553 | val_loss: 0.4386 | 40.5s
+[2026-02-05 22:26:51]   Epoch 18/30 | train_loss: 0.4555 | val_loss: 0.4386 | 40.2s
+[2026-02-05 22:27:31]   Epoch 19/30 | train_loss: 0.4547 | val_loss: 0.4377 | 40.2s
+[2026-02-05 22:28:11]   Epoch 20/30 | train_loss: 0.4548 | val_loss: 0.4412 | 40.0s
+[2026-02-05 22:28:52]   Epoch 21/30 | train_loss: 0.4525 | val_loss: 0.4379 | 40.6s
+[2026-02-05 22:29:33]   Epoch 22/30 | train_loss: 0.4518 | val_loss: 0.4393 | 41.4s
+[2026-02-05 22:30:14]   Epoch 23/30 | train_loss: 0.4527 | val_loss: 0.4354 | 40.8s
+[2026-02-05 22:30:54]   Epoch 24/30 | train_loss: 0.4521 | val_loss: 0.4356 | 40.2s
+[2026-02-05 22:31:34]   Epoch 25/30 | train_loss: 0.4527 | val_loss: 0.4367 | 40.2s
+[2026-02-05 22:32:15]   Epoch 26/30 | train_loss: 0.4509 | val_loss: 0.4448 | 40.2s
+[2026-02-05 22:32:55]   Epoch 27/30 | train_loss: 0.4503 | val_loss: 0.4343 | 40.3s
+[2026-02-05 22:33:35]   Epoch 28/30 | train_loss: 0.4507 | val_loss: 0.4351 | 40.2s
+[2026-02-05 22:34:15]   Epoch 29/30 | train_loss: 0.4499 | val_loss: 0.4426 | 40.2s
+[2026-02-05 22:34:56]   Epoch 30/30 | train_loss: 0.4479 | val_loss: 0.4335 | 40.3s
+[2026-02-05 22:34:58]   RESULTS: acc=0.825 | f1=0.904 | auc=nan
+[2026-02-05 22:34:58]            H_recall=0.000 | MDD_recall=0.825
+[2026-02-05 22:34:58]   Fold completed in 20.3 min
+[2026-02-05 22:34:59] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:34:59]   SAVING RESULTS
+[2026-02-05 22:34:59] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:34:59] Saved: fold_results.csv
+[2026-02-05 22:34:59] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:34:59]   GENERATING VISUALIZATIONS
+[2026-02-05 22:34:59] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:34:59] Saved: confusion_matrix.png
+[2026-02-05 22:34:59] Saved: per_fold_accuracy.png
+[2026-02-05 22:34:59] Saved: roc_curves.png
+[2026-02-05 22:35:00] Saved: metric_distributions.png
+[2026-02-05 22:35:00] Saved: h_vs_mdd_comparison.png
+[2026-02-05 22:35:00] Saved: training_curves.png
+[2026-02-05 22:35:00] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:35:00]   FINAL RESULTS SUMMARY
+[2026-02-05 22:35:00] ══════════════════════════════════════════════════════════════════════
+[2026-02-05 22:35:00] 
++-------------------+-------+-------+-------+-------+
+|       Metric      |  Mean |  Std  |  Min  |  Max  |
++-------------------+-------+-------+-------+-------+
+|      Accuracy     | 0.688 | 0.196 | 0.129 | 0.840 |
+|      F1 Score     | 0.554 | 0.422 | 0.000 | 0.913 |
+|        AUC        |  nan  |  nan  |  nan  |  nan  |
+|     Precision     | 0.650 | 0.483 | 0.000 | 1.000 |
+|    Recall (MDD)   | 0.491 | 0.381 | 0.000 | 0.840 |
+|  Specificity (H)  | 0.197 | 0.304 | 0.000 | 0.816 |
+| Sensitivity (MDD) | 0.491 | 0.381 | 0.000 | 0.840 |
++-------------------+-------+-------+-------+-------+
+[2026-02-05 22:35:00] 
+Aggregate Confusion Matrix:
+[2026-02-05 22:35:00]   True Negatives (H→H):   12,138
+[2026-02-05 22:35:00]   False Positives (H→MDD): 9,550
+[2026-02-05 22:35:00]   False Negatives (MDD→H): 9,536
+[2026-02-05 22:35:00]   True Positives (MDD→MDD): 28,676
+[2026-02-05 22:35:00] 
+Overall Performance:
+[2026-02-05 22:35:00]   Accuracy: 68.1%
+[2026-02-05 22:35:00]   AUC: 0.693
+[2026-02-05 22:35:00] 
+Total training time: 772.1 minutes
+[2026-02-05 22:35:00] Results saved to: /Users/abhinavjoshi/Downloads/eeg_depression/results/inceptionv3_loso

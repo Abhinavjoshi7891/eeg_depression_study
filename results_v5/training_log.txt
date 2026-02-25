@@ -1,0 +1,106 @@
+Training started at 2026-02-05 00:01:27
+
+Fold 1/40 — Test: H_14
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.9s)
+      Ep  1/30 | tr: 0.6936 | val: 0.6965
+      Ep  6/30 | tr: 0.6743 | val: 0.6373
+      Ep 11/30 | tr: 0.6643 | val: 1.0807
+      Ep 16/30 | tr: 0.6406 | val: 0.6024
+      Ep 21/30 | tr: 0.6465 | val: 0.5782
+      Ep 26/30 | tr: 0.6383 | val: 1.4256
+      Ep 30/30 | tr: 0.6422 | val: 1.3403
+      ✓ acc=0.428  f1=0.000  H_rec=0.428  MDD_rec=0.000  [72s]
+
+
+Fold 2/40 — Test: H_16
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.5s)
+      Ep  1/30 | tr: 0.6935 | val: 0.6927
+      Ep  6/30 | tr: 0.6754 | val: 0.6843
+      Ep 11/30 | tr: 0.6536 | val: 0.6196
+      Early stop at epoch 14 (best val=0.5603)
+      ✓ acc=0.025  f1=0.000  H_rec=0.025  MDD_rec=0.000  [33s]
+
+
+Fold 3/40 — Test: H_19
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.5s)
+      Ep  1/30 | tr: 0.6930 | val: 0.6900
+      Ep  6/30 | tr: 0.6842 | val: 0.6786
+      Ep 11/30 | tr: 0.6720 | val: 0.6292
+      Ep 16/30 | tr: 0.6594 | val: 0.8401
+      Ep 21/30 | tr: 0.6558 | val: 0.6321
+      Early stop at epoch 22 (best val=0.6049)
+      ✓ acc=0.239  f1=0.000  H_rec=0.239  MDD_rec=0.000  [52s]
+
+
+Fold 4/40 — Test: H_22
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.5s)
+      Ep  1/30 | tr: 0.6933 | val: 0.6912
+      Ep  6/30 | tr: 0.6850 | val: 0.6769
+      Ep 11/30 | tr: 0.6624 | val: 0.8211
+      Ep 16/30 | tr: 0.6625 | val: 0.6041
+      Early stop at epoch 20 (best val=0.5789)
+      ✓ acc=0.102  f1=0.000  H_rec=0.102  MDD_rec=0.000  [48s]
+
+
+Fold 5/40 — Test: H_23
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.5s)
+      Ep  1/30 | tr: 0.6932 | val: 0.6907
+      Ep  6/30 | tr: 0.6893 | val: 0.6650
+      Ep 11/30 | tr: 0.6841 | val: 0.6883
+      Early stop at epoch 11 (best val=0.6333)
+      ✓ acc=0.000  f1=0.000  H_rec=0.000  MDD_rec=0.000  [27s]
+
+
+Fold 6/40 — Test: H_24
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.6s)
+      Ep  1/30 | tr: 0.6936 | val: 0.6906
+      Ep  6/30 | tr: 0.6818 | val: 0.7584
+      Ep 11/30 | tr: 0.6494 | val: 0.6693
+      Ep 16/30 | tr: 0.6460 | val: 0.5839
+      Ep 21/30 | tr: 0.6359 | val: 0.5734
+      Ep 26/30 | tr: 0.6340 | val: 0.5516
+      Ep 30/30 | tr: 0.6235 | val: 0.9833
+      ✓ acc=0.097  f1=0.000  H_rec=0.097  MDD_rec=0.000  [71s]
+
+
+Fold 7/40 — Test: H_26
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.7s)
+      Ep  1/30 | tr: 0.6931 | val: 0.6939
+      Ep  6/30 | tr: 0.6881 | val: 0.7137
+      Ep 11/30 | tr: 0.6780 | val: 0.8050
+      Ep 16/30 | tr: 0.6701 | val: 1.2014
+      Ep 21/30 | tr: 0.6591 | val: 0.6769
+      Ep 26/30 | tr: 0.6581 | val: 0.6098
+      Ep 30/30 | tr: 0.6613 | val: 0.6623
+      ✓ acc=0.100  f1=0.000  H_rec=0.100  MDD_rec=0.000  [70s]
+
+
+Fold 8/40 — Test: H_27
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.5s)
+      Ep  1/30 | tr: 0.6931 | val: 0.6906
+      Ep  6/30 | tr: 0.6713 | val: 0.7348
+      Ep 11/30 | tr: 0.6362 | val: 0.6608
+      Early stop at epoch 14 (best val=0.5915)
+      ✓ acc=0.000  f1=0.000  H_rec=0.000  MDD_rec=0.000  [34s]
+
+
+Fold 9/40 — Test: H_28
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.6s)
+      Ep  1/30 | tr: 0.6937 | val: 0.6917
+      Ep  6/30 | tr: 0.6867 | val: 0.6331
+      Ep 11/30 | tr: 0.6803 | val: 0.7311
+      Ep 16/30 | tr: 0.6456 | val: 0.6238
+      Early stop at epoch 19 (best val=0.6230)
+      ✓ acc=0.296  f1=0.000  H_rec=0.296  MDD_rec=0.000  [46s]
+
+
+Fold 10/40 — Test: H_4
+      Data: tr=3510, val=390, H=1170, MDD=2340 (0.6s)
+      Ep  1/30 | tr: 0.6915 | val: 0.6819
+      Ep  6/30 | tr: 0.6731 | val: 0.5944
+      Ep 11/30 | tr: 0.6551 | val: 0.6400
+      Early stop at epoch 15 (best val=0.5837)
+      ✓ acc=0.090  f1=0.000  H_rec=0.090  MDD_rec=0.000  [36s]
+
+
+Fold 11/40 — Test: H_5

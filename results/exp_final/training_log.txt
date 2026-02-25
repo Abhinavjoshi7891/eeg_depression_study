@@ -1,0 +1,1350 @@
+[09:44:08] ======================================================================
+[09:44:08] FINAL EXPERIMENT: Spatial RGB + Fine-Tuned InceptionV3 + LSTM
+[09:44:08]   Device:         mps
+[09:44:08]   Data:           Spatial RGB (Frontal=R, Central=G, Posterior=B)
+[09:44:08]   Seq length:     10 spectrograms per sample
+[09:44:08]   LSTM:           hidden=128, layers=1
+[09:44:08]   Fine-tuning:    Mixed_7c only (1 block, reduced overfitting)
+[09:44:08]   LR inception:   1e-05
+[09:44:08]   LR new:         0.0001
+[09:44:08]   Batch size:     8
+[09:44:08]   Grad clipping:  1.0
+[09:44:08]   pos_weight:     n_mdd/n_h (corrected)
+[09:44:08]   Threshold:      per-fold optimization
+[09:44:08] ======================================================================
+[09:44:08] Loading spatial RGB data...
+[09:44:08]   Loaded (mmap): (59900, 224, 224, 3), labels=(59900,)
+[09:44:08]   Spatial RGB check: PASS ✓
+[09:44:08]   Subjects: 40 | LOSO folds: 40
+[09:44:08] ======================================================================
+[09:44:08] FOLD 1/40 — Test Subject: H_14
+[09:44:08] ======================================================================
+[09:45:40]   Sequences — Train: 4954, Val: 874, Test: 142
+[09:45:40]   Class balance (train): H=1717, MDD=3237 | pos_weight=0.530
+[09:45:40]   Data prep: 91.6s
+[09:45:40]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[09:45:40]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[09:45:40]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[09:45:40]   Gradient clipping: max_norm=1.0
+[09:45:40]   Starting training...
+[09:47:40]   Epoch  1/50 | train=0.3786 | val=0.2937 | lr=[1.0e-05,1.0e-04] | 119.3s
+[09:49:51]   Epoch  2/50 | train=0.3220 | val=0.2932 | lr=[1.0e-05,1.0e-04] | 131.3s
+[09:52:08]   Epoch  3/50 | train=0.3074 | val=0.2817 | lr=[1.0e-05,1.0e-04] | 137.1s
+[09:54:21]   Epoch  4/50 | train=0.3005 | val=0.2926 | lr=[1.0e-05,1.0e-04] | 133.0s
+[09:56:35]   Epoch  5/50 | train=0.2924 | val=0.2775 | lr=[1.0e-05,1.0e-04] | 133.6s
+[09:58:48]   Epoch  6/50 | train=0.2785 | val=0.3022 | lr=[1.0e-05,1.0e-04] | 133.0s
+[10:01:00]   Epoch  7/50 | train=0.2757 | val=0.3203 | lr=[1.0e-05,1.0e-04] | 132.5s
+[10:03:13]   Epoch  8/50 | train=0.2603 | val=0.3301 | lr=[1.0e-05,1.0e-04] | 132.1s
+[10:05:25]   Epoch  9/50 | train=0.2431 | val=0.3631 | lr=[1.0e-05,1.0e-04] | 132.7s
+[10:07:37]   Epoch 10/50 | train=0.2308 | val=0.3455 | lr=[1.0e-05,1.0e-04] | 132.1s
+[10:09:50]   Epoch 11/50 | train=0.2203 | val=0.3959 | lr=[5.0e-06,5.0e-05] | 132.4s
+[10:12:03]   Epoch 12/50 | train=0.1815 | val=0.4275 | lr=[5.0e-06,5.0e-05] | 132.8s
+[10:14:16]   Epoch 13/50 | train=0.1720 | val=0.4674 | lr=[5.0e-06,5.0e-05] | 133.7s
+[10:16:30]   Epoch 14/50 | train=0.1533 | val=0.4930 | lr=[5.0e-06,5.0e-05] | 133.4s
+[10:18:43]   Epoch 15/50 | train=0.1524 | val=0.5353 | lr=[5.0e-06,5.0e-05] | 133.5s
+[10:18:43]   Early stopping at epoch 15
+[10:19:00]   Optimal threshold: 0.15 (val F1=0.910)
+[10:19:02]   RESULTS: acc=0.986 | f1=0.000 | auc=nan | thresh=0.15
+[10:19:02]            Sensitivity(MDD)=0.000 | Specificity(H)=0.986
+[10:19:02]            Majority Vote: pred=0, correct=1
+[10:19:02]   Fold time: 34.9 min
+[10:19:04] ======================================================================
+[10:19:04] FOLD 2/40 — Test Subject: H_16
+[10:19:04] ======================================================================
+[10:21:25] ======================================================================
+[10:21:25] FINAL EXPERIMENT: Spatial RGB + Fine-Tuned InceptionV3 + LSTM
+[10:21:25]   Device:         mps
+[10:21:25]   Data:           Spatial RGB (Frontal=R, Central=G, Posterior=B)
+[10:21:25]   Seq length:     10 spectrograms per sample
+[10:21:25]   LSTM:           hidden=128, layers=1
+[10:21:25]   Fine-tuning:    Mixed_7c only (1 block, reduced overfitting)
+[10:21:25]   LR inception:   1e-05
+[10:21:25]   LR new:         0.0001
+[10:21:25]   Batch size:     8
+[10:21:25]   Grad clipping:  1.0
+[10:21:25]   pos_weight:     n_mdd/n_h (corrected)
+[10:21:25]   Threshold:      per-fold optimization
+[10:21:25] ======================================================================
+[10:21:25] Loading spatial RGB data...
+[10:21:25]   Loaded (mmap): (59900, 224, 224, 3), labels=(59900,)
+[10:21:25]   Spatial RGB check: PASS ✓
+[10:21:25]   Subjects: 40 | LOSO folds: 40
+[10:21:25]   Resuming: Found 1 subjects already completed.
+[10:21:25] FOLD 1/40 — Skipping H_14 (already in CSV)
+[10:21:25] ======================================================================
+[10:21:25] FOLD 2/40 — Test Subject: H_16
+[10:21:25] ======================================================================
+[10:23:06]   Sequences — Train: 4950, Val: 873, Test: 147
+[10:23:06]   Class balance (train): H=1713, MDD=3237 | pos_weight=0.529
+[10:23:06]   Data prep: 101.4s
+[10:23:07]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[10:23:07]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[10:23:07]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[10:23:07]   Gradient clipping: max_norm=1.0
+[10:23:07]   Starting training...
+[10:25:06]   Epoch  1/50 | train=0.3542 | val=0.2558 | lr=[1.0e-05,1.0e-04] | 119.6s
+[10:27:18]   Epoch  2/50 | train=0.2843 | val=0.2425 | lr=[1.0e-05,1.0e-04] | 131.5s
+[10:29:34]   Epoch  3/50 | train=0.2830 | val=0.2502 | lr=[1.0e-05,1.0e-04] | 136.0s
+[10:31:47]   Epoch  4/50 | train=0.2626 | val=0.2473 | lr=[1.0e-05,1.0e-04] | 132.5s
+[10:34:00]   Epoch  5/50 | train=0.2538 | val=0.2410 | lr=[1.0e-05,1.0e-04] | 133.0s
+[10:36:13]   Epoch  6/50 | train=0.2460 | val=0.2400 | lr=[1.0e-05,1.0e-04] | 133.0s
+[10:38:26]   Epoch  7/50 | train=0.2432 | val=0.2845 | lr=[1.0e-05,1.0e-04] | 133.0s
+[10:40:40]   Epoch  8/50 | train=0.2348 | val=0.2496 | lr=[1.0e-05,1.0e-04] | 133.9s
+[10:42:54]   Epoch  9/50 | train=0.2268 | val=0.2580 | lr=[1.0e-05,1.0e-04] | 134.0s
+[10:45:07]   Epoch 10/50 | train=0.2112 | val=0.2844 | lr=[1.0e-05,1.0e-04] | 133.6s
+[10:47:22]   Epoch 11/50 | train=0.2018 | val=0.3121 | lr=[1.0e-05,1.0e-04] | 134.2s
+[10:49:34]   Epoch 12/50 | train=0.1912 | val=0.3090 | lr=[5.0e-06,5.0e-05] | 132.7s
+[10:51:46]   Epoch 13/50 | train=0.1619 | val=0.3483 | lr=[5.0e-06,5.0e-05] | 131.6s
+[10:53:57]   Epoch 14/50 | train=0.1572 | val=0.3892 | lr=[5.0e-06,5.0e-05] | 130.8s
+[10:56:08]   Epoch 15/50 | train=0.1451 | val=0.4280 | lr=[5.0e-06,5.0e-05] | 131.0s
+[10:58:19]   Epoch 16/50 | train=0.1386 | val=0.4595 | lr=[5.0e-06,5.0e-05] | 131.3s
+[10:58:19]   Early stopping at epoch 16
+[10:58:35]   Optimal threshold: 0.40 (val F1=0.925)
+[10:58:38]   RESULTS: acc=0.000 | f1=0.000 | auc=nan | thresh=0.40
+[10:58:38]            Sensitivity(MDD)=0.000 | Specificity(H)=0.000
+[10:58:38]            Majority Vote: pred=1, correct=0
+[10:58:38]   Fold time: 37.2 min
+[10:58:40] ======================================================================
+[10:58:40] FOLD 3/40 — Test Subject: H_19
+[10:58:40] ======================================================================
+[11:00:30]   Sequences — Train: 4943, Val: 872, Test: 155
+[11:00:30]   Class balance (train): H=1706, MDD=3237 | pos_weight=0.527
+[11:00:30]   Data prep: 109.6s
+[11:00:30]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[11:00:30]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[11:00:30]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[11:00:30]   Gradient clipping: max_norm=1.0
+[11:00:30]   Starting training...
+[11:02:40]   Epoch  1/50 | train=0.3721 | val=0.2761 | lr=[1.0e-05,1.0e-04] | 129.9s
+[11:04:55]   Epoch  2/50 | train=0.3195 | val=0.2686 | lr=[1.0e-05,1.0e-04] | 134.8s
+[11:07:13]   Epoch  3/50 | train=0.3114 | val=0.2665 | lr=[1.0e-05,1.0e-04] | 138.2s
+[11:09:28]   Epoch  4/50 | train=0.2982 | val=0.2960 | lr=[1.0e-05,1.0e-04] | 134.4s
+[11:11:43]   Epoch  5/50 | train=0.3024 | val=0.2550 | lr=[1.0e-05,1.0e-04] | 134.9s
+[11:13:58]   Epoch  6/50 | train=0.2824 | val=0.2629 | lr=[1.0e-05,1.0e-04] | 134.8s
+[11:16:12]   Epoch  7/50 | train=0.2743 | val=0.3061 | lr=[1.0e-05,1.0e-04] | 134.5s
+[11:18:28]   Epoch  8/50 | train=0.2636 | val=0.2767 | lr=[1.0e-05,1.0e-04] | 135.2s
+[11:20:43]   Epoch  9/50 | train=0.2541 | val=0.2976 | lr=[1.0e-05,1.0e-04] | 135.6s
+[11:22:59]   Epoch 10/50 | train=0.2414 | val=0.3336 | lr=[1.0e-05,1.0e-04] | 135.6s
+[11:25:14]   Epoch 11/50 | train=0.2270 | val=0.4038 | lr=[5.0e-06,5.0e-05] | 135.5s
+[11:27:29]   Epoch 12/50 | train=0.2035 | val=0.4233 | lr=[5.0e-06,5.0e-05] | 135.2s
+[11:29:45]   Epoch 13/50 | train=0.1959 | val=0.4766 | lr=[5.0e-06,5.0e-05] | 135.7s
+[11:32:02]   Epoch 14/50 | train=0.1746 | val=0.4422 | lr=[5.0e-06,5.0e-05] | 136.4s
+[11:34:19]   Epoch 15/50 | train=0.1758 | val=0.5266 | lr=[5.0e-06,5.0e-05] | 137.3s
+[11:34:19]   Early stopping at epoch 15
+[11:34:36]   Optimal threshold: 0.30 (val F1=0.919)
+[11:34:39]   RESULTS: acc=0.948 | f1=0.000 | auc=nan | thresh=0.30
+[11:34:39]            Sensitivity(MDD)=0.000 | Specificity(H)=0.948
+[11:34:39]            Majority Vote: pred=0, correct=1
+[11:34:39]   Fold time: 36.0 min
+[11:34:41] ======================================================================
+[11:34:41] FOLD 4/40 — Test Subject: H_22
+[11:34:41] ======================================================================
+[11:36:36]   Sequences — Train: 4945, Val: 872, Test: 153
+[11:36:36]   Class balance (train): H=1708, MDD=3237 | pos_weight=0.528
+[11:36:36]   Data prep: 115.2s
+[11:36:37]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[11:36:37]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[11:36:37]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[11:36:37]   Gradient clipping: max_norm=1.0
+[11:36:37]   Starting training...
+[11:38:52]   Epoch  1/50 | train=0.3616 | val=0.2881 | lr=[1.0e-05,1.0e-04] | 134.9s
+[11:41:14]   Epoch  2/50 | train=0.3067 | val=0.2792 | lr=[1.0e-05,1.0e-04] | 142.6s
+[11:43:36]   Epoch  3/50 | train=0.2940 | val=0.2922 | lr=[1.0e-05,1.0e-04] | 141.3s
+[11:45:55]   Epoch  4/50 | train=0.2898 | val=0.2954 | lr=[1.0e-05,1.0e-04] | 138.7s
+[11:48:13]   Epoch  5/50 | train=0.2700 | val=0.2834 | lr=[1.0e-05,1.0e-04] | 138.5s
+[11:50:31]   Epoch  6/50 | train=0.2724 | val=0.2818 | lr=[1.0e-05,1.0e-04] | 138.2s
+[11:52:50]   Epoch  7/50 | train=0.2533 | val=0.3169 | lr=[1.0e-05,1.0e-04] | 138.3s
+[11:55:08]   Epoch  8/50 | train=0.2456 | val=0.2907 | lr=[5.0e-06,5.0e-05] | 138.6s
+[11:57:26]   Epoch  9/50 | train=0.2357 | val=0.3110 | lr=[5.0e-06,5.0e-05] | 138.0s
+[11:59:45]   Epoch 10/50 | train=0.2289 | val=0.3758 | lr=[5.0e-06,5.0e-05] | 138.5s
+[12:02:04]   Epoch 11/50 | train=0.2109 | val=0.4165 | lr=[5.0e-06,5.0e-05] | 139.0s
+[12:04:23]   Epoch 12/50 | train=0.2053 | val=0.4136 | lr=[5.0e-06,5.0e-05] | 139.0s
+[12:04:23]   Early stopping at epoch 12
+[12:04:41]   Optimal threshold: 0.65 (val F1=0.910)
+[12:04:44]   RESULTS: acc=0.582 | f1=0.000 | auc=nan | thresh=0.65
+[12:04:44]            Sensitivity(MDD)=0.000 | Specificity(H)=0.582
+[12:04:44]            Majority Vote: pred=0, correct=1
+[12:04:44]   Fold time: 30.1 min
+[12:04:46] ======================================================================
+[12:04:46] FOLD 5/40 — Test Subject: H_23
+[12:04:46] ======================================================================
+[12:06:36]   Sequences — Train: 4948, Val: 872, Test: 150
+[12:06:36]   Class balance (train): H=1711, MDD=3237 | pos_weight=0.529
+[12:06:36]   Data prep: 110.3s
+[12:06:37]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[12:06:37]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[12:06:37]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[12:06:37]   Gradient clipping: max_norm=1.0
+[12:06:37]   Starting training...
+[12:08:53]   Epoch  1/50 | train=0.3781 | val=0.3218 | lr=[1.0e-05,1.0e-04] | 135.9s
+[12:11:25]   Epoch  2/50 | train=0.3229 | val=0.3018 | lr=[1.0e-05,1.0e-04] | 151.4s
+[12:13:47]   Epoch  3/50 | train=0.3042 | val=0.3045 | lr=[1.0e-05,1.0e-04] | 141.9s
+[12:16:07]   Epoch  4/50 | train=0.2908 | val=0.2932 | lr=[1.0e-05,1.0e-04] | 140.3s
+[12:18:28]   Epoch  5/50 | train=0.2863 | val=0.3140 | lr=[1.0e-05,1.0e-04] | 140.6s
+[12:20:47]   Epoch  6/50 | train=0.2737 | val=0.3259 | lr=[1.0e-05,1.0e-04] | 139.7s
+[12:23:07]   Epoch  7/50 | train=0.2642 | val=0.3697 | lr=[1.0e-05,1.0e-04] | 139.3s
+[12:25:26]   Epoch  8/50 | train=0.2557 | val=0.3712 | lr=[1.0e-05,1.0e-04] | 139.5s
+[12:27:45]   Epoch  9/50 | train=0.2536 | val=0.3951 | lr=[1.0e-05,1.0e-04] | 138.8s
+[12:30:05]   Epoch 10/50 | train=0.2262 | val=0.4102 | lr=[5.0e-06,5.0e-05] | 139.8s
+[12:32:27]   Epoch 11/50 | train=0.1987 | val=0.5150 | lr=[5.0e-06,5.0e-05] | 142.5s
+[12:34:50]   Epoch 12/50 | train=0.1927 | val=0.5393 | lr=[5.0e-06,5.0e-05] | 143.3s
+[12:37:12]   Epoch 13/50 | train=0.1910 | val=0.5290 | lr=[5.0e-06,5.0e-05] | 141.5s
+[12:39:32]   Epoch 14/50 | train=0.1794 | val=0.5251 | lr=[5.0e-06,5.0e-05] | 140.4s
+[12:39:32]   Early stopping at epoch 14
+[12:39:49]   Optimal threshold: 0.50 (val F1=0.905)
+[12:39:55]   RESULTS: acc=1.000 | f1=0.000 | auc=nan | thresh=0.50
+[12:39:55]            Sensitivity(MDD)=0.000 | Specificity(H)=1.000
+[12:39:55]            Majority Vote: pred=0, correct=1
+[12:39:55]   Fold time: 35.2 min
+[12:39:57] ======================================================================
+[12:39:57] FOLD 6/40 — Test Subject: H_24
+[12:39:57] ======================================================================
+[12:41:49]   Sequences — Train: 4944, Val: 872, Test: 154
+[12:41:49]   Class balance (train): H=1707, MDD=3237 | pos_weight=0.527
+[12:41:49]   Data prep: 112.1s
+[12:41:50]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[12:41:50]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[12:41:50]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[12:41:50]   Gradient clipping: max_norm=1.0
+[12:41:50]   Starting training...
+[12:44:04]   Epoch  1/50 | train=0.3540 | val=0.2363 | lr=[1.0e-05,1.0e-04] | 134.4s
+[12:46:32]   Epoch  2/50 | train=0.2882 | val=0.2336 | lr=[1.0e-05,1.0e-04] | 147.4s
+[12:48:56]   Epoch  3/50 | train=0.2742 | val=0.2213 | lr=[1.0e-05,1.0e-04] | 143.8s
+[12:51:18]   Epoch  4/50 | train=0.2588 | val=0.2200 | lr=[1.0e-05,1.0e-04] | 141.7s
+[12:53:39]   Epoch  5/50 | train=0.2560 | val=0.2303 | lr=[1.0e-05,1.0e-04] | 141.6s
+[12:56:00]   Epoch  6/50 | train=0.2517 | val=0.2433 | lr=[1.0e-05,1.0e-04] | 140.8s
+[12:58:21]   Epoch  7/50 | train=0.2372 | val=0.2455 | lr=[1.0e-05,1.0e-04] | 141.0s
+[13:00:44]   Epoch  8/50 | train=0.2380 | val=0.2461 | lr=[1.0e-05,1.0e-04] | 142.5s
+[13:03:06]   Epoch  9/50 | train=0.2229 | val=0.2763 | lr=[1.0e-05,1.0e-04] | 142.0s
+[13:05:27]   Epoch 10/50 | train=0.2110 | val=0.3254 | lr=[5.0e-06,5.0e-05] | 141.7s
+[13:07:52]   Epoch 11/50 | train=0.1904 | val=0.3017 | lr=[5.0e-06,5.0e-05] | 144.6s
+[13:10:17]   Epoch 12/50 | train=0.1924 | val=0.3046 | lr=[5.0e-06,5.0e-05] | 145.2s
+[13:12:42]   Epoch 13/50 | train=0.1797 | val=0.3347 | lr=[5.0e-06,5.0e-05] | 145.2s
+[13:15:05]   Epoch 14/50 | train=0.1706 | val=0.3780 | lr=[5.0e-06,5.0e-05] | 142.6s
+[13:15:05]   Early stopping at epoch 14
+[13:15:22]   Optimal threshold: 0.25 (val F1=0.937)
+[13:15:26]   RESULTS: acc=0.000 | f1=0.000 | auc=nan | thresh=0.25
+[13:15:26]            Sensitivity(MDD)=0.000 | Specificity(H)=0.000
+[13:15:26]            Majority Vote: pred=1, correct=0
+[13:15:26]   Fold time: 35.5 min
+[13:15:28] ======================================================================
+[13:15:28] FOLD 7/40 — Test Subject: H_26
+[13:15:28] ======================================================================
+[13:17:13]   Sequences — Train: 4936, Val: 870, Test: 164
+[13:17:13]   Class balance (train): H=1699, MDD=3237 | pos_weight=0.525
+[13:17:13]   Data prep: 105.4s
+[13:17:14]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[13:17:14]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[13:17:14]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[13:17:14]   Gradient clipping: max_norm=1.0
+[13:17:14]   Starting training...
+[13:19:32]   Epoch  1/50 | train=0.3680 | val=0.3016 | lr=[1.0e-05,1.0e-04] | 138.0s
+[13:22:04]   Epoch  2/50 | train=0.3092 | val=0.3151 | lr=[1.0e-05,1.0e-04] | 151.6s
+[13:24:30]   Epoch  3/50 | train=0.3071 | val=0.2771 | lr=[1.0e-05,1.0e-04] | 146.6s
+[13:26:54]   Epoch  4/50 | train=0.2920 | val=0.2993 | lr=[1.0e-05,1.0e-04] | 143.7s
+[13:29:18]   Epoch  5/50 | train=0.2789 | val=0.3096 | lr=[1.0e-05,1.0e-04] | 143.8s
+[13:31:41]   Epoch  6/50 | train=0.2851 | val=0.2919 | lr=[1.0e-05,1.0e-04] | 143.3s
+[13:34:04]   Epoch  7/50 | train=0.2719 | val=0.3171 | lr=[1.0e-05,1.0e-04] | 142.5s
+[13:36:25]   Epoch  8/50 | train=0.2548 | val=0.3122 | lr=[1.0e-05,1.0e-04] | 141.8s
+[13:38:49]   Epoch  9/50 | train=0.2366 | val=0.3728 | lr=[5.0e-06,5.0e-05] | 143.4s
+[13:41:13]   Epoch 10/50 | train=0.2161 | val=0.4219 | lr=[5.0e-06,5.0e-05] | 143.9s
+[13:43:38]   Epoch 11/50 | train=0.2055 | val=0.4510 | lr=[5.0e-06,5.0e-05] | 145.1s
+[13:46:00]   Epoch 12/50 | train=0.1903 | val=0.5150 | lr=[5.0e-06,5.0e-05] | 141.8s
+[13:48:21]   Epoch 13/50 | train=0.1891 | val=0.5405 | lr=[5.0e-06,5.0e-05] | 141.4s
+[13:48:21]   Early stopping at epoch 13
+[13:48:39]   Optimal threshold: 0.25 (val F1=0.913)
+[13:48:42]   RESULTS: acc=0.707 | f1=0.000 | auc=nan | thresh=0.25
+[13:48:42]            Sensitivity(MDD)=0.000 | Specificity(H)=0.707
+[13:48:42]            Majority Vote: pred=0, correct=1
+[13:48:42]   Fold time: 33.2 min
+[13:48:44] ======================================================================
+[13:48:44] FOLD 8/40 — Test Subject: H_27
+[13:48:44] ======================================================================
+[13:50:33]   Sequences — Train: 4928, Val: 869, Test: 173
+[13:50:33]   Class balance (train): H=1691, MDD=3237 | pos_weight=0.522
+[13:50:33]   Data prep: 108.2s
+[13:50:33]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[13:50:33]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[13:50:33]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[13:50:33]   Gradient clipping: max_norm=1.0
+[13:50:33]   Starting training...
+[13:52:50]   Epoch  1/50 | train=0.3433 | val=0.2323 | lr=[1.0e-05,1.0e-04] | 136.1s
+[13:55:23]   Epoch  2/50 | train=0.2871 | val=0.2299 | lr=[1.0e-05,1.0e-04] | 153.1s
+[13:57:48]   Epoch  3/50 | train=0.2643 | val=0.2229 | lr=[1.0e-05,1.0e-04] | 145.5s
+[14:00:13]   Epoch  4/50 | train=0.2574 | val=0.2200 | lr=[1.0e-05,1.0e-04] | 144.0s
+[14:02:36]   Epoch  5/50 | train=0.2430 | val=0.2354 | lr=[1.0e-05,1.0e-04] | 143.7s
+[14:05:02]   Epoch  6/50 | train=0.2515 | val=0.2773 | lr=[1.0e-05,1.0e-04] | 145.3s
+[14:07:29]   Epoch  7/50 | train=0.2393 | val=0.2428 | lr=[1.0e-05,1.0e-04] | 146.8s
+[14:09:54]   Epoch  8/50 | train=0.2307 | val=0.2379 | lr=[1.0e-05,1.0e-04] | 145.1s
+[14:12:18]   Epoch  9/50 | train=0.2148 | val=0.2693 | lr=[1.0e-05,1.0e-04] | 144.3s
+[14:14:42]   Epoch 10/50 | train=0.2139 | val=0.2824 | lr=[5.0e-06,5.0e-05] | 144.4s
+[14:17:07]   Epoch 11/50 | train=0.1843 | val=0.3067 | lr=[5.0e-06,5.0e-05] | 144.4s
+[14:19:31]   Epoch 12/50 | train=0.1823 | val=0.3200 | lr=[5.0e-06,5.0e-05] | 144.1s
+[14:21:54]   Epoch 13/50 | train=0.1698 | val=0.3242 | lr=[5.0e-06,5.0e-05] | 143.4s
+[14:24:18]   Epoch 14/50 | train=0.1710 | val=0.3510 | lr=[5.0e-06,5.0e-05] | 143.3s
+[14:24:18]   Early stopping at epoch 14
+[14:24:35]   Optimal threshold: 0.50 (val F1=0.934)
+[14:24:39]   RESULTS: acc=0.017 | f1=0.000 | auc=nan | thresh=0.50
+[14:24:39]            Sensitivity(MDD)=0.000 | Specificity(H)=0.017
+[14:24:39]            Majority Vote: pred=1, correct=0
+[14:24:39]   Fold time: 35.9 min
+[14:24:40] ======================================================================
+[14:24:40] FOLD 9/40 — Test Subject: H_28
+[14:24:40] ======================================================================
+[14:26:24]   Sequences — Train: 4935, Val: 870, Test: 165
+[14:26:24]   Class balance (train): H=1698, MDD=3237 | pos_weight=0.525
+[14:26:24]   Data prep: 104.0s
+[14:26:25]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[14:26:25]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[14:26:25]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[14:26:25]   Gradient clipping: max_norm=1.0
+[14:26:25]   Starting training...
+[14:28:44]   Epoch  1/50 | train=0.3775 | val=0.2961 | lr=[1.0e-05,1.0e-04] | 138.4s
+[14:31:19]   Epoch  2/50 | train=0.3284 | val=0.2902 | lr=[1.0e-05,1.0e-04] | 155.2s
+[14:33:45]   Epoch  3/50 | train=0.3002 | val=0.2853 | lr=[1.0e-05,1.0e-04] | 146.0s
+[14:36:10]   Epoch  4/50 | train=0.2978 | val=0.2910 | lr=[1.0e-05,1.0e-04] | 144.3s
+[14:38:34]   Epoch  5/50 | train=0.2890 | val=0.3065 | lr=[1.0e-05,1.0e-04] | 144.6s
+[14:40:59]   Epoch  6/50 | train=0.2872 | val=0.3326 | lr=[1.0e-05,1.0e-04] | 144.7s
+[14:43:23]   Epoch  7/50 | train=0.2680 | val=0.3047 | lr=[1.0e-05,1.0e-04] | 144.3s
+[14:45:47]   Epoch  8/50 | train=0.2433 | val=0.3433 | lr=[1.0e-05,1.0e-04] | 143.3s
+[14:48:10]   Epoch  9/50 | train=0.2445 | val=0.4244 | lr=[5.0e-06,5.0e-05] | 143.4s
+[14:50:33]   Epoch 10/50 | train=0.2315 | val=0.4855 | lr=[5.0e-06,5.0e-05] | 143.5s
+[14:52:57]   Epoch 11/50 | train=0.2100 | val=0.5265 | lr=[5.0e-06,5.0e-05] | 143.3s
+[14:55:20]   Epoch 12/50 | train=0.2144 | val=0.5163 | lr=[5.0e-06,5.0e-05] | 143.0s
+[14:57:42]   Epoch 13/50 | train=0.2020 | val=0.5516 | lr=[5.0e-06,5.0e-05] | 142.9s
+[14:57:42]   Early stopping at epoch 13
+[14:58:00]   Optimal threshold: 0.20 (val F1=0.908)
+[14:58:04]   RESULTS: acc=0.976 | f1=0.000 | auc=nan | thresh=0.20
+[14:58:04]            Sensitivity(MDD)=0.000 | Specificity(H)=0.976
+[14:58:04]            Majority Vote: pred=0, correct=1
+[14:58:04]   Fold time: 33.4 min
+[14:58:05] ======================================================================
+[14:58:05] FOLD 10/40 — Test Subject: H_4
+[14:58:05] ======================================================================
+[14:59:53]   Sequences — Train: 4933, Val: 870, Test: 167
+[14:59:53]   Class balance (train): H=1696, MDD=3237 | pos_weight=0.524
+[14:59:53]   Data prep: 107.2s
+[14:59:54]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[14:59:54]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[14:59:54]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[14:59:54]   Gradient clipping: max_norm=1.0
+[14:59:54]   Starting training...
+[15:02:15]   Epoch  1/50 | train=0.3795 | val=0.3336 | lr=[1.0e-05,1.0e-04] | 141.5s
+[15:04:49]   Epoch  2/50 | train=0.3108 | val=0.3178 | lr=[1.0e-05,1.0e-04] | 153.6s
+[15:07:15]   Epoch  3/50 | train=0.3032 | val=0.3143 | lr=[1.0e-05,1.0e-04] | 146.3s
+[15:09:39]   Epoch  4/50 | train=0.2940 | val=0.3232 | lr=[1.0e-05,1.0e-04] | 144.1s
+[15:12:03]   Epoch  5/50 | train=0.2845 | val=0.3300 | lr=[1.0e-05,1.0e-04] | 143.7s
+[15:14:26]   Epoch  6/50 | train=0.2764 | val=0.3446 | lr=[1.0e-05,1.0e-04] | 143.0s
+[15:16:49]   Epoch  7/50 | train=0.2733 | val=0.3745 | lr=[1.0e-05,1.0e-04] | 142.7s
+[15:19:11]   Epoch  8/50 | train=0.2633 | val=0.3689 | lr=[1.0e-05,1.0e-04] | 142.6s
+[15:21:34]   Epoch  9/50 | train=0.2567 | val=0.3524 | lr=[5.0e-06,5.0e-05] | 142.4s
+[15:23:56]   Epoch 10/50 | train=0.2376 | val=0.4179 | lr=[5.0e-06,5.0e-05] | 142.4s
+[15:26:18]   Epoch 11/50 | train=0.2246 | val=0.4346 | lr=[5.0e-06,5.0e-05] | 142.2s
+[15:28:41]   Epoch 12/50 | train=0.2222 | val=0.4528 | lr=[5.0e-06,5.0e-05] | 142.3s
+[15:31:02]   Epoch 13/50 | train=0.2067 | val=0.4803 | lr=[5.0e-06,5.0e-05] | 141.8s
+[15:31:02]   Early stopping at epoch 13
+[15:31:20]   Optimal threshold: 0.10 (val F1=0.898)
+[15:31:24]   RESULTS: acc=0.928 | f1=0.000 | auc=nan | thresh=0.10
+[15:31:24]            Sensitivity(MDD)=0.000 | Specificity(H)=0.928
+[15:31:24]            Majority Vote: pred=0, correct=1
+[15:31:24]   Fold time: 33.3 min
+[15:31:25] ======================================================================
+[15:31:25] FOLD 11/40 — Test Subject: H_5
+[15:31:25] ======================================================================
+[15:33:11]   Sequences — Train: 4940, Val: 871, Test: 159
+[15:33:11]   Class balance (train): H=1703, MDD=3237 | pos_weight=0.526
+[15:33:11]   Data prep: 105.8s
+[15:33:12]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[15:33:12]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[15:33:12]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[15:33:12]   Gradient clipping: max_norm=1.0
+[15:33:12]   Starting training...
+[15:35:33]   Epoch  1/50 | train=0.3692 | val=0.3182 | lr=[1.0e-05,1.0e-04] | 140.8s
+[15:38:04]   Epoch  2/50 | train=0.3143 | val=0.2685 | lr=[1.0e-05,1.0e-04] | 151.0s
+[15:40:29]   Epoch  3/50 | train=0.3072 | val=0.2737 | lr=[1.0e-05,1.0e-04] | 144.8s
+[15:42:52]   Epoch  4/50 | train=0.2893 | val=0.2746 | lr=[1.0e-05,1.0e-04] | 143.1s
+[15:45:16]   Epoch  5/50 | train=0.2752 | val=0.2777 | lr=[1.0e-05,1.0e-04] | 143.6s
+[15:47:39]   Epoch  6/50 | train=0.2770 | val=0.2789 | lr=[1.0e-05,1.0e-04] | 143.3s
+[15:50:02]   Epoch  7/50 | train=0.2728 | val=0.2883 | lr=[1.0e-05,1.0e-04] | 143.1s
+[15:52:25]   Epoch  8/50 | train=0.2589 | val=0.3423 | lr=[5.0e-06,5.0e-05] | 142.8s
+[15:54:48]   Epoch  9/50 | train=0.2510 | val=0.3177 | lr=[5.0e-06,5.0e-05] | 143.1s
+[15:57:11]   Epoch 10/50 | train=0.2312 | val=0.3526 | lr=[5.0e-06,5.0e-05] | 142.6s
+[15:59:33]   Epoch 11/50 | train=0.2246 | val=0.3436 | lr=[5.0e-06,5.0e-05] | 142.7s
+[16:01:56]   Epoch 12/50 | train=0.2211 | val=0.3923 | lr=[5.0e-06,5.0e-05] | 143.1s
+[16:01:56]   Early stopping at epoch 12
+[16:02:14]   Optimal threshold: 0.40 (val F1=0.915)
+[16:02:17]   RESULTS: acc=0.792 | f1=0.000 | auc=nan | thresh=0.40
+[16:02:17]            Sensitivity(MDD)=0.000 | Specificity(H)=0.792
+[16:02:17]            Majority Vote: pred=0, correct=1
+[16:02:17]   Fold time: 30.9 min
+[16:02:19] ======================================================================
+[16:02:19] FOLD 12/40 — Test Subject: H_6
+[16:02:19] ======================================================================
+[16:04:07]   Sequences — Train: 4967, Val: 876, Test: 127
+[16:04:07]   Class balance (train): H=1730, MDD=3237 | pos_weight=0.534
+[16:04:07]   Data prep: 107.5s
+[16:04:08]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[16:04:08]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[16:04:08]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[16:04:08]   Gradient clipping: max_norm=1.0
+[16:04:08]   Starting training...
+[16:06:29]   Epoch  1/50 | train=0.3796 | val=0.3195 | lr=[1.0e-05,1.0e-04] | 141.0s
+[16:09:02]   Epoch  2/50 | train=0.3177 | val=0.2905 | lr=[1.0e-05,1.0e-04] | 153.2s
+[16:11:29]   Epoch  3/50 | train=0.3063 | val=0.3195 | lr=[1.0e-05,1.0e-04] | 147.3s
+[16:13:54]   Epoch  4/50 | train=0.2963 | val=0.2897 | lr=[1.0e-05,1.0e-04] | 144.5s
+[16:16:19]   Epoch  5/50 | train=0.2888 | val=0.3020 | lr=[1.0e-05,1.0e-04] | 144.4s
+[16:18:42]   Epoch  6/50 | train=0.2846 | val=0.2934 | lr=[1.0e-05,1.0e-04] | 143.1s
+[16:21:05]   Epoch  7/50 | train=0.2791 | val=0.3111 | lr=[1.0e-05,1.0e-04] | 143.6s
+[16:23:29]   Epoch  8/50 | train=0.2609 | val=0.3228 | lr=[1.0e-05,1.0e-04] | 143.3s
+[16:25:52]   Epoch  9/50 | train=0.2544 | val=0.3176 | lr=[1.0e-05,1.0e-04] | 143.7s
+[16:28:16]   Epoch 10/50 | train=0.2483 | val=0.4034 | lr=[5.0e-06,5.0e-05] | 143.7s
+[16:30:40]   Epoch 11/50 | train=0.2280 | val=0.3504 | lr=[5.0e-06,5.0e-05] | 143.9s
+[16:33:03]   Epoch 12/50 | train=0.2081 | val=0.4549 | lr=[5.0e-06,5.0e-05] | 143.4s
+[16:35:27]   Epoch 13/50 | train=0.1978 | val=0.4425 | lr=[5.0e-06,5.0e-05] | 143.6s
+[16:37:51]   Epoch 14/50 | train=0.1922 | val=0.4265 | lr=[5.0e-06,5.0e-05] | 143.6s
+[16:37:51]   Early stopping at epoch 14
+[16:38:08]   Optimal threshold: 0.15 (val F1=0.907)
+[16:38:11]   RESULTS: acc=0.969 | f1=0.000 | auc=nan | thresh=0.15
+[16:38:11]            Sensitivity(MDD)=0.000 | Specificity(H)=0.969
+[16:38:11]            Majority Vote: pred=0, correct=1
+[16:38:11]   Fold time: 35.9 min
+[16:38:13] ======================================================================
+[16:38:13] FOLD 13/40 — Test Subject: H_8
+[16:38:13] ======================================================================
+[16:39:51]   Sequences — Train: 4932, Val: 870, Test: 168
+[16:39:51]   Class balance (train): H=1695, MDD=3237 | pos_weight=0.524
+[16:39:51]   Data prep: 98.4s
+[16:39:52]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[16:39:52]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[16:39:52]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[16:39:52]   Gradient clipping: max_norm=1.0
+[16:39:52]   Starting training...
+[16:42:14]   Epoch  1/50 | train=0.3764 | val=0.3255 | lr=[1.0e-05,1.0e-04] | 141.7s
+[16:44:47]   Epoch  2/50 | train=0.3165 | val=0.3132 | lr=[1.0e-05,1.0e-04] | 152.8s
+[16:47:13]   Epoch  3/50 | train=0.3060 | val=0.3003 | lr=[1.0e-05,1.0e-04] | 145.5s
+[16:49:36]   Epoch  4/50 | train=0.2896 | val=0.3199 | lr=[1.0e-05,1.0e-04] | 143.5s
+[16:52:00]   Epoch  5/50 | train=0.2829 | val=0.3112 | lr=[1.0e-05,1.0e-04] | 143.6s
+[16:54:23]   Epoch  6/50 | train=0.2729 | val=0.3241 | lr=[1.0e-05,1.0e-04] | 143.1s
+[16:56:47]   Epoch  7/50 | train=0.2680 | val=0.3136 | lr=[1.0e-05,1.0e-04] | 143.8s
+[16:59:10]   Epoch  8/50 | train=0.2571 | val=0.3742 | lr=[1.0e-05,1.0e-04] | 143.0s
+[17:01:32]   Epoch  9/50 | train=0.2364 | val=0.3800 | lr=[5.0e-06,5.0e-05] | 142.0s
+[17:03:53]   Epoch 10/50 | train=0.2039 | val=0.4175 | lr=[5.0e-06,5.0e-05] | 141.8s
+[17:06:16]   Epoch 11/50 | train=0.1985 | val=0.4384 | lr=[5.0e-06,5.0e-05] | 142.5s
+[17:08:39]   Epoch 12/50 | train=0.1940 | val=0.4715 | lr=[5.0e-06,5.0e-05] | 142.9s
+[17:11:02]   Epoch 13/50 | train=0.1877 | val=0.5172 | lr=[5.0e-06,5.0e-05] | 142.8s
+[17:11:02]   Early stopping at epoch 13
+[17:11:19]   Optimal threshold: 0.30 (val F1=0.900)
+[17:11:23]   RESULTS: acc=0.994 | f1=0.000 | auc=nan | thresh=0.30
+[17:11:23]            Sensitivity(MDD)=0.000 | Specificity(H)=0.994
+[17:11:23]            Majority Vote: pred=0, correct=1
+[17:11:23]   Fold time: 33.2 min
+[17:11:25] ======================================================================
+[17:11:25] FOLD 14/40 — Test Subject: H_9
+[17:11:25] ======================================================================
+[17:13:09]   Sequences — Train: 4958, Val: 874, Test: 138
+[17:13:09]   Class balance (train): H=1721, MDD=3237 | pos_weight=0.532
+[17:13:09]   Data prep: 104.6s
+[17:13:10]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[17:13:10]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[17:13:10]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[17:13:10]   Gradient clipping: max_norm=1.0
+[17:13:10]   Starting training...
+[17:15:34]   Epoch  1/50 | train=0.3800 | val=0.2904 | lr=[1.0e-05,1.0e-04] | 144.0s
+[17:18:07]   Epoch  2/50 | train=0.3266 | val=0.2873 | lr=[1.0e-05,1.0e-04] | 153.1s
+[17:20:34]   Epoch  3/50 | train=0.3093 | val=0.2842 | lr=[1.0e-05,1.0e-04] | 146.3s
+[17:22:58]   Epoch  4/50 | train=0.2988 | val=0.3122 | lr=[1.0e-05,1.0e-04] | 144.3s
+[17:25:22]   Epoch  5/50 | train=0.2954 | val=0.3059 | lr=[1.0e-05,1.0e-04] | 144.3s
+[17:27:46]   Epoch  6/50 | train=0.2765 | val=0.3117 | lr=[1.0e-05,1.0e-04] | 144.0s
+[17:30:10]   Epoch  7/50 | train=0.2788 | val=0.3160 | lr=[1.0e-05,1.0e-04] | 143.7s
+[17:32:33]   Epoch  8/50 | train=0.2642 | val=0.3202 | lr=[1.0e-05,1.0e-04] | 143.2s
+[17:34:57]   Epoch  9/50 | train=0.2492 | val=0.3761 | lr=[5.0e-06,5.0e-05] | 143.5s
+[17:37:20]   Epoch 10/50 | train=0.2303 | val=0.4227 | lr=[5.0e-06,5.0e-05] | 143.0s
+[17:39:45]   Epoch 11/50 | train=0.2215 | val=0.4699 | lr=[5.0e-06,5.0e-05] | 144.8s
+[17:42:10]   Epoch 12/50 | train=0.2080 | val=0.5179 | lr=[5.0e-06,5.0e-05] | 145.4s
+[17:44:36]   Epoch 13/50 | train=0.1977 | val=0.4563 | lr=[5.0e-06,5.0e-05] | 146.0s
+[17:44:36]   Early stopping at epoch 13
+[17:44:54]   Optimal threshold: 0.45 (val F1=0.907)
+[17:44:57]   RESULTS: acc=0.993 | f1=0.000 | auc=nan | thresh=0.45
+[17:44:57]            Sensitivity(MDD)=0.000 | Specificity(H)=0.993
+[17:44:57]            Majority Vote: pred=0, correct=1
+[17:44:57]   Fold time: 33.5 min
+[17:44:59] ======================================================================
+[17:44:59] FOLD 15/40 — Test Subject: MDD_1
+[17:44:59] ======================================================================
+[17:46:26]   Sequences — Train: 4935, Val: 870, Test: 165
+[17:46:26]   Class balance (train): H=1838, MDD=3097 | pos_weight=0.593
+[17:46:26]   Data prep: 87.3s
+[17:46:27]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[17:46:27]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[17:46:27]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[17:46:27]   Gradient clipping: max_norm=1.0
+[17:46:27]   Starting training...
+[17:48:49]   Epoch  1/50 | train=0.3917 | val=0.3081 | lr=[1.0e-05,1.0e-04] | 141.6s
+[17:51:23]   Epoch  2/50 | train=0.3416 | val=0.2923 | lr=[1.0e-05,1.0e-04] | 154.2s
+[17:53:49]   Epoch  3/50 | train=0.3218 | val=0.3098 | lr=[1.0e-05,1.0e-04] | 145.9s
+[17:56:13]   Epoch  4/50 | train=0.3146 | val=0.2899 | lr=[1.0e-05,1.0e-04] | 144.2s
+[17:58:37]   Epoch  5/50 | train=0.3056 | val=0.2910 | lr=[1.0e-05,1.0e-04] | 144.0s
+[18:01:01]   Epoch  6/50 | train=0.3001 | val=0.3110 | lr=[1.0e-05,1.0e-04] | 143.7s
+[18:03:24]   Epoch  7/50 | train=0.2838 | val=0.3087 | lr=[1.0e-05,1.0e-04] | 143.3s
+[18:05:48]   Epoch  8/50 | train=0.2813 | val=0.3267 | lr=[1.0e-05,1.0e-04] | 143.5s
+[18:08:11]   Epoch  9/50 | train=0.2610 | val=0.3301 | lr=[1.0e-05,1.0e-04] | 143.4s
+[18:10:35]   Epoch 10/50 | train=0.2603 | val=0.3567 | lr=[5.0e-06,5.0e-05] | 143.6s
+[18:12:58]   Epoch 11/50 | train=0.2455 | val=0.3622 | lr=[5.0e-06,5.0e-05] | 143.6s
+[18:15:22]   Epoch 12/50 | train=0.2379 | val=0.4489 | lr=[5.0e-06,5.0e-05] | 143.4s
+[18:17:44]   Epoch 13/50 | train=0.2275 | val=0.3932 | lr=[5.0e-06,5.0e-05] | 142.7s
+[18:20:08]   Epoch 14/50 | train=0.2114 | val=0.4549 | lr=[5.0e-06,5.0e-05] | 143.7s
+[18:20:08]   Early stopping at epoch 14
+[18:20:26]   Optimal threshold: 0.20 (val F1=0.905)
+[18:20:30]   RESULTS: acc=0.994 | f1=0.997 | auc=nan | thresh=0.20
+[18:20:30]            Sensitivity(MDD)=0.994 | Specificity(H)=0.000
+[18:20:30]            Majority Vote: pred=1, correct=1
+[18:20:30]   Fold time: 35.5 min
+[18:20:32] ======================================================================
+[18:20:32] FOLD 16/40 — Test Subject: MDD_10
+[18:20:32] ======================================================================
+[18:22:18]   Sequences — Train: 4929, Val: 869, Test: 172
+[18:22:18]   Class balance (train): H=1838, MDD=3091 | pos_weight=0.595
+[18:22:18]   Data prep: 106.4s
+[18:22:19]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[18:22:19]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[18:22:19]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[18:22:19]   Gradient clipping: max_norm=1.0
+[18:22:19]   Starting training...
+[18:24:39]   Epoch  1/50 | train=0.4019 | val=0.3200 | lr=[1.0e-05,1.0e-04] | 140.1s
+[18:27:14]   Epoch  2/50 | train=0.3312 | val=0.3069 | lr=[1.0e-05,1.0e-04] | 154.2s
+[18:29:40]   Epoch  3/50 | train=0.3203 | val=0.3430 | lr=[1.0e-05,1.0e-04] | 146.3s
+[18:32:05]   Epoch  4/50 | train=0.3158 | val=0.2946 | lr=[1.0e-05,1.0e-04] | 144.2s
+[18:34:30]   Epoch  5/50 | train=0.3064 | val=0.2905 | lr=[1.0e-05,1.0e-04] | 144.8s
+[18:36:54]   Epoch  6/50 | train=0.3036 | val=0.3346 | lr=[1.0e-05,1.0e-04] | 144.6s
+[18:39:20]   Epoch  7/50 | train=0.2870 | val=0.3130 | lr=[1.0e-05,1.0e-04] | 145.4s
+[18:41:44]   Epoch  8/50 | train=0.2802 | val=0.3146 | lr=[1.0e-05,1.0e-04] | 144.4s
+[18:44:07]   Epoch  9/50 | train=0.2690 | val=0.3649 | lr=[1.0e-05,1.0e-04] | 143.2s
+[18:46:30]   Epoch 10/50 | train=0.2390 | val=0.4009 | lr=[1.0e-05,1.0e-04] | 142.9s
+[18:48:53]   Epoch 11/50 | train=0.2204 | val=0.5000 | lr=[5.0e-06,5.0e-05] | 142.9s
+[18:51:15]   Epoch 12/50 | train=0.2064 | val=0.4762 | lr=[5.0e-06,5.0e-05] | 142.0s
+[18:53:36]   Epoch 13/50 | train=0.1868 | val=0.5123 | lr=[5.0e-06,5.0e-05] | 141.2s
+[18:56:00]   Epoch 14/50 | train=0.1988 | val=0.5204 | lr=[5.0e-06,5.0e-05] | 143.3s
+[18:58:23]   Epoch 15/50 | train=0.1728 | val=0.5704 | lr=[5.0e-06,5.0e-05] | 142.9s
+[18:58:23]   Early stopping at epoch 15
+[18:58:40]   Optimal threshold: 0.20 (val F1=0.910)
+[18:58:44]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.20
+[18:58:44]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[18:58:44]            Majority Vote: pred=1, correct=1
+[18:58:44]   Fold time: 38.2 min
+[18:58:45] ======================================================================
+[18:58:45] FOLD 17/40 — Test Subject: MDD_11
+[18:58:45] ======================================================================
+[19:00:34]   Sequences — Train: 4963, Val: 875, Test: 132
+[19:00:34]   Class balance (train): H=1838, MDD=3125 | pos_weight=0.588
+[19:00:34]   Data prep: 108.5s
+[19:00:35]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[19:00:35]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[19:00:35]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[19:00:35]   Gradient clipping: max_norm=1.0
+[19:00:35]   Starting training...
+[19:02:56]   Epoch  1/50 | train=0.3965 | val=0.2941 | lr=[1.0e-05,1.0e-04] | 141.5s
+[19:05:27]   Epoch  2/50 | train=0.3267 | val=0.2938 | lr=[1.0e-05,1.0e-04] | 150.8s
+[19:07:52]   Epoch  3/50 | train=0.3187 | val=0.3089 | lr=[1.0e-05,1.0e-04] | 144.6s
+[19:10:15]   Epoch  4/50 | train=0.3115 | val=0.2938 | lr=[1.0e-05,1.0e-04] | 143.5s
+[19:12:39]   Epoch  5/50 | train=0.3003 | val=0.2989 | lr=[1.0e-05,1.0e-04] | 143.5s
+[19:15:02]   Epoch  6/50 | train=0.2940 | val=0.3011 | lr=[1.0e-05,1.0e-04] | 143.3s
+[19:17:25]   Epoch  7/50 | train=0.2849 | val=0.3072 | lr=[1.0e-05,1.0e-04] | 143.0s
+[19:19:48]   Epoch  8/50 | train=0.2697 | val=0.3558 | lr=[5.0e-06,5.0e-05] | 142.8s
+[19:22:11]   Epoch  9/50 | train=0.2456 | val=0.3411 | lr=[5.0e-06,5.0e-05] | 142.6s
+[19:24:33]   Epoch 10/50 | train=0.2370 | val=0.4128 | lr=[5.0e-06,5.0e-05] | 142.6s
+[19:26:56]   Epoch 11/50 | train=0.2299 | val=0.3881 | lr=[5.0e-06,5.0e-05] | 142.4s
+[19:29:18]   Epoch 12/50 | train=0.2187 | val=0.4579 | lr=[5.0e-06,5.0e-05] | 142.7s
+[19:31:41]   Epoch 13/50 | train=0.2132 | val=0.4605 | lr=[5.0e-06,5.0e-05] | 142.6s
+[19:34:04]   Epoch 14/50 | train=0.1962 | val=0.4781 | lr=[2.5e-06,2.5e-05] | 142.6s
+[19:34:04]   Early stopping at epoch 14
+[19:34:21]   Optimal threshold: 0.80 (val F1=0.908)
+[19:34:24]   RESULTS: acc=0.947 | f1=0.973 | auc=nan | thresh=0.80
+[19:34:24]            Sensitivity(MDD)=0.947 | Specificity(H)=0.000
+[19:34:24]            Majority Vote: pred=1, correct=1
+[19:34:24]   Fold time: 35.6 min
+[19:34:26] ======================================================================
+[19:34:26] FOLD 18/40 — Test Subject: MDD_13
+[19:34:26] ======================================================================
+[19:36:15]   Sequences — Train: 4992, Val: 880, Test: 98
+[19:36:15]   Class balance (train): H=1838, MDD=3154 | pos_weight=0.583
+[19:36:15]   Data prep: 109.1s
+[19:36:16]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[19:36:16]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[19:36:16]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[19:36:16]   Gradient clipping: max_norm=1.0
+[19:36:16]   Starting training...
+[19:38:38]   Epoch  1/50 | train=0.3952 | val=0.2834 | lr=[1.0e-05,1.0e-04] | 142.0s
+[19:41:09]   Epoch  2/50 | train=0.3417 | val=0.2687 | lr=[1.0e-05,1.0e-04] | 151.6s
+[19:43:35]   Epoch  3/50 | train=0.3200 | val=0.2736 | lr=[1.0e-05,1.0e-04] | 145.7s
+[19:45:59]   Epoch  4/50 | train=0.3085 | val=0.2673 | lr=[1.0e-05,1.0e-04] | 143.6s
+[19:48:22]   Epoch  5/50 | train=0.3096 | val=0.2625 | lr=[1.0e-05,1.0e-04] | 143.4s
+[19:50:46]   Epoch  6/50 | train=0.2963 | val=0.2705 | lr=[1.0e-05,1.0e-04] | 143.5s
+[19:53:08]   Epoch  7/50 | train=0.2831 | val=0.2761 | lr=[1.0e-05,1.0e-04] | 142.3s
+[19:55:31]   Epoch  8/50 | train=0.2741 | val=0.3179 | lr=[1.0e-05,1.0e-04] | 143.2s
+[19:57:54]   Epoch  9/50 | train=0.2539 | val=0.3396 | lr=[1.0e-05,1.0e-04] | 143.0s
+[20:00:17]   Epoch 10/50 | train=0.2404 | val=0.3544 | lr=[1.0e-05,1.0e-04] | 142.9s
+[20:02:40]   Epoch 11/50 | train=0.2174 | val=0.4410 | lr=[5.0e-06,5.0e-05] | 142.8s
+[20:05:03]   Epoch 12/50 | train=0.2035 | val=0.4359 | lr=[5.0e-06,5.0e-05] | 143.0s
+[20:07:26]   Epoch 13/50 | train=0.1835 | val=0.4690 | lr=[5.0e-06,5.0e-05] | 142.9s
+[20:09:49]   Epoch 14/50 | train=0.1737 | val=0.5032 | lr=[5.0e-06,5.0e-05] | 143.2s
+[20:12:12]   Epoch 15/50 | train=0.1699 | val=0.5199 | lr=[5.0e-06,5.0e-05] | 142.6s
+[20:12:12]   Early stopping at epoch 15
+[20:12:29]   Optimal threshold: 0.50 (val F1=0.917)
+[20:12:31]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.50
+[20:12:31]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[20:12:31]            Majority Vote: pred=1, correct=1
+[20:12:31]   Fold time: 38.1 min
+[20:12:33] ======================================================================
+[20:12:33] FOLD 19/40 — Test Subject: MDD_14
+[20:12:33] ======================================================================
+[20:14:20]   Sequences — Train: 4994, Val: 880, Test: 96
+[20:14:21]   Class balance (train): H=1838, MDD=3156 | pos_weight=0.582
+[20:14:21]   Data prep: 107.4s
+[20:14:21]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[20:14:21]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[20:14:21]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[20:14:21]   Gradient clipping: max_norm=1.0
+[20:14:21]   Starting training...
+[20:16:44]   Epoch  1/50 | train=0.3906 | val=0.3338 | lr=[1.0e-05,1.0e-04] | 142.6s
+[20:19:15]   Epoch  2/50 | train=0.3367 | val=0.3176 | lr=[1.0e-05,1.0e-04] | 150.7s
+[20:21:40]   Epoch  3/50 | train=0.3175 | val=0.3130 | lr=[1.0e-05,1.0e-04] | 145.4s
+[20:24:04]   Epoch  4/50 | train=0.3028 | val=0.3295 | lr=[1.0e-05,1.0e-04] | 143.4s
+[20:26:28]   Epoch  5/50 | train=0.2997 | val=0.3466 | lr=[1.0e-05,1.0e-04] | 143.7s
+[20:28:51]   Epoch  6/50 | train=0.2896 | val=0.3169 | lr=[1.0e-05,1.0e-04] | 143.3s
+[20:31:14]   Epoch  7/50 | train=0.2740 | val=0.3298 | lr=[1.0e-05,1.0e-04] | 142.9s
+[20:33:36]   Epoch  8/50 | train=0.2716 | val=0.3486 | lr=[1.0e-05,1.0e-04] | 142.5s
+[20:35:59]   Epoch  9/50 | train=0.2588 | val=0.3927 | lr=[5.0e-06,5.0e-05] | 142.2s
+[20:38:21]   Epoch 10/50 | train=0.2394 | val=0.4028 | lr=[5.0e-06,5.0e-05] | 142.7s
+[20:40:44]   Epoch 11/50 | train=0.2272 | val=0.4571 | lr=[5.0e-06,5.0e-05] | 142.4s
+[20:43:06]   Epoch 12/50 | train=0.2310 | val=0.4459 | lr=[5.0e-06,5.0e-05] | 142.6s
+[20:45:29]   Epoch 13/50 | train=0.2244 | val=0.4640 | lr=[5.0e-06,5.0e-05] | 142.5s
+[20:45:29]   Early stopping at epoch 13
+[20:45:46]   Optimal threshold: 0.55 (val F1=0.904)
+[20:45:48]   RESULTS: acc=0.969 | f1=0.984 | auc=nan | thresh=0.55
+[20:45:48]            Sensitivity(MDD)=0.969 | Specificity(H)=0.000
+[20:45:48]            Majority Vote: pred=1, correct=1
+[20:45:48]   Fold time: 33.3 min
+[20:45:50] ======================================================================
+[20:45:50] FOLD 20/40 — Test Subject: MDD_15
+[20:45:50] ======================================================================
+[20:47:42]   Sequences — Train: 4944, Val: 872, Test: 154
+[20:47:42]   Class balance (train): H=1838, MDD=3106 | pos_weight=0.592
+[20:47:42]   Data prep: 111.8s
+[20:47:43]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[20:47:43]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[20:47:43]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[20:47:43]   Gradient clipping: max_norm=1.0
+[20:47:43]   Starting training...
+[20:50:03]   Epoch  1/50 | train=0.4032 | val=0.3002 | lr=[1.0e-05,1.0e-04] | 140.3s
+[20:52:32]   Epoch  2/50 | train=0.3374 | val=0.2951 | lr=[1.0e-05,1.0e-04] | 149.3s
+[20:54:57]   Epoch  3/50 | train=0.3244 | val=0.3221 | lr=[1.0e-05,1.0e-04] | 144.6s
+[20:57:19]   Epoch  4/50 | train=0.3170 | val=0.2941 | lr=[1.0e-05,1.0e-04] | 142.1s
+[20:59:41]   Epoch  5/50 | train=0.3075 | val=0.3081 | lr=[1.0e-05,1.0e-04] | 141.9s
+[21:02:03]   Epoch  6/50 | train=0.2934 | val=0.2915 | lr=[1.0e-05,1.0e-04] | 141.6s
+[21:04:24]   Epoch  7/50 | train=0.2831 | val=0.3184 | lr=[1.0e-05,1.0e-04] | 141.3s
+[21:06:45]   Epoch  8/50 | train=0.2642 | val=0.3745 | lr=[1.0e-05,1.0e-04] | 141.4s
+[21:09:07]   Epoch  9/50 | train=0.2596 | val=0.3625 | lr=[1.0e-05,1.0e-04] | 141.5s
+[21:11:29]   Epoch 10/50 | train=0.2477 | val=0.4279 | lr=[1.0e-05,1.0e-04] | 142.0s
+[21:13:50]   Epoch 11/50 | train=0.2295 | val=0.4861 | lr=[1.0e-05,1.0e-04] | 141.4s
+[21:16:11]   Epoch 12/50 | train=0.2105 | val=0.5188 | lr=[5.0e-06,5.0e-05] | 141.1s
+[21:18:32]   Epoch 13/50 | train=0.1763 | val=0.5649 | lr=[5.0e-06,5.0e-05] | 140.6s
+[21:20:53]   Epoch 14/50 | train=0.1670 | val=0.6409 | lr=[5.0e-06,5.0e-05] | 141.2s
+[21:23:15]   Epoch 15/50 | train=0.1755 | val=0.6486 | lr=[5.0e-06,5.0e-05] | 141.4s
+[21:25:36]   Epoch 16/50 | train=0.1695 | val=0.6705 | lr=[5.0e-06,5.0e-05] | 141.3s
+[21:25:36]   Early stopping at epoch 16
+[21:25:53]   Optimal threshold: 0.20 (val F1=0.905)
+[21:25:57]   RESULTS: acc=0.994 | f1=0.997 | auc=nan | thresh=0.20
+[21:25:57]            Sensitivity(MDD)=0.994 | Specificity(H)=0.000
+[21:25:57]            Majority Vote: pred=1, correct=1
+[21:25:57]   Fold time: 40.1 min
+[21:25:58] ======================================================================
+[21:25:58] FOLD 21/40 — Test Subject: MDD_17
+[21:25:58] ======================================================================
+[21:27:44]   Sequences — Train: 4927, Val: 869, Test: 174
+[21:27:44]   Class balance (train): H=1838, MDD=3089 | pos_weight=0.595
+[21:27:44]   Data prep: 105.9s
+[21:27:45]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[21:27:45]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[21:27:45]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[21:27:45]   Gradient clipping: max_norm=1.0
+[21:27:45]   Starting training...
+[21:30:07]   Epoch  1/50 | train=0.3911 | val=0.3888 | lr=[1.0e-05,1.0e-04] | 142.1s
+[21:32:37]   Epoch  2/50 | train=0.3387 | val=0.3848 | lr=[1.0e-05,1.0e-04] | 149.8s
+[21:35:01]   Epoch  3/50 | train=0.3237 | val=0.3158 | lr=[1.0e-05,1.0e-04] | 143.8s
+[21:37:23]   Epoch  4/50 | train=0.3127 | val=0.3259 | lr=[1.0e-05,1.0e-04] | 141.9s
+[21:39:45]   Epoch  5/50 | train=0.3030 | val=0.3656 | lr=[1.0e-05,1.0e-04] | 141.8s
+[21:42:06]   Epoch  6/50 | train=0.2933 | val=0.3530 | lr=[1.0e-05,1.0e-04] | 141.0s
+[21:44:27]   Epoch  7/50 | train=0.2867 | val=0.3066 | lr=[1.0e-05,1.0e-04] | 141.2s
+[21:46:49]   Epoch  8/50 | train=0.2745 | val=0.3386 | lr=[1.0e-05,1.0e-04] | 141.5s
+[21:49:10]   Epoch  9/50 | train=0.2640 | val=0.3818 | lr=[1.0e-05,1.0e-04] | 140.7s
+[21:51:30]   Epoch 10/50 | train=0.2580 | val=0.3998 | lr=[1.0e-05,1.0e-04] | 140.1s
+[21:53:50]   Epoch 11/50 | train=0.2386 | val=0.4175 | lr=[1.0e-05,1.0e-04] | 140.2s
+[21:56:10]   Epoch 12/50 | train=0.2282 | val=0.4853 | lr=[1.0e-05,1.0e-04] | 140.4s
+[21:58:31]   Epoch 13/50 | train=0.2156 | val=0.4398 | lr=[5.0e-06,5.0e-05] | 140.3s
+[22:00:51]   Epoch 14/50 | train=0.1894 | val=0.5197 | lr=[5.0e-06,5.0e-05] | 140.8s
+[22:03:11]   Epoch 15/50 | train=0.1829 | val=0.5983 | lr=[5.0e-06,5.0e-05] | 139.9s
+[22:05:32]   Epoch 16/50 | train=0.1700 | val=0.6160 | lr=[5.0e-06,5.0e-05] | 140.7s
+[22:07:53]   Epoch 17/50 | train=0.1604 | val=0.6479 | lr=[5.0e-06,5.0e-05] | 140.6s
+[22:07:53]   Early stopping at epoch 17
+[22:08:10]   Optimal threshold: 0.20 (val F1=0.902)
+[22:08:14]   RESULTS: acc=0.994 | f1=0.997 | auc=nan | thresh=0.20
+[22:08:14]            Sensitivity(MDD)=0.994 | Specificity(H)=0.000
+[22:08:14]            Majority Vote: pred=1, correct=1
+[22:08:14]   Fold time: 42.3 min
+[22:08:15] ======================================================================
+[22:08:15] FOLD 22/40 — Test Subject: MDD_18
+[22:08:15] ======================================================================
+[22:10:01]   Sequences — Train: 4938, Val: 871, Test: 161
+[22:10:01]   Class balance (train): H=1838, MDD=3100 | pos_weight=0.593
+[22:10:01]   Data prep: 106.2s
+[22:10:02]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[22:10:02]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[22:10:02]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[22:10:02]   Gradient clipping: max_norm=1.0
+[22:10:02]   Starting training...
+[22:12:24]   Epoch  1/50 | train=0.3989 | val=0.3080 | lr=[1.0e-05,1.0e-04] | 141.6s
+[22:14:54]   Epoch  2/50 | train=0.3379 | val=0.3569 | lr=[1.0e-05,1.0e-04] | 150.0s
+[22:17:18]   Epoch  3/50 | train=0.3229 | val=0.2968 | lr=[1.0e-05,1.0e-04] | 144.0s
+[22:19:40]   Epoch  4/50 | train=0.3152 | val=0.2992 | lr=[1.0e-05,1.0e-04] | 142.1s
+[22:22:02]   Epoch  5/50 | train=0.3010 | val=0.3386 | lr=[1.0e-05,1.0e-04] | 141.6s
+[22:24:24]   Epoch  6/50 | train=0.2954 | val=0.3114 | lr=[1.0e-05,1.0e-04] | 142.3s
+[22:26:47]   Epoch  7/50 | train=0.2786 | val=0.3466 | lr=[1.0e-05,1.0e-04] | 142.9s
+[22:29:08]   Epoch  8/50 | train=0.2720 | val=0.3499 | lr=[1.0e-05,1.0e-04] | 141.1s
+[22:31:30]   Epoch  9/50 | train=0.2585 | val=0.3620 | lr=[5.0e-06,5.0e-05] | 141.7s
+[22:33:52]   Epoch 10/50 | train=0.2493 | val=0.4035 | lr=[5.0e-06,5.0e-05] | 141.8s
+[22:36:13]   Epoch 11/50 | train=0.2423 | val=0.3942 | lr=[5.0e-06,5.0e-05] | 141.5s
+[22:38:35]   Epoch 12/50 | train=0.2302 | val=0.4744 | lr=[5.0e-06,5.0e-05] | 141.3s
+[22:40:56]   Epoch 13/50 | train=0.2313 | val=0.4227 | lr=[5.0e-06,5.0e-05] | 141.3s
+[22:40:56]   Early stopping at epoch 13
+[22:41:13]   Optimal threshold: 0.35 (val F1=0.908)
+[22:41:17]   RESULTS: acc=0.994 | f1=0.997 | auc=nan | thresh=0.35
+[22:41:17]            Sensitivity(MDD)=0.994 | Specificity(H)=0.000
+[22:41:17]            Majority Vote: pred=1, correct=1
+[22:41:17]   Fold time: 33.0 min
+[22:41:19] ======================================================================
+[22:41:19] FOLD 23/40 — Test Subject: MDD_19
+[22:41:19] ======================================================================
+[22:43:07]   Sequences — Train: 4931, Val: 869, Test: 170
+[22:43:07]   Class balance (train): H=1838, MDD=3093 | pos_weight=0.594
+[22:43:07]   Data prep: 108.5s
+[22:43:08]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[22:43:08]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[22:43:08]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[22:43:08]   Gradient clipping: max_norm=1.0
+[22:43:08]   Starting training...
+[22:45:29]   Epoch  1/50 | train=0.3878 | val=0.3167 | lr=[1.0e-05,1.0e-04] | 140.9s
+[22:47:58]   Epoch  2/50 | train=0.3323 | val=0.2777 | lr=[1.0e-05,1.0e-04] | 148.7s
+[22:50:22]   Epoch  3/50 | train=0.3057 | val=0.2845 | lr=[1.0e-05,1.0e-04] | 144.6s
+[22:52:44]   Epoch  4/50 | train=0.3012 | val=0.3070 | lr=[1.0e-05,1.0e-04] | 141.8s
+[22:55:06]   Epoch  5/50 | train=0.3002 | val=0.3012 | lr=[1.0e-05,1.0e-04] | 141.4s
+[22:57:27]   Epoch  6/50 | train=0.2841 | val=0.3165 | lr=[1.0e-05,1.0e-04] | 141.4s
+[22:59:48]   Epoch  7/50 | train=0.2805 | val=0.3516 | lr=[1.0e-05,1.0e-04] | 141.2s
+[23:02:09]   Epoch  8/50 | train=0.2692 | val=0.3565 | lr=[5.0e-06,5.0e-05] | 140.9s
+[23:04:30]   Epoch  9/50 | train=0.2538 | val=0.3830 | lr=[5.0e-06,5.0e-05] | 141.0s
+[23:06:51]   Epoch 10/50 | train=0.2358 | val=0.3660 | lr=[5.0e-06,5.0e-05] | 141.0s
+[23:09:12]   Epoch 11/50 | train=0.2314 | val=0.4231 | lr=[5.0e-06,5.0e-05] | 140.8s
+[23:11:33]   Epoch 12/50 | train=0.2318 | val=0.4134 | lr=[5.0e-06,5.0e-05] | 141.1s
+[23:11:33]   Early stopping at epoch 12
+[23:11:50]   Optimal threshold: 0.60 (val F1=0.911)
+[23:11:54]   RESULTS: acc=0.541 | f1=0.702 | auc=nan | thresh=0.60
+[23:11:54]            Sensitivity(MDD)=0.541 | Specificity(H)=0.000
+[23:11:54]            Majority Vote: pred=1, correct=1
+[23:11:54]   Fold time: 30.6 min
+[23:11:56] ======================================================================
+[23:11:56] FOLD 24/40 — Test Subject: MDD_2
+[23:11:56] ======================================================================
+[23:13:39]   Sequences — Train: 4930, Val: 869, Test: 171
+[23:13:39]   Class balance (train): H=1838, MDD=3092 | pos_weight=0.594
+[23:13:39]   Data prep: 103.9s
+[23:13:40]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[23:13:40]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[23:13:40]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[23:13:40]   Gradient clipping: max_norm=1.0
+[23:13:40]   Starting training...
+[23:16:01]   Epoch  1/50 | train=0.3943 | val=0.3338 | lr=[1.0e-05,1.0e-04] | 140.5s
+[23:18:30]   Epoch  2/50 | train=0.3326 | val=0.3232 | lr=[1.0e-05,1.0e-04] | 148.8s
+[23:20:53]   Epoch  3/50 | train=0.3192 | val=0.3310 | lr=[1.0e-05,1.0e-04] | 143.4s
+[23:23:14]   Epoch  4/50 | train=0.3171 | val=0.3343 | lr=[1.0e-05,1.0e-04] | 140.7s
+[23:25:35]   Epoch  5/50 | train=0.3056 | val=0.3242 | lr=[1.0e-05,1.0e-04] | 140.9s
+[23:27:56]   Epoch  6/50 | train=0.2846 | val=0.3624 | lr=[1.0e-05,1.0e-04] | 140.8s
+[23:30:16]   Epoch  7/50 | train=0.2774 | val=0.3516 | lr=[1.0e-05,1.0e-04] | 140.6s
+[23:32:36]   Epoch  8/50 | train=0.2688 | val=0.3643 | lr=[5.0e-06,5.0e-05] | 140.3s
+[23:34:57]   Epoch  9/50 | train=0.2542 | val=0.4141 | lr=[5.0e-06,5.0e-05] | 140.3s
+[23:37:18]   Epoch 10/50 | train=0.2388 | val=0.4245 | lr=[5.0e-06,5.0e-05] | 141.1s
+[23:39:39]   Epoch 11/50 | train=0.2419 | val=0.4671 | lr=[5.0e-06,5.0e-05] | 141.1s
+[23:42:00]   Epoch 12/50 | train=0.2433 | val=0.4711 | lr=[5.0e-06,5.0e-05] | 141.2s
+[23:42:00]   Early stopping at epoch 12
+[23:42:17]   Optimal threshold: 0.15 (val F1=0.900)
+[23:42:21]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.15
+[23:42:21]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[23:42:21]            Majority Vote: pred=1, correct=1
+[23:42:21]   Fold time: 30.4 min
+[23:42:23] ======================================================================
+[23:42:23] FOLD 25/40 — Test Subject: MDD_20
+[23:42:23] ======================================================================
+[23:44:10]   Sequences — Train: 4938, Val: 871, Test: 161
+[23:44:10]   Class balance (train): H=1838, MDD=3100 | pos_weight=0.593
+[23:44:10]   Data prep: 107.0s
+[23:44:11]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[23:44:11]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[23:44:11]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[23:44:11]   Gradient clipping: max_norm=1.0
+[23:44:11]   Starting training...
+[23:46:31]   Epoch  1/50 | train=0.4009 | val=0.3220 | lr=[1.0e-05,1.0e-04] | 140.1s
+[23:49:05]   Epoch  2/50 | train=0.3415 | val=0.3391 | lr=[1.0e-05,1.0e-04] | 153.6s
+[23:51:29]   Epoch  3/50 | train=0.3230 | val=0.3068 | lr=[1.0e-05,1.0e-04] | 144.6s
+[23:53:52]   Epoch  4/50 | train=0.3093 | val=0.3129 | lr=[1.0e-05,1.0e-04] | 142.8s
+[23:56:14]   Epoch  5/50 | train=0.3032 | val=0.3435 | lr=[1.0e-05,1.0e-04] | 142.1s
+[23:58:36]   Epoch  6/50 | train=0.2944 | val=0.3230 | lr=[1.0e-05,1.0e-04] | 141.5s
+[00:00:58]   Epoch  7/50 | train=0.2840 | val=0.3436 | lr=[1.0e-05,1.0e-04] | 142.0s
+[00:03:20]   Epoch  8/50 | train=0.2729 | val=0.4183 | lr=[1.0e-05,1.0e-04] | 142.3s
+[00:05:43]   Epoch  9/50 | train=0.2556 | val=0.4416 | lr=[5.0e-06,5.0e-05] | 142.6s
+[00:08:05]   Epoch 10/50 | train=0.2334 | val=0.4332 | lr=[5.0e-06,5.0e-05] | 142.5s
+[00:10:28]   Epoch 11/50 | train=0.2191 | val=0.4534 | lr=[5.0e-06,5.0e-05] | 142.7s
+[00:12:51]   Epoch 12/50 | train=0.2088 | val=0.4981 | lr=[5.0e-06,5.0e-05] | 142.6s
+[00:15:13]   Epoch 13/50 | train=0.1943 | val=0.5503 | lr=[5.0e-06,5.0e-05] | 142.5s
+[00:15:13]   Early stopping at epoch 13
+[00:15:31]   Optimal threshold: 0.25 (val F1=0.904)
+[00:15:34]   RESULTS: acc=0.994 | f1=0.997 | auc=nan | thresh=0.25
+[00:15:34]            Sensitivity(MDD)=0.994 | Specificity(H)=0.000
+[00:15:34]            Majority Vote: pred=1, correct=1
+[00:15:34]   Fold time: 33.2 min
+[00:15:36] ======================================================================
+[00:15:36] FOLD 26/40 — Test Subject: MDD_21
+[00:15:36] ======================================================================
+[00:17:25]   Sequences — Train: 4956, Val: 874, Test: 140
+[00:17:25]   Class balance (train): H=1838, MDD=3118 | pos_weight=0.589
+[00:17:25]   Data prep: 108.8s
+[00:17:26]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[00:17:26]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[00:17:26]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[00:17:26]   Gradient clipping: max_norm=1.0
+[00:17:26]   Starting training...
+[00:19:48]   Epoch  1/50 | train=0.3982 | val=0.3540 | lr=[1.0e-05,1.0e-04] | 142.0s
+[00:22:27]   Epoch  2/50 | train=0.3294 | val=0.3526 | lr=[1.0e-05,1.0e-04] | 159.3s
+[00:24:53]   Epoch  3/50 | train=0.3110 | val=0.3699 | lr=[1.0e-05,1.0e-04] | 146.0s
+[00:27:16]   Epoch  4/50 | train=0.3101 | val=0.3426 | lr=[1.0e-05,1.0e-04] | 142.9s
+[00:29:39]   Epoch  5/50 | train=0.2934 | val=0.3713 | lr=[1.0e-05,1.0e-04] | 143.1s
+[00:32:02]   Epoch  6/50 | train=0.2913 | val=0.4051 | lr=[1.0e-05,1.0e-04] | 142.5s
+[00:34:24]   Epoch  7/50 | train=0.2843 | val=0.3874 | lr=[1.0e-05,1.0e-04] | 142.6s
+[00:36:47]   Epoch  8/50 | train=0.2747 | val=0.3661 | lr=[1.0e-05,1.0e-04] | 143.2s
+[00:39:10]   Epoch  9/50 | train=0.2544 | val=0.4101 | lr=[1.0e-05,1.0e-04] | 142.7s
+[00:41:33]   Epoch 10/50 | train=0.2389 | val=0.4817 | lr=[5.0e-06,5.0e-05] | 142.6s
+[00:43:55]   Epoch 11/50 | train=0.2134 | val=0.5046 | lr=[5.0e-06,5.0e-05] | 142.6s
+[00:46:18]   Epoch 12/50 | train=0.1982 | val=0.5342 | lr=[5.0e-06,5.0e-05] | 142.6s
+[00:48:41]   Epoch 13/50 | train=0.1927 | val=0.6360 | lr=[5.0e-06,5.0e-05] | 142.8s
+[00:51:03]   Epoch 14/50 | train=0.1744 | val=0.5613 | lr=[5.0e-06,5.0e-05] | 142.7s
+[00:51:03]   Early stopping at epoch 14
+[00:51:21]   Optimal threshold: 0.10 (val F1=0.889)
+[00:51:24]   RESULTS: acc=0.979 | f1=0.989 | auc=nan | thresh=0.10
+[00:51:24]            Sensitivity(MDD)=0.979 | Specificity(H)=0.000
+[00:51:24]            Majority Vote: pred=1, correct=1
+[00:51:24]   Fold time: 35.8 min
+[00:51:26] ======================================================================
+[00:51:26] FOLD 27/40 — Test Subject: MDD_22
+[00:51:26] ======================================================================
+[00:53:12]   Sequences — Train: 4950, Val: 873, Test: 147
+[00:53:12]   Class balance (train): H=1838, MDD=3112 | pos_weight=0.591
+[00:53:12]   Data prep: 105.9s
+[00:53:13]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[00:53:13]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[00:53:13]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[00:53:13]   Gradient clipping: max_norm=1.0
+[00:53:13]   Starting training...
+[00:55:33]   Epoch  1/50 | train=0.3927 | val=0.3030 | lr=[1.0e-05,1.0e-04] | 140.1s
+[00:58:06]   Epoch  2/50 | train=0.3445 | val=0.2865 | lr=[1.0e-05,1.0e-04] | 153.0s
+[01:00:31]   Epoch  3/50 | train=0.3265 | val=0.2920 | lr=[1.0e-05,1.0e-04] | 145.4s
+[01:02:55]   Epoch  4/50 | train=0.3120 | val=0.2807 | lr=[1.0e-05,1.0e-04] | 143.5s
+[01:05:18]   Epoch  5/50 | train=0.3021 | val=0.3108 | lr=[1.0e-05,1.0e-04] | 142.6s
+[01:07:40]   Epoch  6/50 | train=0.2985 | val=0.2797 | lr=[1.0e-05,1.0e-04] | 142.5s
+[01:10:02]   Epoch  7/50 | train=0.2855 | val=0.2983 | lr=[1.0e-05,1.0e-04] | 142.1s
+[01:12:24]   Epoch  8/50 | train=0.2758 | val=0.3454 | lr=[1.0e-05,1.0e-04] | 142.2s
+[01:14:46]   Epoch  9/50 | train=0.2711 | val=0.3535 | lr=[1.0e-05,1.0e-04] | 142.0s
+[01:17:08]   Epoch 10/50 | train=0.2497 | val=0.3560 | lr=[1.0e-05,1.0e-04] | 141.7s
+[01:19:30]   Epoch 11/50 | train=0.2453 | val=0.4430 | lr=[1.0e-05,1.0e-04] | 142.0s
+[01:21:52]   Epoch 12/50 | train=0.2188 | val=0.4786 | lr=[5.0e-06,5.0e-05] | 142.2s
+[01:24:14]   Epoch 13/50 | train=0.1918 | val=0.4863 | lr=[5.0e-06,5.0e-05] | 142.2s
+[01:26:36]   Epoch 14/50 | train=0.1852 | val=0.5390 | lr=[5.0e-06,5.0e-05] | 142.0s
+[01:29:00]   Epoch 15/50 | train=0.1814 | val=0.5792 | lr=[5.0e-06,5.0e-05] | 143.5s
+[01:31:22]   Epoch 16/50 | train=0.1772 | val=0.6249 | lr=[5.0e-06,5.0e-05] | 142.4s
+[01:31:22]   Early stopping at epoch 16
+[01:31:40]   Optimal threshold: 0.40 (val F1=0.913)
+[01:31:43]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.40
+[01:31:43]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[01:31:43]            Majority Vote: pred=1, correct=1
+[01:31:43]   Fold time: 40.3 min
+[01:31:45] ======================================================================
+[01:31:45] FOLD 28/40 — Test Subject: MDD_23
+[01:31:45] ======================================================================
+[01:33:42]   Sequences — Train: 4967, Val: 876, Test: 127
+[01:33:42]   Class balance (train): H=1838, MDD=3129 | pos_weight=0.587
+[01:33:42]   Data prep: 117.0s
+[01:33:43]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[01:33:43]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[01:33:43]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[01:33:43]   Gradient clipping: max_norm=1.0
+[01:33:43]   Starting training...
+[01:36:04]   Epoch  1/50 | train=0.3936 | val=0.3397 | lr=[1.0e-05,1.0e-04] | 141.2s
+[01:38:38]   Epoch  2/50 | train=0.3316 | val=0.3544 | lr=[1.0e-05,1.0e-04] | 153.6s
+[01:41:04]   Epoch  3/50 | train=0.3165 | val=0.3282 | lr=[1.0e-05,1.0e-04] | 146.0s
+[01:43:27]   Epoch  4/50 | train=0.3066 | val=0.3441 | lr=[1.0e-05,1.0e-04] | 143.8s
+[01:45:51]   Epoch  5/50 | train=0.3017 | val=0.3316 | lr=[1.0e-05,1.0e-04] | 143.5s
+[01:48:13]   Epoch  6/50 | train=0.2888 | val=0.3636 | lr=[1.0e-05,1.0e-04] | 142.1s
+[01:50:36]   Epoch  7/50 | train=0.2772 | val=0.3633 | lr=[1.0e-05,1.0e-04] | 142.8s
+[01:52:58]   Epoch  8/50 | train=0.2708 | val=0.4037 | lr=[1.0e-05,1.0e-04] | 142.5s
+[01:55:21]   Epoch  9/50 | train=0.2645 | val=0.4029 | lr=[5.0e-06,5.0e-05] | 142.4s
+[01:57:44]   Epoch 10/50 | train=0.2409 | val=0.4093 | lr=[5.0e-06,5.0e-05] | 142.9s
+[02:00:07]   Epoch 11/50 | train=0.2369 | val=0.4495 | lr=[5.0e-06,5.0e-05] | 142.9s
+[02:02:29]   Epoch 12/50 | train=0.2178 | val=0.4843 | lr=[5.0e-06,5.0e-05] | 142.8s
+[02:04:52]   Epoch 13/50 | train=0.2244 | val=0.5047 | lr=[5.0e-06,5.0e-05] | 142.2s
+[02:04:52]   Early stopping at epoch 13
+[02:05:09]   Optimal threshold: 0.10 (val F1=0.897)
+[02:05:12]   RESULTS: acc=0.992 | f1=0.996 | auc=nan | thresh=0.10
+[02:05:12]            Sensitivity(MDD)=0.992 | Specificity(H)=0.000
+[02:05:12]            Majority Vote: pred=1, correct=1
+[02:05:12]   Fold time: 33.5 min
+[02:05:14] ======================================================================
+[02:05:14] FOLD 29/40 — Test Subject: MDD_24
+[02:05:14] ======================================================================
+[02:07:04]   Sequences — Train: 4956, Val: 874, Test: 140
+[02:07:04]   Class balance (train): H=1838, MDD=3118 | pos_weight=0.589
+[02:07:04]   Data prep: 110.1s
+[02:07:05]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[02:07:05]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[02:07:05]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[02:07:05]   Gradient clipping: max_norm=1.0
+[02:07:05]   Starting training...
+[02:09:25]   Epoch  1/50 | train=0.3923 | val=0.3546 | lr=[1.0e-05,1.0e-04] | 140.5s
+[02:11:57]   Epoch  2/50 | train=0.3269 | val=0.3399 | lr=[1.0e-05,1.0e-04] | 151.5s
+[02:14:22]   Epoch  3/50 | train=0.3246 | val=0.3025 | lr=[1.0e-05,1.0e-04] | 144.9s
+[02:16:45]   Epoch  4/50 | train=0.3147 | val=0.3278 | lr=[1.0e-05,1.0e-04] | 142.7s
+[02:19:07]   Epoch  5/50 | train=0.3001 | val=0.3380 | lr=[1.0e-05,1.0e-04] | 142.7s
+[02:21:30]   Epoch  6/50 | train=0.2884 | val=0.3297 | lr=[1.0e-05,1.0e-04] | 142.3s
+[02:23:52]   Epoch  7/50 | train=0.2808 | val=0.3420 | lr=[1.0e-05,1.0e-04] | 142.5s
+[02:26:14]   Epoch  8/50 | train=0.2738 | val=0.3377 | lr=[1.0e-05,1.0e-04] | 142.1s
+[02:28:36]   Epoch  9/50 | train=0.2490 | val=0.3767 | lr=[5.0e-06,5.0e-05] | 141.8s
+[02:30:58]   Epoch 10/50 | train=0.2413 | val=0.3850 | lr=[5.0e-06,5.0e-05] | 141.7s
+[02:33:20]   Epoch 11/50 | train=0.2329 | val=0.4661 | lr=[5.0e-06,5.0e-05] | 141.8s
+[02:35:41]   Epoch 12/50 | train=0.2196 | val=0.4499 | lr=[5.0e-06,5.0e-05] | 141.8s
+[02:38:03]   Epoch 13/50 | train=0.2223 | val=0.5147 | lr=[5.0e-06,5.0e-05] | 141.8s
+[02:38:03]   Early stopping at epoch 13
+[02:38:21]   Optimal threshold: 0.30 (val F1=0.903)
+[02:38:24]   RESULTS: acc=0.986 | f1=0.993 | auc=nan | thresh=0.30
+[02:38:24]            Sensitivity(MDD)=0.986 | Specificity(H)=0.000
+[02:38:24]            Majority Vote: pred=1, correct=1
+[02:38:24]   Fold time: 33.2 min
+[02:38:26] ======================================================================
+[02:38:26] FOLD 30/40 — Test Subject: MDD_26
+[02:38:26] ======================================================================
+[02:40:20]   Sequences — Train: 4970, Val: 876, Test: 124
+[02:40:20]   Class balance (train): H=1838, MDD=3132 | pos_weight=0.587
+[02:40:20]   Data prep: 114.7s
+[02:40:22]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[02:40:22]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[02:40:22]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[02:40:22]   Gradient clipping: max_norm=1.0
+[02:40:22]   Starting training...
+[02:42:41]   Epoch  1/50 | train=0.3945 | val=0.3661 | lr=[1.0e-05,1.0e-04] | 139.7s
+[02:45:13]   Epoch  2/50 | train=0.3335 | val=0.3421 | lr=[1.0e-05,1.0e-04] | 151.3s
+[02:47:38]   Epoch  3/50 | train=0.3110 | val=0.3436 | lr=[1.0e-05,1.0e-04] | 145.2s
+[02:50:01]   Epoch  4/50 | train=0.3065 | val=0.3570 | lr=[1.0e-05,1.0e-04] | 142.9s
+[02:52:24]   Epoch  5/50 | train=0.3042 | val=0.3574 | lr=[1.0e-05,1.0e-04] | 143.2s
+[02:54:47]   Epoch  6/50 | train=0.2991 | val=0.3588 | lr=[1.0e-05,1.0e-04] | 142.7s
+[02:57:09]   Epoch  7/50 | train=0.2791 | val=0.3514 | lr=[1.0e-05,1.0e-04] | 142.4s
+[02:59:31]   Epoch  8/50 | train=0.2673 | val=0.3753 | lr=[5.0e-06,5.0e-05] | 142.2s
+[03:01:54]   Epoch  9/50 | train=0.2476 | val=0.3994 | lr=[5.0e-06,5.0e-05] | 142.3s
+[03:04:16]   Epoch 10/50 | train=0.2459 | val=0.4163 | lr=[5.0e-06,5.0e-05] | 142.2s
+[03:06:38]   Epoch 11/50 | train=0.2299 | val=0.4659 | lr=[5.0e-06,5.0e-05] | 142.4s
+[03:09:00]   Epoch 12/50 | train=0.2318 | val=0.4682 | lr=[5.0e-06,5.0e-05] | 142.2s
+[03:09:00]   Early stopping at epoch 12
+[03:09:18]   Optimal threshold: 0.30 (val F1=0.892)
+[03:09:21]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.30
+[03:09:21]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[03:09:21]            Majority Vote: pred=1, correct=1
+[03:09:21]   Fold time: 30.9 min
+[03:09:23] ======================================================================
+[03:09:23] FOLD 31/40 — Test Subject: MDD_27
+[03:09:23] ======================================================================
+[03:11:22]   Sequences — Train: 4990, Val: 880, Test: 100
+[03:11:22]   Class balance (train): H=1838, MDD=3152 | pos_weight=0.583
+[03:11:22]   Data prep: 119.9s
+[03:11:23]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[03:11:23]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[03:11:23]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[03:11:23]   Gradient clipping: max_norm=1.0
+[03:11:23]   Starting training...
+[03:13:45]   Epoch  1/50 | train=0.3940 | val=0.3872 | lr=[1.0e-05,1.0e-04] | 141.8s
+[03:16:15]   Epoch  2/50 | train=0.3227 | val=0.3358 | lr=[1.0e-05,1.0e-04] | 149.7s
+[03:18:40]   Epoch  3/50 | train=0.3226 | val=0.3532 | lr=[1.0e-05,1.0e-04] | 145.0s
+[03:21:03]   Epoch  4/50 | train=0.3042 | val=0.3225 | lr=[1.0e-05,1.0e-04] | 143.0s
+[03:23:26]   Epoch  5/50 | train=0.2900 | val=0.3962 | lr=[1.0e-05,1.0e-04] | 143.2s
+[03:25:48]   Epoch  6/50 | train=0.2835 | val=0.3279 | lr=[1.0e-05,1.0e-04] | 142.0s
+[03:28:11]   Epoch  7/50 | train=0.2784 | val=0.3490 | lr=[1.0e-05,1.0e-04] | 142.1s
+[03:30:33]   Epoch  8/50 | train=0.2713 | val=0.3720 | lr=[1.0e-05,1.0e-04] | 142.4s
+[03:32:56]   Epoch  9/50 | train=0.2560 | val=0.3524 | lr=[1.0e-05,1.0e-04] | 142.8s
+[03:35:18]   Epoch 10/50 | train=0.2425 | val=0.4169 | lr=[5.0e-06,5.0e-05] | 142.6s
+[03:37:41]   Epoch 11/50 | train=0.2182 | val=0.4944 | lr=[5.0e-06,5.0e-05] | 142.7s
+[03:40:03]   Epoch 12/50 | train=0.2145 | val=0.5410 | lr=[5.0e-06,5.0e-05] | 142.4s
+[03:42:26]   Epoch 13/50 | train=0.1935 | val=0.4989 | lr=[5.0e-06,5.0e-05] | 142.3s
+[03:44:48]   Epoch 14/50 | train=0.1849 | val=0.5506 | lr=[5.0e-06,5.0e-05] | 142.5s
+[03:44:48]   Early stopping at epoch 14
+[03:45:06]   Optimal threshold: 0.10 (val F1=0.901)
+[03:45:08]   RESULTS: acc=0.980 | f1=0.990 | auc=nan | thresh=0.10
+[03:45:08]            Sensitivity(MDD)=0.980 | Specificity(H)=0.000
+[03:45:08]            Majority Vote: pred=1, correct=1
+[03:45:08]   Fold time: 35.8 min
+[03:45:10] ======================================================================
+[03:45:10] FOLD 32/40 — Test Subject: MDD_28
+[03:45:10] ======================================================================
+[03:46:56]   Sequences — Train: 4931, Val: 869, Test: 170
+[03:46:56]   Class balance (train): H=1838, MDD=3093 | pos_weight=0.594
+[03:46:56]   Data prep: 106.9s
+[03:46:57]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[03:46:57]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[03:46:57]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[03:46:57]   Gradient clipping: max_norm=1.0
+[03:46:57]   Starting training...
+[03:49:18]   Epoch  1/50 | train=0.3980 | val=0.3436 | lr=[1.0e-05,1.0e-04] | 140.7s
+[03:51:48]   Epoch  2/50 | train=0.3338 | val=0.3177 | lr=[1.0e-05,1.0e-04] | 149.9s
+[03:54:12]   Epoch  3/50 | train=0.3339 | val=0.3219 | lr=[1.0e-05,1.0e-04] | 143.8s
+[03:56:33]   Epoch  4/50 | train=0.3046 | val=0.3410 | lr=[1.0e-05,1.0e-04] | 141.5s
+[03:58:55]   Epoch  5/50 | train=0.2953 | val=0.3296 | lr=[1.0e-05,1.0e-04] | 141.6s
+[04:01:16]   Epoch  6/50 | train=0.3002 | val=0.3514 | lr=[1.0e-05,1.0e-04] | 141.1s
+[04:03:37]   Epoch  7/50 | train=0.2788 | val=0.3359 | lr=[1.0e-05,1.0e-04] | 140.9s
+[04:05:57]   Epoch  8/50 | train=0.2684 | val=0.3548 | lr=[5.0e-06,5.0e-05] | 140.4s
+[04:08:18]   Epoch  9/50 | train=0.2523 | val=0.3936 | lr=[5.0e-06,5.0e-05] | 140.3s
+[04:10:39]   Epoch 10/50 | train=0.2418 | val=0.4229 | lr=[5.0e-06,5.0e-05] | 141.0s
+[04:13:00]   Epoch 11/50 | train=0.2352 | val=0.4320 | lr=[5.0e-06,5.0e-05] | 140.8s
+[04:15:20]   Epoch 12/50 | train=0.2268 | val=0.5159 | lr=[5.0e-06,5.0e-05] | 140.6s
+[04:15:20]   Early stopping at epoch 12
+[04:15:37]   Optimal threshold: 0.50 (val F1=0.894)
+[04:15:41]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.50
+[04:15:41]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[04:15:41]            Majority Vote: pred=1, correct=1
+[04:15:41]   Fold time: 30.5 min
+[04:15:43] ======================================================================
+[04:15:43] FOLD 33/40 — Test Subject: MDD_29
+[04:15:43] ======================================================================
+[04:17:15]   Sequences — Train: 4953, Val: 873, Test: 144
+[04:17:15]   Class balance (train): H=1838, MDD=3115 | pos_weight=0.590
+[04:17:15]   Data prep: 92.5s
+[04:17:16]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[04:17:16]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[04:17:16]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[04:17:16]   Gradient clipping: max_norm=1.0
+[04:17:16]   Starting training...
+[04:19:38]   Epoch  1/50 | train=0.3946 | val=0.3296 | lr=[1.0e-05,1.0e-04] | 141.3s
+[04:22:08]   Epoch  2/50 | train=0.3396 | val=0.3175 | lr=[1.0e-05,1.0e-04] | 150.5s
+[04:24:34]   Epoch  3/50 | train=0.3266 | val=0.3076 | lr=[1.0e-05,1.0e-04] | 145.9s
+[04:26:58]   Epoch  4/50 | train=0.3138 | val=0.3213 | lr=[1.0e-05,1.0e-04] | 143.3s
+[04:29:21]   Epoch  5/50 | train=0.2975 | val=0.3573 | lr=[1.0e-05,1.0e-04] | 143.1s
+[04:31:43]   Epoch  6/50 | train=0.2926 | val=0.3294 | lr=[1.0e-05,1.0e-04] | 142.3s
+[04:34:05]   Epoch  7/50 | train=0.2883 | val=0.3244 | lr=[1.0e-05,1.0e-04] | 141.9s
+[04:36:27]   Epoch  8/50 | train=0.2802 | val=0.3445 | lr=[1.0e-05,1.0e-04] | 141.6s
+[04:38:48]   Epoch  9/50 | train=0.2650 | val=0.3925 | lr=[5.0e-06,5.0e-05] | 141.3s
+[04:41:09]   Epoch 10/50 | train=0.2518 | val=0.3855 | lr=[5.0e-06,5.0e-05] | 141.3s
+[04:43:31]   Epoch 11/50 | train=0.2189 | val=0.4787 | lr=[5.0e-06,5.0e-05] | 141.4s
+[04:45:51]   Epoch 12/50 | train=0.2268 | val=0.5181 | lr=[5.0e-06,5.0e-05] | 140.6s
+[04:48:12]   Epoch 13/50 | train=0.2259 | val=0.5754 | lr=[5.0e-06,5.0e-05] | 140.8s
+[04:48:12]   Early stopping at epoch 13
+[04:48:29]   Optimal threshold: 0.60 (val F1=0.905)
+[04:48:32]   RESULTS: acc=0.986 | f1=0.993 | auc=nan | thresh=0.60
+[04:48:32]            Sensitivity(MDD)=0.986 | Specificity(H)=0.000
+[04:48:32]            Majority Vote: pred=1, correct=1
+[04:48:32]   Fold time: 32.8 min
+[04:48:34] ======================================================================
+[04:48:34] FOLD 34/40 — Test Subject: MDD_3
+[04:48:34] ======================================================================
+[04:50:08]   Sequences — Train: 4983, Val: 879, Test: 108
+[04:50:08]   Class balance (train): H=1838, MDD=3145 | pos_weight=0.584
+[04:50:08]   Data prep: 94.1s
+[04:50:09]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[04:50:09]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[04:50:09]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[04:50:09]   Gradient clipping: max_norm=1.0
+[04:50:09]   Starting training...
+[04:52:30]   Epoch  1/50 | train=0.3946 | val=0.3099 | lr=[1.0e-05,1.0e-04] | 140.8s
+[04:55:01]   Epoch  2/50 | train=0.3383 | val=0.3036 | lr=[1.0e-05,1.0e-04] | 151.3s
+[04:57:26]   Epoch  3/50 | train=0.3204 | val=0.2945 | lr=[1.0e-05,1.0e-04] | 144.4s
+[04:59:49]   Epoch  4/50 | train=0.3140 | val=0.2868 | lr=[1.0e-05,1.0e-04] | 143.3s
+[05:02:13]   Epoch  5/50 | train=0.2983 | val=0.3238 | lr=[1.0e-05,1.0e-04] | 143.2s
+[05:04:35]   Epoch  6/50 | train=0.2982 | val=0.3203 | lr=[1.0e-05,1.0e-04] | 142.5s
+[05:06:57]   Epoch  7/50 | train=0.2849 | val=0.3631 | lr=[1.0e-05,1.0e-04] | 142.1s
+[05:09:19]   Epoch  8/50 | train=0.2704 | val=0.3137 | lr=[1.0e-05,1.0e-04] | 142.0s
+[05:11:42]   Epoch  9/50 | train=0.2656 | val=0.3426 | lr=[1.0e-05,1.0e-04] | 142.4s
+[05:14:03]   Epoch 10/50 | train=0.2435 | val=0.3724 | lr=[5.0e-06,5.0e-05] | 141.8s
+[05:16:25]   Epoch 11/50 | train=0.2113 | val=0.4380 | lr=[5.0e-06,5.0e-05] | 141.6s
+[05:18:47]   Epoch 12/50 | train=0.1981 | val=0.4953 | lr=[5.0e-06,5.0e-05] | 141.7s
+[05:21:09]   Epoch 13/50 | train=0.1912 | val=0.5048 | lr=[5.0e-06,5.0e-05] | 141.8s
+[05:23:31]   Epoch 14/50 | train=0.1706 | val=0.5395 | lr=[5.0e-06,5.0e-05] | 142.1s
+[05:23:31]   Early stopping at epoch 14
+[05:23:48]   Optimal threshold: 0.40 (val F1=0.912)
+[05:23:50]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.40
+[05:23:50]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[05:23:50]            Majority Vote: pred=1, correct=1
+[05:23:50]   Fold time: 35.3 min
+[05:23:52] ======================================================================
+[05:23:52] FOLD 35/40 — Test Subject: MDD_30
+[05:23:52] ======================================================================
+[05:25:42]   Sequences — Train: 4939, Val: 871, Test: 160
+[05:25:42]   Class balance (train): H=1838, MDD=3101 | pos_weight=0.593
+[05:25:42]   Data prep: 110.1s
+[05:25:43]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[05:25:43]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[05:25:43]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[05:25:43]   Gradient clipping: max_norm=1.0
+[05:25:43]   Starting training...
+[05:28:03]   Epoch  1/50 | train=0.4044 | val=0.3341 | lr=[1.0e-05,1.0e-04] | 140.0s
+[05:30:30]   Epoch  2/50 | train=0.3335 | val=0.3201 | lr=[1.0e-05,1.0e-04] | 147.2s
+[05:32:54]   Epoch  3/50 | train=0.3177 | val=0.3262 | lr=[1.0e-05,1.0e-04] | 143.9s
+[05:35:16]   Epoch  4/50 | train=0.3073 | val=0.3302 | lr=[1.0e-05,1.0e-04] | 141.7s
+[05:37:38]   Epoch  5/50 | train=0.2968 | val=0.3446 | lr=[1.0e-05,1.0e-04] | 141.7s
+[05:39:59]   Epoch  6/50 | train=0.2926 | val=0.3397 | lr=[1.0e-05,1.0e-04] | 141.5s
+[05:42:20]   Epoch  7/50 | train=0.2839 | val=0.3739 | lr=[1.0e-05,1.0e-04] | 140.8s
+[05:44:41]   Epoch  8/50 | train=0.2664 | val=0.3981 | lr=[5.0e-06,5.0e-05] | 141.0s
+[05:47:02]   Epoch  9/50 | train=0.2557 | val=0.3971 | lr=[5.0e-06,5.0e-05] | 141.0s
+[05:49:23]   Epoch 10/50 | train=0.2424 | val=0.4247 | lr=[5.0e-06,5.0e-05] | 140.6s
+[05:51:43]   Epoch 11/50 | train=0.2421 | val=0.4698 | lr=[5.0e-06,5.0e-05] | 140.7s
+[05:54:04]   Epoch 12/50 | train=0.2286 | val=0.5010 | lr=[5.0e-06,5.0e-05] | 140.7s
+[05:54:04]   Early stopping at epoch 12
+[05:54:21]   Optimal threshold: 0.35 (val F1=0.896)
+[05:54:25]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.35
+[05:54:25]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[05:54:25]            Majority Vote: pred=1, correct=1
+[05:54:25]   Fold time: 30.5 min
+[05:54:27] ======================================================================
+[05:54:27] FOLD 36/40 — Test Subject: MDD_31
+[05:54:27] ======================================================================
+[05:56:15]   Sequences — Train: 4928, Val: 869, Test: 173
+[05:56:15]   Class balance (train): H=1838, MDD=3090 | pos_weight=0.595
+[05:56:15]   Data prep: 108.8s
+[05:56:16]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[05:56:16]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[05:56:16]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[05:56:16]   Gradient clipping: max_norm=1.0
+[05:56:16]   Starting training...
+[05:58:35]   Epoch  1/50 | train=0.3959 | val=0.3054 | lr=[1.0e-05,1.0e-04] | 139.1s
+[06:01:03]   Epoch  2/50 | train=0.3398 | val=0.2831 | lr=[1.0e-05,1.0e-04] | 148.1s
+[06:03:27]   Epoch  3/50 | train=0.3240 | val=0.2888 | lr=[1.0e-05,1.0e-04] | 143.2s
+[06:05:48]   Epoch  4/50 | train=0.3200 | val=0.2860 | lr=[1.0e-05,1.0e-04] | 141.6s
+[06:08:10]   Epoch  5/50 | train=0.3052 | val=0.2867 | lr=[1.0e-05,1.0e-04] | 141.3s
+[06:10:30]   Epoch  6/50 | train=0.2954 | val=0.2873 | lr=[1.0e-05,1.0e-04] | 140.8s
+[06:12:51]   Epoch  7/50 | train=0.2775 | val=0.2955 | lr=[1.0e-05,1.0e-04] | 140.2s
+[06:15:11]   Epoch  8/50 | train=0.2731 | val=0.3128 | lr=[5.0e-06,5.0e-05] | 140.0s
+[06:17:31]   Epoch  9/50 | train=0.2585 | val=0.3438 | lr=[5.0e-06,5.0e-05] | 139.9s
+[06:19:50]   Epoch 10/50 | train=0.2462 | val=0.3694 | lr=[5.0e-06,5.0e-05] | 139.5s
+[06:22:10]   Epoch 11/50 | train=0.2394 | val=0.3529 | lr=[5.0e-06,5.0e-05] | 139.8s
+[06:24:30]   Epoch 12/50 | train=0.2173 | val=0.4095 | lr=[5.0e-06,5.0e-05] | 139.9s
+[06:24:30]   Early stopping at epoch 12
+[06:24:47]   Optimal threshold: 0.15 (val F1=0.911)
+[06:24:51]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.15
+[06:24:51]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[06:24:51]            Majority Vote: pred=1, correct=1
+[06:24:51]   Fold time: 30.4 min
+[06:24:53] ======================================================================
+[06:24:53] FOLD 37/40 — Test Subject: MDD_32
+[06:24:53] ======================================================================
+[06:26:40]   Sequences — Train: 4930, Val: 869, Test: 171
+[06:26:40]   Class balance (train): H=1838, MDD=3092 | pos_weight=0.594
+[06:26:40]   Data prep: 107.0s
+[06:26:40]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[06:26:40]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[06:26:40]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[06:26:40]   Gradient clipping: max_norm=1.0
+[06:26:40]   Starting training...
+[06:28:59]   Epoch  1/50 | train=0.4018 | val=0.3434 | lr=[1.0e-05,1.0e-04] | 139.0s
+[06:31:28]   Epoch  2/50 | train=0.3416 | val=0.3452 | lr=[1.0e-05,1.0e-04] | 148.5s
+[06:33:51]   Epoch  3/50 | train=0.3312 | val=0.3251 | lr=[1.0e-05,1.0e-04] | 143.2s
+[06:36:12]   Epoch  4/50 | train=0.3087 | val=0.3606 | lr=[1.0e-05,1.0e-04] | 140.7s
+[06:38:33]   Epoch  5/50 | train=0.3007 | val=0.3719 | lr=[1.0e-05,1.0e-04] | 141.1s
+[06:40:54]   Epoch  6/50 | train=0.2983 | val=0.3257 | lr=[1.0e-05,1.0e-04] | 140.5s
+[06:43:14]   Epoch  7/50 | train=0.2815 | val=0.3517 | lr=[1.0e-05,1.0e-04] | 140.1s
+[06:45:34]   Epoch  8/50 | train=0.2785 | val=0.3921 | lr=[1.0e-05,1.0e-04] | 140.2s
+[06:47:54]   Epoch  9/50 | train=0.2647 | val=0.3977 | lr=[5.0e-06,5.0e-05] | 140.1s
+[06:50:14]   Epoch 10/50 | train=0.2465 | val=0.4542 | lr=[5.0e-06,5.0e-05] | 139.8s
+[06:52:34]   Epoch 11/50 | train=0.2370 | val=0.4637 | lr=[5.0e-06,5.0e-05] | 140.0s
+[06:54:54]   Epoch 12/50 | train=0.2311 | val=0.5290 | lr=[5.0e-06,5.0e-05] | 139.9s
+[06:57:14]   Epoch 13/50 | train=0.2252 | val=0.4902 | lr=[5.0e-06,5.0e-05] | 139.8s
+[06:57:14]   Early stopping at epoch 13
+[06:57:31]   Optimal threshold: 0.20 (val F1=0.890)
+[06:57:34]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.20
+[06:57:34]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[06:57:34]            Majority Vote: pred=1, correct=1
+[06:57:34]   Fold time: 32.7 min
+[06:57:36] ======================================================================
+[06:57:36] FOLD 38/40 — Test Subject: MDD_33
+[06:57:36] ======================================================================
+[06:59:21]   Sequences — Train: 4944, Val: 872, Test: 154
+[06:59:21]   Class balance (train): H=1838, MDD=3106 | pos_weight=0.592
+[06:59:21]   Data prep: 104.6s
+[06:59:22]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[06:59:22]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[06:59:22]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[06:59:22]   Gradient clipping: max_norm=1.0
+[06:59:22]   Starting training...
+[07:01:42]   Epoch  1/50 | train=0.3952 | val=0.3199 | lr=[1.0e-05,1.0e-04] | 139.9s
+[07:04:10]   Epoch  2/50 | train=0.3404 | val=0.3115 | lr=[1.0e-05,1.0e-04] | 148.3s
+[07:06:34]   Epoch  3/50 | train=0.3263 | val=0.3323 | lr=[1.0e-05,1.0e-04] | 143.4s
+[07:08:55]   Epoch  4/50 | train=0.3128 | val=0.3096 | lr=[1.0e-05,1.0e-04] | 141.5s
+[07:11:16]   Epoch  5/50 | train=0.3104 | val=0.2799 | lr=[1.0e-05,1.0e-04] | 140.9s
+[07:13:37]   Epoch  6/50 | train=0.2946 | val=0.3229 | lr=[1.0e-05,1.0e-04] | 140.6s
+[07:15:57]   Epoch  7/50 | train=0.2803 | val=0.3378 | lr=[1.0e-05,1.0e-04] | 140.3s
+[07:18:17]   Epoch  8/50 | train=0.2849 | val=0.3364 | lr=[1.0e-05,1.0e-04] | 140.1s
+[07:20:37]   Epoch  9/50 | train=0.2685 | val=0.3457 | lr=[1.0e-05,1.0e-04] | 139.6s
+[07:22:57]   Epoch 10/50 | train=0.2544 | val=0.3809 | lr=[1.0e-05,1.0e-04] | 140.0s
+[07:25:17]   Epoch 11/50 | train=0.2375 | val=0.4170 | lr=[5.0e-06,5.0e-05] | 139.8s
+[07:27:36]   Epoch 12/50 | train=0.2248 | val=0.4071 | lr=[5.0e-06,5.0e-05] | 139.7s
+[07:29:56]   Epoch 13/50 | train=0.1968 | val=0.4843 | lr=[5.0e-06,5.0e-05] | 139.7s
+[07:32:16]   Epoch 14/50 | train=0.2027 | val=0.4746 | lr=[5.0e-06,5.0e-05] | 139.9s
+[07:34:36]   Epoch 15/50 | train=0.1811 | val=0.5225 | lr=[5.0e-06,5.0e-05] | 139.7s
+[07:34:36]   Early stopping at epoch 15
+[07:34:53]   Optimal threshold: 0.40 (val F1=0.909)
+[07:34:56]   RESULTS: acc=1.000 | f1=1.000 | auc=nan | thresh=0.40
+[07:34:56]            Sensitivity(MDD)=1.000 | Specificity(H)=0.000
+[07:34:56]            Majority Vote: pred=1, correct=1
+[07:34:56]   Fold time: 37.3 min
+[07:34:58] ======================================================================
+[07:34:58] FOLD 39/40 — Test Subject: MDD_5
+[07:34:58] ======================================================================
+[07:36:44]   Sequences — Train: 4941, Val: 871, Test: 158
+[07:36:44]   Class balance (train): H=1838, MDD=3103 | pos_weight=0.592
+[07:36:44]   Data prep: 106.2s
+[07:36:45]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[07:36:45]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[07:36:45]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[07:36:45]   Gradient clipping: max_norm=1.0
+[07:36:45]   Starting training...
+[07:39:06]   Epoch  1/50 | train=0.3767 | val=0.3265 | lr=[1.0e-05,1.0e-04] | 140.3s
+[07:41:33]   Epoch  2/50 | train=0.3144 | val=0.3316 | lr=[1.0e-05,1.0e-04] | 147.5s
+[07:43:56]   Epoch  3/50 | train=0.3008 | val=0.2984 | lr=[1.0e-05,1.0e-04] | 143.2s
+[07:46:18]   Epoch  4/50 | train=0.2859 | val=0.3055 | lr=[1.0e-05,1.0e-04] | 141.1s
+[07:48:38]   Epoch  5/50 | train=0.2810 | val=0.3229 | lr=[1.0e-05,1.0e-04] | 140.5s
+[07:50:57]   Epoch  6/50 | train=0.2737 | val=0.3050 | lr=[1.0e-05,1.0e-04] | 139.5s
+[07:53:18]   Epoch  7/50 | train=0.2635 | val=0.3109 | lr=[1.0e-05,1.0e-04] | 140.2s
+[07:55:38]   Epoch  8/50 | train=0.2549 | val=0.2909 | lr=[1.0e-05,1.0e-04] | 139.9s
+[07:57:57]   Epoch  9/50 | train=0.2384 | val=0.3730 | lr=[1.0e-05,1.0e-04] | 139.7s
+[08:00:17]   Epoch 10/50 | train=0.2335 | val=0.3388 | lr=[1.0e-05,1.0e-04] | 140.1s
+[08:02:37]   Epoch 11/50 | train=0.2143 | val=0.4334 | lr=[1.0e-05,1.0e-04] | 139.9s
+[08:04:57]   Epoch 12/50 | train=0.2084 | val=0.4407 | lr=[1.0e-05,1.0e-04] | 140.0s
+[08:07:17]   Epoch 13/50 | train=0.1825 | val=0.4736 | lr=[1.0e-05,1.0e-04] | 140.1s
+[08:09:38]   Epoch 14/50 | train=0.1629 | val=0.5415 | lr=[5.0e-06,5.0e-05] | 140.7s
+[08:11:58]   Epoch 15/50 | train=0.1400 | val=0.6146 | lr=[5.0e-06,5.0e-05] | 140.1s
+[08:14:18]   Epoch 16/50 | train=0.1239 | val=0.6145 | lr=[5.0e-06,5.0e-05] | 139.8s
+[08:16:38]   Epoch 17/50 | train=0.1247 | val=0.6456 | lr=[5.0e-06,5.0e-05] | 139.8s
+[08:18:58]   Epoch 18/50 | train=0.1033 | val=0.7065 | lr=[5.0e-06,5.0e-05] | 139.9s
+[08:18:58]   Early stopping at epoch 18
+[08:19:15]   Optimal threshold: 0.65 (val F1=0.911)
+[08:19:18]   RESULTS: acc=0.158 | f1=0.273 | auc=nan | thresh=0.65
+[08:19:18]            Sensitivity(MDD)=0.158 | Specificity(H)=0.000
+[08:19:18]            Majority Vote: pred=0, correct=0
+[08:19:18]   Fold time: 44.3 min
+[08:19:20] ======================================================================
+[08:19:20] FOLD 40/40 — Test Subject: MDD_6
+[08:19:20] ======================================================================
+[08:20:52]   Sequences — Train: 4958, Val: 874, Test: 138
+[08:20:52]   Class balance (train): H=1838, MDD=3120 | pos_weight=0.589
+[08:20:52]   Data prep: 92.2s
+[08:20:53]   Model: FT-InceptionV3+LSTM(seq=10) | Trainable: 7,192,065/22,900,833
+[08:20:53]   Optimizer: Adam | LR_inception=1e-05, LR_new=0.0001
+[08:20:53]   Scheduler: ReduceLROnPlateau(factor=0.5, patience=5)
+[08:20:53]   Gradient clipping: max_norm=1.0
+[08:20:53]   Starting training...
+[08:23:14]   Epoch  1/50 | train=0.3922 | val=0.3190 | lr=[1.0e-05,1.0e-04] | 140.0s
+[08:25:41]   Epoch  2/50 | train=0.3430 | val=0.2946 | lr=[1.0e-05,1.0e-04] | 147.9s
+[08:28:05]   Epoch  3/50 | train=0.3230 | val=0.3011 | lr=[1.0e-05,1.0e-04] | 143.2s
+[08:30:27]   Epoch  4/50 | train=0.3154 | val=0.2714 | lr=[1.0e-05,1.0e-04] | 141.7s
+[08:32:48]   Epoch  5/50 | train=0.2992 | val=0.2733 | lr=[1.0e-05,1.0e-04] | 141.7s
+[08:35:09]   Epoch  6/50 | train=0.3027 | val=0.2885 | lr=[1.0e-05,1.0e-04] | 141.2s
+[08:37:30]   Epoch  7/50 | train=0.2869 | val=0.3041 | lr=[1.0e-05,1.0e-04] | 140.5s
+[08:39:51]   Epoch  8/50 | train=0.2732 | val=0.3086 | lr=[1.0e-05,1.0e-04] | 140.7s
+[08:42:11]   Epoch  9/50 | train=0.2612 | val=0.3474 | lr=[1.0e-05,1.0e-04] | 140.3s
+[08:44:31]   Epoch 10/50 | train=0.2542 | val=0.3046 | lr=[5.0e-06,5.0e-05] | 140.4s
+[08:46:52]   Epoch 11/50 | train=0.2326 | val=0.3736 | lr=[5.0e-06,5.0e-05] | 140.3s
+[08:49:12]   Epoch 12/50 | train=0.2319 | val=0.3960 | lr=[5.0e-06,5.0e-05] | 140.1s
+[08:51:33]   Epoch 13/50 | train=0.2110 | val=0.4502 | lr=[5.0e-06,5.0e-05] | 140.8s
+[08:53:53]   Epoch 14/50 | train=0.2051 | val=0.4563 | lr=[5.0e-06,5.0e-05] | 140.7s
+[08:53:53]   Early stopping at epoch 14
+[08:54:10]   Optimal threshold: 0.25 (val F1=0.916)
+[08:54:13]   RESULTS: acc=0.986 | f1=0.993 | auc=nan | thresh=0.25
+[08:54:13]            Sensitivity(MDD)=0.986 | Specificity(H)=0.000
+[08:54:13]            Majority Vote: pred=1, correct=1
+[08:54:13]   Fold time: 34.9 min
+[08:54:15] ======================================================================
+[08:54:15] FINAL RESULTS
+[08:54:15] ======================================================================
+[08:54:15]   Global Confusion Matrix:
+[[1374  646]
+ [ 238 3570]]
+[08:54:15] 
++---------+-------+-------+-------------+-------------+-----+--------+------+
+| Subject |  Acc  |   F1  | Sensitivity | Specificity | AUC | Thresh | Vote |
++---------+-------+-------+-------------+-------------+-----+--------+------+
+|   H_16  | 0.000 | 0.000 |    0.000    |    0.000    | nan |  0.40  |  ✗   |
+|   H_19  | 0.948 | 0.000 |    0.000    |    0.948    | nan |  0.30  |  ✓   |
+|   H_22  | 0.582 | 0.000 |    0.000    |    0.582    | nan |  0.65  |  ✓   |
+|   H_23  | 1.000 | 0.000 |    0.000    |    1.000    | nan |  0.50  |  ✓   |
+|   H_24  | 0.000 | 0.000 |    0.000    |    0.000    | nan |  0.25  |  ✗   |
+|   H_26  | 0.707 | 0.000 |    0.000    |    0.707    | nan |  0.25  |  ✓   |
+|   H_27  | 0.017 | 0.000 |    0.000    |    0.017    | nan |  0.50  |  ✗   |
+|   H_28  | 0.976 | 0.000 |    0.000    |    0.976    | nan |  0.20  |  ✓   |
+|   H_4   | 0.928 | 0.000 |    0.000    |    0.928    | nan |  0.10  |  ✓   |
+|   H_5   | 0.792 | 0.000 |    0.000    |    0.792    | nan |  0.40  |  ✓   |
+|   H_6   | 0.969 | 0.000 |    0.000    |    0.969    | nan |  0.15  |  ✓   |
+|   H_8   | 0.994 | 0.000 |    0.000    |    0.994    | nan |  0.30  |  ✓   |
+|   H_9   | 0.993 | 0.000 |    0.000    |    0.993    | nan |  0.45  |  ✓   |
+|  MDD_1  | 0.994 | 0.997 |    0.994    |    0.000    | nan |  0.20  |  ✓   |
+|  MDD_10 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.20  |  ✓   |
+|  MDD_11 | 0.947 | 0.973 |    0.947    |    0.000    | nan |  0.80  |  ✓   |
+|  MDD_13 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.50  |  ✓   |
+|  MDD_14 | 0.969 | 0.984 |    0.969    |    0.000    | nan |  0.55  |  ✓   |
+|  MDD_15 | 0.994 | 0.997 |    0.994    |    0.000    | nan |  0.20  |  ✓   |
+|  MDD_17 | 0.994 | 0.997 |    0.994    |    0.000    | nan |  0.20  |  ✓   |
+|  MDD_18 | 0.994 | 0.997 |    0.994    |    0.000    | nan |  0.35  |  ✓   |
+|  MDD_19 | 0.541 | 0.702 |    0.541    |    0.000    | nan |  0.60  |  ✓   |
+|  MDD_2  | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.15  |  ✓   |
+|  MDD_20 | 0.994 | 0.997 |    0.994    |    0.000    | nan |  0.25  |  ✓   |
+|  MDD_21 | 0.979 | 0.989 |    0.979    |    0.000    | nan |  0.10  |  ✓   |
+|  MDD_22 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.40  |  ✓   |
+|  MDD_23 | 0.992 | 0.996 |    0.992    |    0.000    | nan |  0.10  |  ✓   |
+|  MDD_24 | 0.986 | 0.993 |    0.986    |    0.000    | nan |  0.30  |  ✓   |
+|  MDD_26 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.30  |  ✓   |
+|  MDD_27 | 0.980 | 0.990 |    0.980    |    0.000    | nan |  0.10  |  ✓   |
+|  MDD_28 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.50  |  ✓   |
+|  MDD_29 | 0.986 | 0.993 |    0.986    |    0.000    | nan |  0.60  |  ✓   |
+|  MDD_3  | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.40  |  ✓   |
+|  MDD_30 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.35  |  ✓   |
+|  MDD_31 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.15  |  ✓   |
+|  MDD_32 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.20  |  ✓   |
+|  MDD_33 | 1.000 | 1.000 |    1.000    |    0.000    | nan |  0.40  |  ✓   |
+|  MDD_5  | 0.158 | 0.273 |    0.158    |    0.000    | nan |  0.65  |  ✗   |
+|  MDD_6  | 0.986 | 0.993 |    0.986    |    0.000    | nan |  0.25  |  ✓   |
++---------+-------+-------+-------------+-------------+-----+--------+------+
+[08:54:15] 
++-------------+-------+-------+-------+-------+
+|    Metric   |  Mean |  Std  |  Min  |  Max  |
++-------------+-------+-------+-------+-------+
+|   Accuracy  | 0.856 | 0.295 | 0.000 | 1.000 |
+|      F1     | 0.638 | 0.467 | 0.000 | 1.000 |
+| Sensitivity | 0.628 | 0.468 | 0.000 | 1.000 |
+| Specificity | 0.228 | 0.394 | 0.000 | 1.000 |
++-------------+-------+-------+-------+-------+
+[08:54:15] 
+  GLOBAL (aggregated across all folds):
+[08:54:15]     Accuracy:       0.848
+[08:54:15]     Sensitivity:    0.938
+[08:54:15]     Specificity:    0.680
+[08:54:15]     F1 Score:       0.890
+[08:54:15] 
+  SUBJECT-LEVEL MAJORITY VOTE:
+[08:54:15]     Correct: 35/39 (89.7%)
+[08:54:15] 
+  COMPARISON WITH EXPERIMENT 1:
+[08:54:15]     Metric               Exp 1      Final      Change    
+[08:54:15]     ──────────────────────────────────────────────────
+[08:54:15]     Accuracy             0.805     0.848     +0.043
+[08:54:15]     Sensitivity          0.901     0.938     +0.036
+[08:54:15]     Specificity          0.636     0.680     +0.044
+[08:54:15]     F1                   0.855     0.890     +0.035
+[08:54:15] 
+  Results saved to: /Users/abhinavjoshi/Downloads/eeg_depression/results/exp_final
+[08:54:15]   Total time: 1352.8 minutes

@@ -1,0 +1,26 @@
+Final Experiment: Spatial RGB + Fine-Tuned InceptionV3 + LSTM
+============================================================
+
+Total subjects: 40
+Sequence length: 10
+LSTM hidden: 128
+Fine-tuned layers: Mixed_7a, Mixed_7b, Mixed_7c
+LR inception: 1e-05, LR new: 0.0001
+
++-------------+-------+-------+-------+-------+
+|    Metric   |  Mean |  Std  |  Min  |  Max  |
++-------------+-------+-------+-------+-------+
+|   Accuracy  | 0.856 | 0.295 | 0.000 | 1.000 |
+|      F1     | 0.638 | 0.467 | 0.000 | 1.000 |
+| Sensitivity | 0.628 | 0.468 | 0.000 | 1.000 |
+| Specificity | 0.228 | 0.394 | 0.000 | 1.000 |
++-------------+-------+-------+-------+-------+
+
+Global Accuracy:    0.8483
+Global Sensitivity: 0.9375
+Global Specificity: 0.6802
+Global F1:          0.8898
+
+Subject-Level Vote: 35/39 (89.7%)
+
+Total time: 1352.8 minutes

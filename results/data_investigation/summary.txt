@@ -1,0 +1,11 @@
+DATA INVESTIGATION SUMMARY
+==================================================
+
+Total samples: 59,900
+Healthy: 21,688 (36.2%)
+MDD: 38,212 (63.8%)
+
+H mean: 0.384276
+MDD mean: 0.378185
+H std: 0.239386
+MDD std: 0.229054

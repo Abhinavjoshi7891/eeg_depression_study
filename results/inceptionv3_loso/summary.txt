@@ -1,0 +1,23 @@
+InceptionV3 + LSTM with LOSO Cross-Validation
+==================================================
+
+Total subjects: 40
+Total samples: 59,900
+
+Results:
++-------------------+-------+-------+-------+-------+
+|       Metric      |  Mean |  Std  |  Min  |  Max  |
++-------------------+-------+-------+-------+-------+
+|      Accuracy     | 0.688 | 0.196 | 0.129 | 0.840 |
+|      F1 Score     | 0.554 | 0.422 | 0.000 | 0.913 |
+|        AUC        |  nan  |  nan  |  nan  |  nan  |
+|     Precision     | 0.650 | 0.483 | 0.000 | 1.000 |
+|    Recall (MDD)   | 0.491 | 0.381 | 0.000 | 0.840 |
+|  Specificity (H)  | 0.197 | 0.304 | 0.000 | 0.816 |
+| Sensitivity (MDD) | 0.491 | 0.381 | 0.000 | 0.840 |
++-------------------+-------+-------+-------+-------+
+
+Overall Accuracy: 68.1%
+Overall AUC: 0.693
+
+Total time: 772.1 minutes

@@ -1,0 +1,22 @@
+Experiment 1: Sequence-based InceptionV3 + LSTM
+============================================================
+
+Total subjects: 40
+Sequence length: 10
+LSTM hidden: 128
+
++-------------+-------+-------+-------+-------+
+|    Metric   |  Mean |  Std  |  Min  |  Max  |
++-------------+-------+-------+-------+-------+
+|   Accuracy  | 0.815 | 0.302 | 0.000 | 1.000 |
+|      F1     | 0.602 | 0.474 | 0.000 | 1.000 |
+| Sensitivity | 0.590 | 0.471 | 0.000 | 1.000 |
+| Specificity | 0.224 | 0.366 | 0.000 | 0.935 |
++-------------+-------+-------+-------+-------+
+
+Global Accuracy:    0.8050
+Global Sensitivity: 0.9010
+Global Specificity: 0.6360
+Global F1:          0.8550
+
+Total time: 2879.9 minutes
