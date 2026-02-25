@@ -59,15 +59,22 @@ Our early models assumed a sequence length of `1` for the LSTM, essentially feed
   - **Specificity (Healthy Detection)**: Flatlined at **63.6%**.
 - **The Caveat**: We noticed a severe imbalance in error distribution. The model was heavily skewed towards predicting MDD, destroying the specificity.
 
-### 3. Deep Dive: Outlier Analysis
-Why was Specificity so low? Was the model biased, or was the data inherently dirty? We created `inspect_outliers.py` to examine the raw Alpha energy bands of the misclassified subjects. 
+### 3. Dedicated Analysis: The "Impossible" Outliers
+Why did our baseline model struggle so heavily with Specificity? Was the model biased, or was the data inherently tricky? We created `inspect_outliers.py` to examine the raw Alpha energy bands of the subjects the model repeatedly misclassified. 
 
 ![Outlier Spectral Profiles](results/outlier_analysis/spectral_profiles_comparison.png)
 
-**The Discovery**:
-- A subset of Healthy subjects (**H_16, H_24, H_27**) had naturally lower Alpha band energies, mimicking the clinical signature of MDD.
-- A subset of MDD subjects (**MDD_5, MDD_19**) exhibited unusually prominent Alpha energy, mimicking healthy brains.
-- *Because we were averaging all 19 skull channels into one grayscale image*, the spatial quirks of these brains were smoothing over into false representations. 
+#### What are these Outliers?
+In EEG analysis for depression, the classic biomarker is **reduced Alpha band energy** compared to healthy controls. However, human brains are highly variable. We discovered 5 "Impossible Outliers" in our 40-subject cohort whose brain waves fundamentally mimic the opposite clinical condition:
+
+1. **The "Depressed-Looking" Healthy Brains (`H_16`, `H_24`, `H_27`)**: 
+   These healthy individuals naturally possess extremely low Alpha band energy. To any generic spectral algorithm, their brain waves look identical to a clinically depressed patient.
+2. **The "Healthy-Looking" MDD Brains (`MDD_5`, `MDD_19`)**: 
+   These clinically depressed patients exhibit unusually prominent Alpha energy, making their EEG profile look perfectly healthy.
+
+#### Why did they break the model?
+In Experiment 1, we were averaging all 19 skull channels into a single *grayscale* spectrogram image. 
+Because the spatial quirks (e.g., *where* the Alpha energy was located) were averaged together, the model lost the ability to distinguish between "naturally low Alpha" and "MDD-induced low Alpha." To the model, these 5 subjects were completely indistinguishable from the wrong class, causing them to hover near **0% accuracy** even across multiple iterations.
 
 ### 4. Experiment 2: Tracking Pipeline Dynamics & Fine-Tuning (`train_inceptionv3_loso.py`)
 To increase representation power, we moved from using InceptionV3 purely as a frozen feature extractor to **Fine-Tuning**.
