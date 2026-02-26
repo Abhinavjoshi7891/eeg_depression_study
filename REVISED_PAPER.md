@@ -249,6 +249,53 @@ The final architecture combined all three interventions:
 2. **`Mixed_7c`-only partial fine-tuning** to adapt without catastrophic overfitting
 3. **Corrected `pos_weight = n_H / n_MDD` BCE penalisation** to address class imbalance
 
+**Figure 13: Python Code Snippet: Hybrid InceptionV3 + LSTM for EEG Classification**
+```python
+import torch
+import torch.nn as nn
+from torchvision import models
+
+class InceptionV3_LSTM_FineTuned(nn.Module):
+    """
+    Hybrid model: Partially Fine-Tuned InceptionV3 + LSTM.
+    Input:  (batch, seq=10, 3 channels (Spatial RGB), 224, 224)
+    Output: (batch,) logits
+    """
+    def __init__(self):
+        super().__init__()
+        # 1. Base CNN: InceptionV3
+        self.inception = models.inception_v3(weights='IMAGENET1K_V1')
+        self.inception.aux_logits = False
+        self.inception.fc = nn.Identity()
+
+        # 2. Freeze all layers to retain pre-trained weights
+        for param in self.inception.parameters():
+            param.requires_grad = False
+
+        # 3. Unfreeze only Mixed_7c (partial fine-tuning for EEG)
+        for name, module in self.inception.named_children():
+            if name == 'Mixed_7c':
+                for param in module.parameters():
+                    param.requires_grad = True
+
+        self.upsample = nn.Upsample(size=(299, 299), mode='bilinear')
+
+        # 4. Sequence Modelling: LSTM
+        self.lstm = nn.LSTM(
+            input_size=2048,  # InceptionV3 output size
+            hidden_size=128,  # Temporal dimensions
+            num_layers=1,
+            batch_first=True
+        )
+
+        # 5. Classification
+        self.classifier = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(128, 1) # Probability of depression
+        )
+```
+
+
 ---
 
 ## 4. Results and Discussion
@@ -276,17 +323,17 @@ The Specificity *Mean* of 68.0% was mathematically dragged down by the three bio
 The spatial RGB mapping provided the network sufficient topographic context to correctly diagnose the extreme outlier **MDD_19** (which earlier algorithms rated at <10% accuracy), while the remaining 4 outliers remain unresolvable without additional clinical biomarkers or data modalities.
 
 ![Comparison Metrics vs Experiment 1](results/exp_final/figures/comparison_metrics.png)
-*Figure 13: Percentage-point growth across Mean and Median metrics between Baseline (Exp 1) and Final Spatial RGB architecture.*
+*Figure 14: Percentage-point growth across Mean and Median metrics between Baseline (Exp 1) and Final Spatial RGB architecture.*
 
 ### 4.3 Clinical Subject-Level Evaluation (Majority Vote)
 
 Evaluating singular 7-second sequence chunks is clinically insufficient in isolation. We implemented a Subject-Level Majority Vote: every patient's constituent sequence predictions are aggregated and the majority label taken as the final clinical diagnosis.
 
 ![Per-Subject Accuracy — Final Experiment](results/exp_final/figures/subject_accuracy.png)
-*Figure 14: Per-subject granular sequence accuracy using the Final Architecture. The 4 persistent outlier subjects are clearly identifiable.*
+*Figure 15: Per-subject granular sequence accuracy using the Final Architecture. The 4 persistent outlier subjects are clearly identifiable.*
 
 ![Majority Vote Clinical Outcome](results/exp_final/figures/majority_vote_pie.png)
-*Figure 15: Clinical diagnostic outcome via majority vote — 36 / 40 patients correctly diagnosed (90.0% subject-level accuracy).*
+*Figure 16: Clinical diagnostic outcome via majority vote — 36 / 40 patients correctly diagnosed (90.0% subject-level accuracy).*
 
 By aggregating sequence votes, the framework accurately diagnosed **36 out of 40 patients (90.0% Subject-Level Accuracy)** under strict, uncompromised LOSO cross-validation constraints.
 
