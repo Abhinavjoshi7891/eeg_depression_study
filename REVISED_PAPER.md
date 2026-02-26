@@ -1,13 +1,14 @@
 # Hybrid Deep Learning Framework for EEG-Based Detection of Depression and Brain Abnormalities
 
-**PRAWAR CHAUDHARY¹*, KAUSHAL KUMAR², CHINTAN SINGH³, ROOBAL CHAUDHARY⁴, PREETI RUSTAGI⁵, HARSH PANDEY⁶***  
-¹ School of Basics and Applied Sciences, KR Mangalam University, Gurugram, INDIA  
-² Department of Mechanical Engineering, KR Mangalam University, Gurugram, INDIA  
-³ Amity Institute of Forensic Sciences, Amity University Noida, Uttar Pradesh, INDIA  
-⁴ Department of Forensic Science, Sharda School of Allied Health Sciences, Sharda University, Greater Noida, INDIA  
-⁵ Faculty of Commerce & Management, SGT University, Gurugram, Haryana, INDIA  
-⁶ Department of Biotechnology and Chemical Engineering, Manipal University Jaipur, INDIA  
-*Corresponding author: harsh.pandey@jaipur.manipal.edu* 
+**ABHINAV JOSHI¹*, PRAWAR CHAUDHARY², KAUSHAL KUMAR³, CHINTAN SINGH⁴, ROOBAL CHAUDHARY⁵, PREETI RUSTAGI⁶, HARSH PANDEY⁷**  
+¹ RISE Lab, Indian Institute of Technology Delhi, New Delhi, INDIA  
+² School of Basics and Applied Sciences, KR Mangalam University, Gurugram, INDIA  
+³ Department of Mechanical Engineering, KR Mangalam University, Gurugram, INDIA  
+⁴ Amity Institute of Forensic Sciences, Amity University Noida, Uttar Pradesh, INDIA  
+⁵ Department of Forensic Science, Sharda School of Allied Health Sciences, Sharda University, Greater Noida, INDIA  
+⁶ Faculty of Commerce & Management, SGT University, Gurugram, Haryana, INDIA  
+⁷ Department of Biotechnology and Chemical Engineering, Manipal University Jaipur, INDIA  
+*Corresponding author: abhinavjoshi@iitd.ac.in* 
 
 ---
 
