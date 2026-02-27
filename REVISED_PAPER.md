@@ -97,21 +97,7 @@ The proposed framework employs a hybrid architecture that processes sequences of
 
 The architecture is depicted in the flow diagram (Figure 3):
 
-```
-Data Acquisition (EEG, 19-ch, 250Hz)
-        ↓
-Preprocessing (Bandpass 0.5–40Hz → Artifact Rejection → Epoching 700ms)
-        ↓
-Feature Extraction (DWT db4 → Approximation Coefficients cA)
-        ↓
-Spatial RGB Scalogram Generation (224×224×3, Frontal=R, Central=G, Posterior=B)
-        ↓
-Sequence Building (seq=10 consecutive frames ≈ 7s per subject epoch)
-        ↓
-Hybrid Model: TimeDistributed(InceptionV3 Mixed_7c fine-tuned) → LSTM(128) → Dense(1, sigmoid)
-        ↓
-Classification: MDD (1) / Healthy (0) via Subject-Level Majority Vote
-```
+![Flow diagram of proposed methodology](results/exp_final/figures/flow_diagram.png)
 *Figure 3: Flow diagram of proposed methodology.*
 
 ### 2.5 Model Training, Class Imbalance Handling and LOSO Validation
